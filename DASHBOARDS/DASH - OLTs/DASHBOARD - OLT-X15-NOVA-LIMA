@@ -1,0 +1,2869 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 198,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 33,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Banner</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n  <div class=\"banner-container\">\n    <div class=\"banner\">\n      <div class=\"left-img\">\n        <img src=\"https://support.huawei.com/enterpriseindex/layout/v5/img/logo_huawei.png\" width=\"165px\" />\n      </div>\n      <div class=\"text-center\">\n        <span>OLT-HUAWEI-X15 NOVA LIMA</span>\n      </div>\n      <div class=\"right-img\">\n        <img src=\"\"link da img'\" width=\"140px\" />\n      </div>\n    </div>\n  </div>\n</body>\n\n</html>",
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalScripts": [],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "status": "ICMP: ICMP ping",
+        "styles": ".banner-container {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n}\r\n\r\n.banner {\r\n    position: relative;\r\n    width: 100%;\r\n    height: auto;\r\n    background-image: url('https://i.ibb.co/RhNQxVf/TITULO-DASH-ZABBIX-SEM-LETRA.png');\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 25px; /* Aumentado de 15px para 25px */\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 35px; /* Aumentado de 25px para 35px */\r\n}\r\n\r\n.left-img,\r\n.right-img {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.left-img img {\r\n    width: 185px; /* Aumentado de 165px para 185px */\r\n    height: auto;\r\n}\r\n\r\n.right-img img {\r\n    width: 160px; /* Aumentado de 140px para 160px */\r\n    height: auto;\r\n    transform: translateY(-1px);\r\n}\r\n\r\n.left-img {\r\n    margin-right: 15px; /* Aumentado de 10px para 15px */\r\n}\r\n\r\n.right-img {\r\n    margin-left: 15px; /* Aumentado de 10px para 15px */\r\n    margin-top: 0px;\r\n}\r\n\r\n.text-center {\r\n    flex-grow: 1;\r\n    text-align: center;\r\n}\r\n\r\n.banner span {\r\n    color: #ffffff;\r\n    font-size: 45px; /* Aumentado de 35px para 45px */\r\n    font-weight: bold;\r\n    font-family: 'Viking Squad', sans-serif;\r\n    text-shadow: 0 0 5px #87CEEB, 0 0 10px #87CEEB, 0 0 20px #00ffcc, 0 0 30px #00ffcc;\r\n    animation: text-glow 1.5s infinite alternate;\r\n    margin: 0;\r\n}\r\n\r\n.banner h1 {\r\n    color: #ffffff;\r\n    font-size: 36px; /* Aumentado de 26px para 36px */\r\n    text-transform: uppercase;\r\n    letter-spacing: 2px;\r\n    text-shadow: 0 0 5px #56d5dc, 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc;\r\n    animation: text-glow 1.5s infinite alternate;\r\n}\r\n\r\n@keyframes text-glow {\r\n    from {\r\n        text-shadow: 0 0 5px #56d5dc, 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc, 0 0 40px #56d5dc;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "4.5.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "ICMP: ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 32,
+      "options": {
+        "activeTheme": "Tema Bee Solutions",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Bee Solutions",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": "https://i.ibb.co/qKdxWYk/Technology-Background-DASH.jpg"
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": ""
+                },
+                "type": "style"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Autorizadas"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Desautorizadas"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 12,
+        "y": 1
+      },
+      "id": 21,
+      "options": {
+        "displayMode": "gradient",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "namePlacement": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {},
+        "valueMode": "color"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Geral"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1790",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Desautorizadas"
+              ],
+              "text": "setAlias(Total Desautorizadas)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Total ONUs Desprovisionadas"
+          },
+          "itemTag": {
+            "filter": "Application: Geral"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B1",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Ramais"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1811",
+              "def": {
+                "category": "Aggregate",
+                "defaultParams": [],
+                "name": "sumSeries",
+                "params": []
+              },
+              "params": [],
+              "text": "sumSeries()"
+            },
+            {
+              "$$hashKey": "object:1812",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Autorizadas"
+              ],
+              "text": "setAlias(Total Autorizadas)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Application: ONUs Autorizadas"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "ONUs ON"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1834",
+              "def": {
+                "category": "Aggregate",
+                "defaultParams": [],
+                "name": "sumSeries",
+                "params": []
+              },
+              "params": [],
+              "text": "sumSeries()"
+            },
+            {
+              "$$hashKey": "object:1835",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Onlines"
+              ],
+              "text": "setAlias(Total Online)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Application: ONUs ON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "ONUs OFF"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1857",
+              "def": {
+                "category": "Aggregate",
+                "defaultParams": [],
+                "name": "sumSeries",
+                "params": []
+              },
+              "params": [],
+              "text": "sumSeries()"
+            },
+            {
+              "$$hashKey": "object:1858",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Offlines"
+              ],
+              "text": "setAlias(Total OFF)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Application: ONUs OFF"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#18494e",
+            "mode": "fixed"
+          },
+          "displayName": "VENTILAÇÃO DA OLT",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 8,
+        "x": 16,
+        "y": 1
+      },
+      "id": 24,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT count(i.itemid) AS Total\r\n    FROM problem p\r\n    INNER JOIN (\r\n        SELECT max(itemid) AS itemid, max(triggerid) AS triggerid\r\n        FROM functions\r\n        GROUP BY triggerid\r\n    ) f ON p.objectid = f.triggerid\r\n    INNER JOIN items i ON (f.itemid = i.itemid)\r\n    INNER JOIN hosts h ON (i.hostid = h.hostid)\r\n    LEFT JOIN interface it ON (it.interfaceid = i.interfaceid)\r\n    INNER JOIN triggers t ON (f.triggerid = t.triggerid)\r\n    WHERE FROM_UNIXTIME(p.clock) >= NOW() - INTERVAL 24 HOUR\r\norder by Total DESC;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 16,
+        "y": 2
+      },
+      "id": 25,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const lastValue = sData[sData.length - 1]; // Pega o último valor (1 para UP, 0 para DOWN)\n\n  const isUp = lastValue === 1;\n\n  return {\n    type: 'stat',\n    radius: '85%',\n    center: ['50%', '55%'], // Centraliza o medidor\n    axisLine: {\n      lineStyle: {\n        width: 10,\n        color: [\n          [1, isUp ? '#00FFAA' : '#FF3E3E'], // Verde se UP, Vermelho se DOWN\n        ],\n      },\n    },\n    pointer: {\n      show: false, // Esconde o ponteiro\n    },\n    progress: {\n      show: true,\n      width: 10,\n      itemStyle: {\n        color: isUp ? '#00FFAA' : '#FF3E3E', // Progresso na mesma cor\n      },\n    },\n    detail: {\n      show: true,\n      formatter: isUp ? 'UP' : 'DOWN',\n      fontSize: 30,\n      color: isUp ? '#00FFAA' : '#FF3E3E',\n      fontWeight: 'bold',\n      offsetCenter: [0, '20%'],\n    },\n    title: {\n      show: false, // Remove o título interno\n    },\n    data: [\n      {\n        value: lastValue,\n        name: 'Status',\n      },\n    ],\n  };\n});\n\n// Define qual seta exibir com base no valor\nconst lastValue = series.length > 0 && series[0].data.length > 0 ? series[0].data[0].value : 0; // Garante um valor válido\nconst isUp = lastValue === 1;\n\nreturn {\n  backgroundColor: 'transparent', // Fundo escuro tecnológico\n  tooltip: {\n    show: true,\n    formatter: (params) =>\n      params.value === 1 ? 'Status: UP' : 'Status: DOWN',\n    backgroundColor: '#333',\n    borderColor: '#00FFAA',\n    textStyle: {\n      color: '#FFF',\n    },\n  },\n  series,\n  graphic: [\n    {\n      type: 'image',\n      left: 'center',\n      top: '15%',\n      style: {\n        image: isUp\n          ? 'https://cdn-icons-png.flaticon.com/128/5610/5610930.png' // URL para imagem de seta para cima\n          : 'https://cdn-icons-png.flaticon.com/128/14025/14025545.png', // URL para imagem de seta para baixo\n        width: 50,\n        height: 50,\n        opacity: 0.9,\n      },\n      animation: {\n        duration: 1500,\n        easing: 'elasticOut',\n        loop: true,\n      },\n    },\n    {\n      type: 'text',\n      left: 'center',\n      top: '65%',\n      style: {\n        text: isUp ? 'ONLINE' : 'OFFLINE',\n        fontSize: 20,\n        fontWeight: 'bold',\n        fill: isUp ? '#00FFAA' : '#FF3E3E',\n      },\n    },\n  ],\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Fan Status"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 18,
+        "y": 2
+      },
+      "id": 26,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Fan Rotacao"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 20,
+        "y": 2
+      },
+      "id": 27,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Fan Temperatura"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 22,
+        "y": 2
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1913",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host:/",
+                "OLT"
+              ],
+              "text": "replaceAlias(/$host:/, OLT)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Uptime"
+          },
+          "itemTag": {
+            "filter": "Uptime"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 5
+      },
+      "id": 35,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface ethernet0/8/0(): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface ethernet0/8/0(): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 4,
+        "x": 12,
+        "y": 6
+      },
+      "id": 6,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  // Obtém os dados da série\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer ||\n    s.fields.find((f) => f.type === 'number').values;\n  const lastValue = sData[sData.length - 1];\n  const tempValue = lastValue.toFixed(1); // Mostra temperatura com 1 decimal\n\n  // Cores dinâmicas baseadas no valor de temperatura\n  let pointerColor, detailColor;\n  if (lastValue <= 30) {\n    pointerColor = '#00C8FF';\n    detailColor = '#00C8FF';\n  } else if (lastValue <= 50) {\n    pointerColor = '#00FFAA';\n    detailColor = '#00FFAA';\n  } else if (lastValue <= 70) {\n    pointerColor = '#FFC107';\n    detailColor = '#FFC107';\n  } else {\n    pointerColor = '#FF3E3E';\n    detailColor = '#FF3E3E';\n  }\n\n  return {\n    type: 'gauge',\n    radius: '90%',\n    center: ['50%', '55%'],\n    startAngle: 180,\n    endAngle: 0,\n    min: 0,\n    max: 100, // Assumindo que a temperatura máxima é 100°C\n    splitNumber: 10,\n    axisLine: {\n      lineStyle: {\n        width: 20,\n        color: [\n          [0.3, '#00C8FF'],   // Azul claro para temperaturas baixas\n          [0.5, '#00FFAA'],   // Verde para temperaturas moderadas\n          [0.7, '#FFC107'],    // Amarelo para temperaturas altas\n          [1, '#FF3E3E']       // Vermelho para temperaturas críticas\n        ],\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 10\n      }\n    },\n    progress: {\n      show: true,\n      overlap: false,\n      width: 18,\n      roundCap: true,\n      clip: false,\n      itemStyle: {\n        color: {\n          type: 'linear',\n          x: 0,\n          y: 0,\n          x2: 1,\n          y2: 0,\n          colorStops: [{\n            offset: 0,\n            color: 'rgba(0, 200, 255, 0.3)'\n          }, {\n            offset: 1,\n            color: pointerColor\n          }]\n        },\n        shadowColor: 'rgba(0, 200, 255, 0.5)',\n        shadowBlur: 10\n      }\n    },\n    axisTick: {\n      show: true,\n      splitNumber: 5,\n      length: 8,\n      lineStyle: {\n        width: 2,\n        color: '#fff'\n      }\n    },\n    splitLine: {\n      show: true,\n      length: 15,\n      lineStyle: {\n        width: 3,\n        color: '#fff'\n      }\n    },\n    pointer: {\n      show: true,\n      icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',\n      length: '60%',\n      width: 16,\n      offsetCenter: [0, '-40%'],\n      itemStyle: {\n        color: pointerColor,\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 5,\n        shadowOffsetX: 1,\n        shadowOffsetY: 1\n      }\n    },\n    anchor: {\n      show: true,\n      size: 10,\n      itemStyle: {\n        color: '#fff',\n        borderColor: pointerColor,\n        borderWidth: 2,\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 5\n      }\n    },\n    detail: {\n      valueAnimation: true,\n      formatter: `{value} %`,\n      fontSize: 30,\n      fontWeight: 'bolder',\n      color: detailColor,\n      offsetCenter: [0, '30%'],\n      textStyle: {\n        textShadowColor: 'rgba(0, 0, 0, 0.3)',\n        textShadowBlur: 5,\n        textShadowOffsetX: 1,\n        textShadowOffsetY: 1\n      }\n    },\n    title: {\n      show: true,\n      offsetCenter: [0, '60%'],\n      color: '#fff',\n      fontSize: 14,\n      fontWeight: 'bold'\n    },\n    data: [{\n      value: tempValue,\n      name: 'CPU UTILIZATION'\n    }]\n  };\n});\n\n// Efeitos adicionais\nconst animationDuration = 2000;\n\nreturn {\n  backgroundColor: 'transparent',\n  animationDuration: animationDuration,\n  animationEasing: 'elasticOut',\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b} : {c}°C',\n    backgroundColor: 'rgba(0,0,0,0.7)',\n    borderColor: '#00C8FF',\n    borderWidth: 1,\n    textStyle: {\n      color: '#FFF',\n      fontSize: 14\n    },\n    extraCssText: 'box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);'\n  },\n  series: series,\n  graphic: [\n    {\n      type: 'group',\n      left: 'center',\n      top: '85%',\n      children: [\n        {\n          type: 'text',\n          left: 'center',\n          style: {\n            text: 'SENSOR: NUCLEO 1',\n            fontSize: 0,\n            fontWeight: 'bold',\n            fill: '#00C8FF',\n            textShadowColor: 'rgba(0, 200, 255, 0.5)',\n            textShadowBlur: 5\n          }\n        }\n      ]\n    },\n    {\n      type: 'text',\n      left: 'center',\n      top: '5%',\n      style: {\n        text: 'MONITORAMENTO DE TEMPERATURA',\n        fontSize: 0,\n        fontWeight: 'bold',\n        fill: '#fff',\n        textShadowColor: 'rgba(0, 200, 255, 0.5)',\n        textShadowBlur: 5\n      }\n    }\n  ]\n};",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "CPU"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Aggregate",
+                "defaultParams": [
+                  "1m",
+                  95
+                ],
+                "name": "percentileAgg",
+                "params": [
+                  {
+                    "name": "interval",
+                    "type": "string"
+                  },
+                  {
+                    "name": "percent",
+                    "options": [
+                      25,
+                      50,
+                      75,
+                      90,
+                      95,
+                      99,
+                      99.9
+                    ],
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "1m",
+                95
+              ],
+              "text": "percentileAgg(1m, 95)"
+            },
+            {
+              "$$hashKey": "object:2048",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host:/",
+                " "
+              ],
+              "text": "replaceAlias(/$host: C/, C)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Application: CPU"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 16,
+        "y": 7
+      },
+      "id": 37,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para formatar o tempo de resposta ICMP (ms)\nfunction formatResponseTime(value) {\n  return { value: value.toFixed(2), unit: 'ms' };\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 3,\n        type: 'dashed', // Define o tipo de linha como tracejada\n        color: '#0a4bad' // Azul vibrante para destaque\n      },\n      showSymbol: true,\n      symbolSize: 6,\n      symbol: 'circle',\n      areaStyle: {\n        opacity: 0.3, // Transparência do fundo da área\n        color: '#0e6b8a' // Fundo com transparência para efeito visual bonito\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nreturn {\n  backgroundColor: 'rgba(0, 0, 0, 0)', // Fundo totalmente transparente\n  color: ['#0a4bad'], // Azul vibrante para as linhas\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Transparência no fundo do tooltip (50%)\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    textStyle: {\n      color: '#ffffff'  // Cor do texto do tooltip para branco\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        tooltipText += `${seriesName}: ${data.toFixed(2)} ms<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#ffffff'  // Cor da legenda para branca\n    }\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '3%',\n    right: '4%',\n    bottom: '3%',\n    containLabel: true,\n    backgroundColor: 'rgba(0, 0, 0, 0.1)' // Fundo do grid com leve transparência\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#ffffff'  // Cor das linhas do eixo X\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#ffffff'  // Cor das legendas do eixo X\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    name: 'ICMP Response Time (ms)',\n    nameTextStyle: {\n      color: '#ffffff',\n      fontSize: 12\n    },\n    axisLine: {\n      lineStyle: {\n        color: '#ffffff'  // Cor das linhas do eixo Y\n      }\n    },\n    axisLabel: {\n      formatter: function (value) {\n        const formatted = formatResponseTime(value);\n        return `${formatted.value} ${formatted.unit}`;\n      },\n      textStyle: {\n        color: '#ffffff'  // Cor das legendas do eixo Y\n      }\n    },\n    splitLine: {\n      lineStyle: {\n        type: 'dashed',\n        color: '#ffffff55' // Linhas guias suaves e discretas\n      }\n    }\n  }],\n  series: seriesData\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  100
+                ],
+                "name": "scale",
+                "params": [
+                  {
+                    "name": "factor",
+                    "options": [
+                      100,
+                      0.01,
+                      10,
+                      -1
+                    ],
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "1000"
+              ],
+              "text": "scale(100)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "ICMP: ICMP response time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#192e33",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Autorizadas"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "color"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "#EAB839",
+                      "value": 40
+                    },
+                    {
+                      "color": "#6ED0E0",
+                      "value": 60
+                    },
+                    {
+                      "color": "red",
+                      "value": 120
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Up 🟢"
+                      },
+                      "2": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "Down 🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Bits In"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bps"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Bits Out"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bps"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Tx Power"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dBm"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "21474836.47": {
+                        "index": 0,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Bias"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "mA"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "21474836.47": {
+                        "index": 0,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Laser"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Online 🟢"
+                      },
+                      "2": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "Offline 🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Temperatura"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "max",
+                "value": 60
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": null
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": 30
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 30
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 50
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "2147483647": {
+                        "color": "#1d375a",
+                        "index": 0,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Tipo"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "102": {
+                        "index": 0,
+                        "text": "C+"
+                      },
+                      "104": {
+                        "index": 1,
+                        "text": "C++"
+                      },
+                      "-1": {
+                        "index": 2,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Voltagem"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "volt"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "21474836.47": {
+                        "index": 0,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 21,
+        "w": 13,
+        "x": 0,
+        "y": 13
+      },
+      "id": 23,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Autorizadas"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\nsubstring(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace\r\n(it.name, 'Onlines ', ''),'Autorizadas ', ''),'Offlines ', ''),': Tx Power', ''),': Temperatura', ''),': Bias', ''),': Tipo', ''),': Voltagem', ''),': Laser', '')\r\n,'(): Bits sent', ''),'(): Bits received', ''),'Interface', 'PON'), 1)\r\nAS itemname,\r\nMAX(CASE WHEN itg.value LIKE '%ONUs Autorizadas%' THEN hu.value END) AS \"Autorizadas\",\r\nMAX(CASE WHEN itg.value LIKE '%ONUs ON%' THEN hu.value END) AS \"Onlines\",\r\nMAX(CASE WHEN itg.value LIKE '%ONUs OFF%' THEN hu.value END) AS \"Offlines\",\r\nMAX(CASE WHEN itg.value LIKE '%PON Status%' THEN hu.value END) AS \"Status\",\r\nMAX(CASE WHEN it.name LIKE '%Bits sent%' THEN hu.value END) AS \"Bits In\",\r\nMAX(CASE WHEN it.name LIKE '%Bits received%' THEN hu.value END) AS \"Bits Out\",\r\n#MAX(CASE WHEN itg.tag LIKE '%PON Tx Power%' THEN h.value END) AS \"Tx Power\",\r\n#MAX(CASE WHEN itg.tag LIKE '%PON Bias%' THEN h.value END) AS \"Bias\",\r\n#MAX(CASE WHEN itg.tag LIKE '%PON Laser%' THEN hu.value END) AS \"Laser\",\r\nMAX(CASE WHEN itg.tag LIKE '%PON Temperatura%' THEN hu.value END) AS \"Temperatura\",\r\n#MAX(CASE WHEN itg.tag LIKE '%PON Tipo%' THEN h.value END) AS \"Tipo\",\r\n#MAX(CASE WHEN itg.tag LIKE '%PON Voltagem%' THEN h.value END) AS \"Voltagem\",\r\nDATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(max(max_clock)), '+03:00', '+03:00'), '%d-%m-%Y %H:%i:%s') AS \"Ultima Verificacao\"\r\nFROM\r\nitems it\r\nINNER JOIN hosts ht ON (it.hostid = ht.hostid and ht.name like '%$host%')\r\nLEFT JOIN (SELECT hu.itemid, MAX(hu.clock) AS max_clock FROM history_uint hu GROUP BY hu.itemid) max_hu ON (it.itemid = max_hu.itemid)\r\nLEFT JOIN history_uint hu ON (max_hu.itemid = hu.itemid AND max_hu.max_clock = hu.clock)\r\nLEFT JOIN (SELECT h.itemid, MAX(h.clock) AS max_clock_h FROM history h GROUP BY h.itemid) max_h ON (it.itemid = max_h.itemid)\r\nLEFT JOIN history h ON (max_h.itemid = h.itemid AND max_h.max_clock_h = h.clock)\r\nLEFT JOIN item_tag itg ON (itg.itemid = it.itemid)\r\nWHERE\r\nht.name LIKE \"%$host%\"\r\nAND it.name LIKE '%PON GPON%' or it.name LIKE '%Interface GPON%'\r\nGROUP BY\r\nitemname\r\nORDER BY\r\nSUBSTRING_INDEX(itemname, ' ', -3) + 0,\r\nSUBSTRING_INDEX(SUBSTRING_INDEX(itemname, ' ', -2), '/', -2) + 0,\r\nSUBSTRING_INDEX(SUBSTRING_INDEX(itemname, ' ', -1), '/', -1) + 0;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "itemname": "Pon"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#192e33",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "max",
+                "value": 60
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": null
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": -40
+                    },
+                    {
+                      "color": "red",
+                      "value": -30
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": -27
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": -26
+                    },
+                    {
+                      "color": "semi-dark-green",
+                      "value": -24.99
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "unit",
+                "value": "dBm"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Tipo"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "102": {
+                        "index": 0,
+                        "text": "C+"
+                      },
+                      "104": {
+                        "index": 1,
+                        "text": "C++"
+                      },
+                      "-1": {
+                        "index": 2,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Voltagem"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "volt"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "21474836.47": {
+                        "index": 0,
+                        "text": "-"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 21,
+        "w": 11,
+        "x": 13,
+        "y": 13
+      },
+      "id": 36,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "value"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b5173e2f-7e88-4e07-9a5a-ed840a4be142"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    it.name AS itemname,\r\n    h.value AS value,\r\n    DATE_FORMAT(FROM_UNIXTIME(h.clock), '%d-%m-%Y %H:%i:%s') AS \"Timestamp\"\r\nFROM \r\n    items it\r\n    JOIN history h ON h.itemid = it.itemid\r\n    JOIN hosts ht ON ht.hostid = it.hostid  -- Junta a tabela hosts para filtrar o grupo\r\nWHERE \r\n    (it.name LIKE '%ONT - Signal Rx%')\r\n    AND h.value LIKE '-%'  -- Filtra valores negativos\r\n    AND h.value BETWEEN -40 AND -7  -- Filtra valores entre -40 e -7\r\n    AND ht.name LIKE '%OLT_X15_NOVA_LIMA%'  -- Filtra pelo grupo OLT_X7_UNIAO\r\n    AND h.clock = (\r\n        SELECT MAX(clock) \r\n        FROM history \r\n        WHERE itemid = it.itemid\r\n    )  -- Garante o valor mais recente para cada item\r\nORDER BY \r\n    h.value DESC;  -- Ordena de forma decrescente, trazendo os piores valores (mais negativos) primeiro\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "itemname": "Pon"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 1,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 13,
+        "x": 0,
+        "y": 34
+      },
+      "id": 28,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.1.4",
+      "targets": [
+        {
+          "application": {
+            "filter": "ONUs ON"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Application: ONUs ON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Historico de ONUs Onlines",
+      "transformations": [],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "Bps"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 11,
+        "x": 13,
+        "y": 34
+      },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.1.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:2102",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: I/",
+                "I"
+              ],
+              "text": "replaceAlias(/$host: I/, I)"
+            }
+          ],
+          "group": {
+            "filter": "OLT"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*GPON/"
+          },
+          "itemTag": {
+            "filter": "Application: Network Interfaces"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Tráfego por Porta PON",
+      "transformations": [],
+      "transparent": true,
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "OLT_X15_NOVA_LIMA",
+          "value": "OLT_X15_NOVA_LIMA"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+        },
+        "definition": "Zabbix - host",
+        "hide": 2,
+        "includeAll": false,
+        "label": "OLT",
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/OLT/",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "/OLT_X15_NOVA_LIMA/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DASHBOARD _OLT_X15_NOVA_LIMA",
+  "uid": "a9a343a4-7b49-4424-bbed-b4661059d3b1",
+  "version": 6,
+  "weekStart": ""
+}
