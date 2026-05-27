@@ -1,0 +1,1138 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 82,
+  "links": [],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 417,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<link\r\n    href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap\"\r\n    rel=\"stylesheet\">\r\n\r\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\r\n\r\n<style>\r\n    /* --- 1. CONFIGURAÇÃO DO FUNDO DO DASHBOARD (IMPORTANTE) --- */\r\n    :root {\r\n        //--dashboard-bg-color: #282A36;\r\n    }\r\n\r\n    .dashboard-row__title {\r\n        color: white !important;\r\n    }\r\n\r\n\r\n\r\n    /* Força o background no corpo do Grafana para sumir com o cinza padrão */\r\n    html,\r\n    body {\r\n        /* background: #0A253E; AZUL*/\r\n\r\n\r\n        /* background-image: radial-gradient(circle, #3a3f44 0%, #000000 90%) !important;\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    font-family: 'Roboto', sans-serif; */\r\n\r\n\r\n        background-image: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Crect fill='%23010d05' width='540' height='450'/%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(21,930,463)'%3E%3Cstop offset='0' stop-color='%23011102'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='433' height='360.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.02'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E\") !important;\r\n        background-size: cover;\r\n        background-repeat: no-repeat;\r\n        background-position: center;\r\n        background-attachment: fixed;\r\n    }\r\n\r\n    /* --- 2. HEADER CONTAINER --- */\r\n    .header-container {\r\n        background-color: rgba(0, 0, 0, 0.2);\r\n        //background-image: #1e1e38 !important;\r\n        color: #ffffff;\r\n        width: 100%;\r\n        height: 100%;\r\n        padding: 1.5rem;\r\n        box-sizing: border-box;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: space-between;\r\n        border-radius: 1.5rem;\r\n        //border: 1px solid rgba(255, 255, 255, 0.05);\r\n        border: 1px solid rgba(204, 204, 220, 0.12);\r\n        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */\r\n    }\r\n\r\n    /* --- 3. SOBRESCRITAS GLOBAIS DO GRAFANA (DO SEU EXEMPLO) --- */\r\n    /* Aplica sombra e bordas arredondadas em TODOS os painéis do dashboard */\r\n    .css-itdw1b-panel-container,\r\n    .css-1ijfwvk-panel-container,\r\n    .css-7mshyc-panel-container,\r\n    .css-2qng6u-panel-container,\r\n    .css-18yh62t-panel-container {\r\n        background: rgba(0, 0, 0, 0.2);\r\n        /* Fundo dos painéis */\r\n        border-radius: 1.5rem;\r\n        //  border: 1px solid rgba(255, 255, 255, 0.05);\r\n        border: 1px solid rgba(204, 204, 220, 0.12);\r\n\r\n    }\r\n\r\n    .css-1978mzo-canvas-content {\r\n        //background: #1e1e38;\r\n        /* Fundo dos painéis */\r\n    }\r\n\r\n    /* Seção da Esquerda (Logo) */\r\n    .header-left {\r\n        flex: 1;\r\n        display: flex;\r\n        justify-content: flex-start;\r\n    }\r\n\r\n    .logo {\r\n        height: 100px;\r\n        width: auto;\r\n        display: block;\r\n    }\r\n\r\n    /* Seção Central (Títulos) */\r\n    .header-center {\r\n        flex: 2;\r\n        text-align: center;\r\n        padding: 0 20px;\r\n    }\r\n\r\n    .title {\r\n        font-size: 2.5rem;\r\n        font-weight: bold;\r\n        /* Mais negrito */\r\n        margin: 0;\r\n        color: #FFFFFF;\r\n        text-transform: uppercase;\r\n        letter-spacing: 1px;\r\n    }\r\n\r\n    .subtitle {\r\n        font-size: 0.8rem;\r\n        font-weight: 400;\r\n        margin: 6px 0 0 0;\r\n        color: #FFF;\r\n        opacity: 0.8;\r\n        letter-spacing: 0.5px;\r\n        text-transform: uppercase;\r\n    }\r\n\r\n    /* Seção da Direita (Relógio) */\r\n    .header-right {\r\n        flex: 1;\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        align-items: center;\r\n        gap: 24px;\r\n    }\r\n\r\n    /* --- ALTERAÇÃO AQUI: ADICIONADO BACKGROUND AO RELÓGIO --- */\r\n    #clock {\r\n        font-family: 'Roboto Mono', monospace;\r\n        font-size: 2.5rem;\r\n        font-weight: 500;\r\n        color: #e0e0e0;\r\n\r\n        /* Novo estilo de background */\r\n        background-color: rgba(0, 0, 0, 0.2);\r\n        padding: 8px 16px;\r\n        border-radius: 2rem;\r\n        border: 1px solid rgba(204, 204, 220, 0.12);\r\n    }\r\n\r\n    /* --- CLASSES EXTRAS DO SEU EXEMPLO (MANTIDAS) --- */\r\n    .css-18o2w4z {\r\n        font-size: 10rem;\r\n        color: white;\r\n    }\r\n\r\n    .flot-temp-elem {\r\n        color: white !important;\r\n        font-family: 'Roboto Mono', monospace;\r\n        font-weight: 400 !important;\r\n    }\r\n\r\n    .css-t12fgu {\r\n        color: rgba(255, 255, 255, 1);\r\n        font-family: 'Roboto Mono', monospace;\r\n        font-size: 1rem;\r\n    }\r\n\r\n    /* Tabelas */\r\n    .ReactTable .rt-thead .rt-resizable-header-content {\r\n        color: white;\r\n        font-size: 1rem;\r\n        text-transform: uppercase;\r\n        font-weight: 700;\r\n    }\r\n\r\n    .ReactTable .rt-tr {\r\n        color: #ddd;\r\n        font-size: 1rem;\r\n    }\r\n\r\n    .css-1kfgvg7-thead {\r\n        background: linear-gradient(180deg, #0094FF 0%, #005BB5 100%);\r\n        padding: 0;\r\n        border-radius: 1rem 1rem 0 0;\r\n    }\r\n\r\n\r\n    .css-131hug8 label,\r\n    .css-m0z7c1 label {\r\n        background: rgba(0, 0, 0, 0.2) !important;\r\n        border-radius: 1.5rem;\r\n        color: white !important;\r\n        font-family: 'Roboto', sans-serif !important;\r\n        text-transform: uppercase;\r\n        border: 1px solid rgba(204, 204, 220, 0.12);\r\n\r\n    }\r\n\r\n\r\n    .css-rebjtg-input-wrapper,\r\n    .css-1nmqu8c-input-wrapper {\r\n        background: rgba(0, 0, 0, 0.2) !important;\r\n        border-radius: 1.5rem !important;\r\n        color: white !important;\r\n        font-family: 'Roboto', sans-serif !important;\r\n\r\n    }\r\n\r\n    .css-uflqqj-grafana-select-multi-value-container {\r\n        background: rgba(0, 0, 0, 0.2);\r\n        border: 1px solid rgba(204, 204, 220, 0.12);\r\n        color: white;\r\n        border-radius: 1rem !important;\r\n        font-weight: bold;\r\n    }\r\n\r\n    .css-8nwx1l-singleValue {\r\n        background: rgba(0, 0, 0, 0.2) !important;\r\n        border-radius: 0.8rem !important;\r\n        color: white !important;\r\n        font-family: 'Roboto', sans-serif !important;\r\n    }\r\n    }\r\n</style>\r\n\r\n<div class=\"header-container\">\r\n    <div class=\"header-left\">\r\n        <img src=\"https://storage.googleapis.com/flowbix-img/TimeGrafana/Freeway%20logo2.png\" alt=\"Flowbix Logo\" class=\"logo\">\r\n    </div>\r\n    <div class=\"header-center\">\r\n        <h1 class=\"title\">SWITCHES CAMPO GRANDE\r\n        </h1>\r\n        <p class=\"subtitle\">MONITORAMENTO DE LATÊNCIA INTERNA</p>\r\n    </div>\r\n    <div class=\"header-right\">\r\n        <div id=\"clock\">--:--:--</div>\r\n    </div>\r\n</div>\r\n\r\n<script>\r\n    // --- Lógica do Relógio ---\r\n    if (!window.grafanaHeaderClock) {\r\n        function updateClock() {\r\n            const clockElement = document.getElementById('clock');\r\n            if (clockElement) {\r\n                const now = new Date();\r\n                const hours = String(now.getHours()).padStart(2, '0');\r\n                const minutes = String(now.getMinutes()).padStart(2, '0');\r\n                const seconds = String(now.getSeconds()).padStart(2, '0');\r\n                clockElement.textContent = `${hours}:${minutes}:${seconds}`;\r\n            }\r\n        }\r\n        window.grafanaHeaderClock = setInterval(updateClock, 1000);\r\n        updateClock();\r\n    }\r\n</script>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.5.7",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "af6036ntdc740c"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "thresholdsStyle": {
+              "mode": "color",
+              "thresholds": []
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 323,
+      "options": {
+        "alertCustomMessage": "",
+        "alwaysVisibleFilter": false,
+        "autoScroll": false,
+        "browserTabNamePattern": "",
+        "collapsedByDefault": false,
+        "customValue": false,
+        "displayMode": "minimize",
+        "emptyValue": false,
+        "favorites": {
+          "enabled": false,
+          "storage": "browser"
+        },
+        "filter": false,
+        "groupSelection": false,
+        "header": true,
+        "isMinimizeForTable": false,
+        "isMinimizeViewShowCustomIcon": false,
+        "isPinTabsEnabled": false,
+        "isUseLocalTime": false,
+        "minimizeOutputFormat": "text",
+        "minimizeViewCustomIcon": "",
+        "minimizeViewNativeIcon": "gf-movepane-right",
+        "padding": 20,
+        "persistent": false,
+        "requestLatency": "low",
+        "saveSelectedGroup": false,
+        "saveSelectedGroupKey": "",
+        "selectedValues": {
+          "maxCount": 0,
+          "showSelected": false
+        },
+        "showGroupTotal": false,
+        "showLabel": true,
+        "showName": false,
+        "showResetButton": false,
+        "showTotal": false,
+        "statusSort": false,
+        "sticky": false,
+        "tableViewPosition": "normal",
+        "tabsInOrder": true,
+        "toolbarMode": "tabs",
+        "variable": "GRUPO",
+        "wordBreak": "normal"
+      },
+      "pluginVersion": "5.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "af6036ntdc740c"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "volkovlabs-variable-panel"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "id": 418,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<!DOCTYPE html>\r\n<html lang=\"pt-br\">\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Flowbix Banner</title>\r\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\r\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\r\n  <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\r\n  <style>\r\n    .container-banner-unique {\r\n      height: 100%;\r\n    }\r\n\r\n    .content-wrapper-banner-unique {\r\n      width: 100%;\r\n      margin: 0;\r\n    }\r\n\r\n    .background-banner-unique {\r\n      height: 100%;\r\n      margin: 0;\r\n    }\r\n\r\n    .input-wrapper-banner-unique {\r\n      background: rgba(0, 0, 0, 0.2);\r\n      width: 100%;\r\n      height: 100%;\r\n      border: 0;\r\n      color: #FFFFFF;\r\n    }\r\n\r\n    .main-container-banner-unique {\r\n      background: rgba(0, 0, 0, 0.1);\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      height: 100%;\r\n      position: relative;\r\n      border-radius: 5rem;\r\n      border: 1px solid rgba(204, 204, 220, 0.12);\r\n    }\r\n\r\n    .content-main-banner-unique {\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 1rem;\r\n      color: #FFFFFF;\r\n      font-weight: 400;\r\n      font-size: 1.5rem;\r\n      text-transform: uppercase;\r\n    }\r\n\r\n    .logo-banner-unique {\r\n      height: 4rem;\r\n      width: auto;\r\n    }\r\n\r\n    .text-banner-unique {\r\n      font-size: 2rem;\r\n      color: #FFFFFF;\r\n      text-align: center;\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 0.5rem;\r\n      font-family: Inter, Helvetica, Arial, sans-serif;\r\n      font-weight: bold;\r\n    }\r\n\r\n    .divider-text-unique {\r\n      color: #FFFFFF;\r\n      font-size: 2rem;\r\n    }\r\n\r\n    .icon-security-unique {\r\n      width: 2rem;\r\n      height: auto;\r\n    }\r\n  </style>\r\n</head>\r\n\r\n<body>\r\n  <!-- Estrutura do banner -->\r\n  <div class=\"main-container-banner-unique\">\r\n    <div class=\"content-main-banner-unique\">\r\n      <span class=\"text-banner-unique\">LATÊNCIA GERAL\r\n\r\n        <!-- Ícone de segurança embutido ao lado do texto -->\r\n        <!-- <img src=\"https://img.icons8.com/?size=100&id=2963&format=png&color=FFFFFF\" alt=\"Security Icon\" class=\"icon-security-unique\"> -->\r\n      </span>\r\n    </div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.5.7",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "af6036ntdc740c"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 425,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".problems-dashboard-container {\n  background-color: rgba(0, 0, 0, 0.2);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 8px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 12px;\n  box-sizing: border-box;\n  font-family: 'Inter', sans-serif;\n  overflow: hidden;\n}\n\n.header-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 12px;\n  flex-shrink: 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.05);\n  padding-bottom: 10px;\n}\n\n.panel-title {\n  color: #ffffff;\n  font-size: 14px;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n/* KPI CARDS */\n.kpi-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  /* 3 cards: Total, UP, DOWN */\n  gap: 10px;\n  width: 100%;\n  flex-shrink: 0;\n  margin-bottom: 12px;\n}\n\n.problem-card {\n  background: rgba(0, 0, 0, 0.2);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 6px;\n  padding: 12px 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  transition: all 0.25s ease;\n  width: 100%;\n  box-sizing: border-box;\n  cursor: pointer;\n  user-select: none;\n}\n\n.problem-card:hover {\n  background: rgba(255, 255, 255, 0.05);\n  transform: translateY(-2px);\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);\n}\n\n.problem-card.inactive-filter {\n  opacity: 0.35;\n  transform: scale(0.97);\n  border-color: rgba(255, 255, 255, 0.03) !important;\n  background: rgba(0, 0, 0, 0.1);\n}\n\n.problem-card.inactive-filter:hover {\n  opacity: 0.6;\n  transform: scale(0.98);\n}\n\n.card-title,\n.card-value {\n  color: #ffffff;\n  transition: opacity 0.3s ease;\n}\n\n.card-title {\n  font-size: 10px;\n  font-weight: 700;\n  text-transform: uppercase;\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n\n.card-value {\n  font-size: 26px;\n  font-weight: 800;\n  line-height: 1;\n}\n\n/* TABLE WRAPPER & SCROLLBAR */\n.table-wrapper {\n  flex: 1;\n  width: 100%;\n  overflow-y: auto;\n  border: 1px solid rgba(255, 255, 255, 0.05);\n  border-radius: 6px;\n  background: rgba(0, 0, 0, 0.15);\n}\n\n.table-wrapper::-webkit-scrollbar {\n  width: 6px;\n}\n\n.table-wrapper::-webkit-scrollbar-track {\n  background: rgba(0, 0, 0, 0.1);\n}\n\n.table-wrapper::-webkit-scrollbar-thumb {\n  background: #ffffff;\n  border-radius: 10px;\n}\n\n.table-wrapper::-webkit-scrollbar-thumb:hover {\n  background: #e0e0e0;\n}\n\n.premium-table {\n  width: 100%;\n  border-collapse: collapse;\n}\n\n.premium-table th {\n  position: relative;\n  background: transparent;\n  color: #ffffff;\n  font-size: 10px;\n  font-weight: 700;\n  text-transform: uppercase;\n  padding: 10px 8px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  text-align: center;\n  cursor: pointer;\n  transition: background 0.2s ease;\n  user-select: none;\n}\n\n.premium-table th:hover {\n  background: rgba(255, 255, 255, 0.08);\n}\n\n.sort-icon {\n  margin-left: 5px;\n  opacity: 0.3;\n  transition: all 0.2s ease;\n}\n\n.premium-table th.active-sort .sort-icon {\n  opacity: 1;\n  color: #ffffff;\n}\n\n.premium-table td {\n  padding: 10px 8px;\n  font-size: 11px;\n  font-weight: 600;\n  color: #ffffff;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.03);\n  vertical-align: middle;\n  text-align: center;\n  word-break: break-word;\n}\n\n.premium-table tr:hover td {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n\n/* STATUS BADGES (UP/DOWN) */\n.sev-badge {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 4px 12px;\n  border-radius: 2rem;\n  font-size: 9px;\n  font-weight: 800;\n  text-transform: uppercase;\n  min-width: 70px;\n  color: #ffffff;\n}\n\n.status-up {\n  background: rgba(115, 191, 105, 0.3);\n  border: 1px solid #73BF69;\n}\n\n.status-down {\n  background: rgba(224, 47, 68, 0.4);\n  border: 1px solid #E02F44;\n}\n\n/* PAGINAÇÃO CENTRALIZADA */\n.pagination-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 20px;\n  padding-top: 10px;\n  flex-shrink: 0;\n}\n\n.page-btn {\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.15);\n  color: #ffffff;\n  padding: 6px 14px;\n  border-radius: 4px;\n  cursor: pointer;\n  font-size: 11px;\n  font-weight: 700;\n  transition: all 0.2s ease;\n}\n\n.page-btn:hover:not(:disabled) {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.3);\n}\n\n.page-btn:disabled {\n  opacity: 0.3;\n  cursor: not-allowed;\n}\n\n.page-info {\n  color: #ffffff;\n  font-size: 11px;\n  font-weight: 700;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n\n<div class=\"problems-dashboard-container\">\n  <!-- HEADER -->\n  <div class=\"header-container\">\n    <div class=\"panel-title\">ICMP PING STATUS</div>\n  </div>\n\n  <!-- KPI CARDS GRID -->\n  <div id=\"icmp-kpi\" class=\"kpi-grid\"></div>\n\n  <!-- TABELA DE HOSTS -->\n  <div class=\"table-wrapper\">\n    <table class=\"premium-table\">\n      <thead>\n        <tr>\n          <th data-sort=\"name\" style=\"width: 70%; text-align: left; padding-left: 20px;\">HOST\n            <i class=\"fas fa-sort sort-icon\"></i></th>\n          <th data-sort=\"status\" class=\"active-sort\" style=\"width: 30%;\">STATUS <i class=\"fas fa-sort-up sort-icon\"></i>\n          </th>\n        </tr>\n      </thead>\n      <tbody id=\"icmp-tbody\">\n        <!-- Renderizado via JS -->\n      </tbody>\n    </table>\n  </div>\n\n  <!-- CONTROLES DE PAGINAÇÃO -->\n  <div id=\"pagination-controls\" class=\"pagination-container\"></div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const kpiContainer = htmlNode.querySelector(\"#icmp-kpi\");\nconst tbody = htmlNode.querySelector(\"#icmp-tbody\");\nconst paginationContainer = htmlNode.querySelector(\"#pagination-controls\");\nconst tableHeaders = htmlNode.querySelectorAll(\"th[data-sort]\");\n\nlet hostsList = [];\n\n// Configurações de Estado\nlet currentPage = 1;\nconst itemsPerPage = 15;\nlet currentFilter = 'all'; // Pode ser 'all', 1 (UP) ou 0 (DOWN)\nlet currentSort = { column: 'status', dir: 'asc' }; // Padrão: DOWN primeiro (0 vem antes de 1)\n\n// 1. EXTRAÇÃO DE DADOS (Baseado na tabela Field x Last *)\nif (data && data.series && data.series.length > 0) {\n  const fields = data.series[0].fields;\n\n  // Procura a coluna de nomes e a coluna de valores\n  const nameField = fields.find(f => f.type === 'string' || f.name === 'Field');\n  const valueField = fields.find(f => f.type === 'number');\n\n  if (nameField && valueField && nameField.values && valueField.values) {\n    let names = nameField.values.toArray ? nameField.values.toArray() : nameField.values;\n    let values = valueField.values.toArray ? valueField.values.toArray() : valueField.values;\n\n    for (let i = 0; i < names.length; i++) {\n      let rawName = names[i] || \"Desconhecido\";\n      let val = parseFloat(values[i]);\n\n      // Limpa a string removendo \": ICMP ping\" para deixar a tabela mais limpa\n      let cleanName = rawName.replace(/:?\\s*ICMP ping/i, '').trim();\n\n      hostsList.push({\n        name: cleanName,\n        status: (val === 1) ? 1 : 0 // 1 = UP, 0 = DOWN\n      });\n    }\n  }\n}\n\n// LÓGICA DE ORDENAÇÃO\nfunction sortHosts() {\n  hostsList.sort((a, b) => {\n    if (currentSort.column === 'default' || currentSort.dir === 'none') {\n      // Padrão: Mostra os DOWN (0) primeiro, e desempata por nome\n      if (a.status !== b.status) return a.status - b.status;\n      return a.name.localeCompare(b.name);\n    }\n\n    let valA = a[currentSort.column];\n    let valB = b[currentSort.column];\n\n    if (currentSort.column === 'name') {\n      valA = valA.toLowerCase();\n      valB = valB.toLowerCase();\n    }\n\n    if (valA < valB) return currentSort.dir === 'asc' ? -1 : 1;\n    if (valA > valB) return currentSort.dir === 'asc' ? 1 : -1;\n\n    // Desempate por nome\n    return a.name.localeCompare(b.name);\n  });\n}\n\n// EVENTOS THEAD\ntableHeaders.forEach(th => {\n  th.addEventListener('click', () => {\n    const clickedCol = th.getAttribute('data-sort');\n    const isTextCol = (clickedCol === 'name');\n    const defaultFirstDir = isTextCol ? 'asc' : 'asc'; // Para status, ASC mostra DOWN(0) primeiro.\n\n    if (currentSort.column === clickedCol) {\n      if (currentSort.dir === defaultFirstDir) {\n        currentSort.dir = defaultFirstDir === 'asc' ? 'desc' : 'asc';\n      } else {\n        currentSort.column = 'default';\n        currentSort.dir = 'none';\n      }\n    } else {\n      currentSort.column = clickedCol;\n      currentSort.dir = defaultFirstDir;\n    }\n\n    tableHeaders.forEach(el => {\n      el.classList.remove('active-sort');\n      el.querySelector('.sort-icon').className = 'fas fa-sort sort-icon';\n    });\n\n    if (currentSort.column !== 'default') {\n      th.classList.add('active-sort');\n      const iconClass = currentSort.dir === 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down';\n      th.querySelector('.sort-icon').className = `${iconClass} sort-icon`;\n    }\n\n    currentPage = 1;\n    sortHosts();\n    renderTable();\n  });\n});\n\n// RENDERIZAÇÃO CARDS\nfunction renderKPIs() {\n  let countTotal = hostsList.length;\n  let countUp = hostsList.filter(h => h.status === 1).length;\n  let countDown = hostsList.filter(h => h.status === 0).length;\n\n  const getInactiveClass = (filterVal) => (currentFilter !== 'all' && currentFilter !== filterVal) ? 'inactive-filter' : '';\n\n  let html = `\n    <!-- TOTAL -->\n    <div class=\"problem-card ${getInactiveClass('all')}\" data-filter=\"all\">\n      <div class=\"card-title\">TOTAL HOSTS</div>\n      <div class=\"card-value\">${countTotal}</div>\n    </div>\n    \n    <!-- UP -->\n    <div class=\"problem-card ${getInactiveClass(1)}\" data-filter=\"1\" style=\"border-bottom: 3px solid #73BF69;\">\n      <div class=\"card-title\"><i class=\"fas fa-arrow-up\" style=\"color:#73BF69\"></i> ONLINE</div>\n      <div class=\"card-value\">${countUp}</div>\n    </div>\n\n    <!-- DOWN -->\n    <div class=\"problem-card ${getInactiveClass(0)}\" data-filter=\"0\" style=\"border-bottom: 3px solid #E02F44;\">\n      <div class=\"card-title\"><i class=\"fas fa-arrow-down\" style=\"color:#E02F44\"></i> OFFLINE</div>\n      <div class=\"card-value\">${countDown}</div>\n    </div>\n  `;\n\n  kpiContainer.innerHTML = html;\n\n  const generatedCards = kpiContainer.querySelectorAll('.problem-card');\n  generatedCards.forEach(card => {\n    card.addEventListener('click', () => {\n      let filterVal = card.getAttribute('data-filter');\n      if (filterVal !== 'all') filterVal = parseInt(filterVal);\n\n      if (currentFilter === filterVal) { currentFilter = 'all'; }\n      else { currentFilter = filterVal; }\n\n      currentPage = 1;\n      renderKPIs();\n      renderTable();\n    });\n  });\n}\n\n// RENDERIZAÇÃO TABELA\nfunction renderTable() {\n  let filteredList = hostsList;\n  if (currentFilter !== 'all') {\n    filteredList = hostsList.filter(h => h.status === currentFilter);\n  }\n\n  if (filteredList.length === 0) {\n    tbody.innerHTML = '<tr><td colspan=\"2\" style=\"text-align:center; padding: 40px; color: #ffffff;\">Nenhum host encontrado para este filtro.</td></tr>';\n    paginationContainer.innerHTML = '';\n    return;\n  }\n\n  const totalPages = Math.ceil(filteredList.length / itemsPerPage);\n  if (currentPage > totalPages) currentPage = totalPages;\n  if (currentPage < 1) currentPage = 1;\n\n  const startIdx = (currentPage - 1) * itemsPerPage;\n  const paginatedList = filteredList.slice(startIdx, startIdx + itemsPerPage);\n\n  let tableHtml = '';\n\n  paginatedList.forEach(h => {\n    let isUp = h.status === 1;\n    let statusClass = isUp ? \"status-up\" : \"status-down\";\n    let statusText = isUp ? \"UP\" : \"DOWN\";\n\n    tableHtml += `\n      <tr>\n        <td style=\"text-align: left; padding-left: 20px;\">${h.name}</td>\n        <td><span class=\"sev-badge ${statusClass}\">${statusText}</span></td>\n      </tr>\n    `;\n  });\n\n  tbody.innerHTML = tableHtml;\n\n  paginationContainer.innerHTML = `\n    <button class=\"page-btn\" id=\"btn-prev\" ${currentPage === 1 ? 'disabled' : ''}>\n      <i class=\"fas fa-chevron-left\"></i> Previous\n    </button>\n    <div class=\"page-info\">Page ${currentPage} of ${totalPages}</div>\n    <button class=\"page-btn\" id=\"btn-next\" ${currentPage === totalPages ? 'disabled' : ''}>\n      Next <i class=\"fas fa-chevron-right\"></i>\n    </button>\n  `;\n\n  const btnPrev = htmlNode.querySelector(\"#btn-prev\");\n  const btnNext = htmlNode.querySelector(\"#btn-next\");\n\n  if (btnPrev) btnPrev.addEventListener('click', () => { currentPage--; renderTable(); });\n  if (btnNext) btnNext.addEventListener('click', () => { currentPage++; renderTable(); });\n}\n\n// INICIALIZAÇÃO\ntableHeaders.forEach(el => {\n  el.classList.remove('active-sort');\n  el.querySelector('.sort-icon').className = 'fas fa-sort sort-icon';\n});\n\nsortHosts();\nrenderKPIs();\nrenderTable();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$GRUPO"
+          },
+          "host": {
+            "filter": "$HOST"
+          },
+          "hostTags": [],
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "severities": [
+              5
+            ],
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "af6036ntdc740c"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 60
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byValue",
+              "options": {
+                "op": "gte",
+                "reducer": "lastNotNull",
+                "value": 50
+              }
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "shades"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 22,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 165,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".latency-dashboard-container {\n  background-color: rgba(0, 0, 0, 0.2);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 8px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 8px;\n  box-sizing: border-box;\n  font-family: 'Inter', sans-serif;\n  overflow: hidden;\n}\n\n.header-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 8px;\n  flex-shrink: 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.05);\n  padding-bottom: 6px;\n}\n\n.table-title {\n  color: #ffffff;\n  font-size: 12px;\n  font-weight: 700;\n  text-transform: uppercase;\n}\n\n/* GRID FLEXÍVEL 100% */\n.cards-grid {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  /* 5 colunas iguais */\n  grid-auto-rows: 1fr;\n  /* Força as linhas a dividirem a altura disponível igualmente */\n  gap: 8px;\n  width: 100%;\n  flex: 1;\n  /* Ocupa todo o espaço vertical livre do painel */\n  overflow: hidden;\n}\n\n/* CARD PADRÃO PREMIUM (100% Width/Height) */\n.latency-card {\n  background: rgba(0, 0, 0, 0.2);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  /* Borda padrão, sem cores */\n  border-radius: 6px;\n  padding: 8px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  transition: all 0.25s ease;\n  box-sizing: border-box;\n  width: 100%;\n  /* Estica na horizontal */\n  height: 100%;\n  /* Estica na vertical */\n}\n\n.latency-card:hover {\n  background: rgba(255, 255, 255, 0.05);\n  transform: translateY(-2px);\n  border-color: rgba(255, 255, 255, 0.2);\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);\n}\n\n.host-name {\n  font-size: 10px;\n  font-weight: 600;\n  color: #ffffff;\n  text-transform: uppercase;\n  text-align: center;\n  word-break: break-all;\n  line-height: 1.2;\n}\n\n.latency-value {\n  font-size: 22px;\n  font-weight: 800;\n  color: #ffffff;\n  display: flex;\n  align-items: baseline;\n  gap: 3px;\n}\n\n.ms-unit {\n  font-size: 10px;\n  font-weight: 700;\n  color: #ffffff;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n\n<div class=\"latency-dashboard-container\">\n  <div class=\"header-container\">\n    <div class=\"table-title\">TOP 10 PIORES LATÊNCIAS</div>\n  </div>\n\n  <div id=\"latency-cards\" class=\"cards-grid\"></div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const cardsContainer = htmlNode.querySelector(\"#latency-cards\");\n\nlet metrics = [];\n\n// Limpa o nome (ex: \"IA74_PKS... : ICMP response time\" -> \"IA74_PKS...\")\nfunction cleanName(rawName) {\n  if (!rawName) return \"Desconhecido\";\n  return rawName.split(':')[0].trim();\n}\n\n// 1. LEITURA DOS DADOS (Padrão Reduce do Grafana)\nif (data && data.series && data.series.length > 0) {\n  const fields = data.series[0].fields;\n  const nameField = fields.find(f => f.type === 'string'); // Coluna dos Nomes\n  const valueField = fields.find(f => f.type === 'number'); // Coluna dos Valores (Last *)\n\n  if (nameField && valueField) {\n    for (let i = 0; i < nameField.values.length; i++) {\n      let rawVal = parseFloat(valueField.values[i]);\n\n      // Converte segundos para milissegundos\n      let valMs = isNaN(rawVal) ? 0 : rawVal * 1000;\n\n      if (valMs > 0) {\n        metrics.push({\n          name: cleanName(nameField.values[i]),\n          last: valMs\n        });\n      }\n    }\n  }\n}\n\n// 2. ORDENA E PEGA O TOP 10\nmetrics.sort((a, b) => b.last - a.last);\nconst top10 = metrics.slice(0, 10);\n\n// 3. RENDERIZA OS CARDS\nfunction renderCards() {\n  if (top10.length === 0) {\n    cardsContainer.innerHTML = '<div style=\"color:#ffffff; grid-column: 1/-1; text-align:center; padding-top: 20px;\">Nenhum dado de latência encontrado.</div>';\n    return;\n  }\n\n  let cardsHtml = '';\n  top10.forEach((item) => {\n    // Card limpo, sem estilo inline de borda colorida\n    cardsHtml += `\n      <div class=\"latency-card\">\n        <span class=\"host-name\">${item.name}</span>\n        <div class=\"latency-value\">\n          ${item.last.toFixed(2)} <span class=\"ms-unit\">ms</span>\n        </div>\n      </div>\n    `;\n  });\n\n  cardsContainer.innerHTML = cardsHtml;\n}\n\nrenderCards();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "af6036ntdc740c"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:128",
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: ICMP: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/: ICMP: ICMP response time/,  )"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: Mikrotik: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "$$hashKey": "object:130",
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: Generic SNMP: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/: Generic SNMP: ICMP response time/,  )"
+            }
+          ],
+          "group": {
+            "filter": "$GRUPO"
+          },
+          "host": {
+            "filter": "$HOST"
+          },
+          "item": {
+            "filter": "/ICMP response/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "af6036ntdc740c"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 422,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "af6036ntdc740c"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:128",
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: ICMP: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/: ICMP: ICMP response time/,  )"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: Mikrotik: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "$$hashKey": "object:130",
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/: Generic SNMP: ICMP response time/",
+                " "
+              ],
+              "text": "replaceAlias(/: Generic SNMP: ICMP response time/,  )"
+            }
+          ],
+          "group": {
+            "filter": "$GRUPO"
+          },
+          "host": {
+            "filter": "$HOST"
+          },
+          "item": {
+            "filter": "/ICMP response/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 30
+      },
+      "id": 322,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<!DOCTYPE html>\r\n<html lang=\"pt-br\">\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Flowbix Banner</title>\r\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\r\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\r\n  <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\r\n  <style>\r\n    .container-banner-unique {\r\n      height: 100%;\r\n    }\r\n\r\n    .content-wrapper-banner-unique {\r\n      width: 100%;\r\n      margin: 0;\r\n    }\r\n\r\n    .background-banner-unique {\r\n      height: 100%;\r\n      margin: 0;\r\n    }\r\n\r\n    .input-wrapper-banner-unique {\r\n      background: rgba(0, 0, 0, 0.2);\r\n      width: 100%;\r\n      height: 100%;\r\n      border: 0;\r\n      color: #FFFFFF;\r\n    }\r\n\r\n    .main-container-banner-unique {\r\n      background: rgba(0, 0, 0, 0.1);\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      height: 100%;\r\n      position: relative;\r\n      border-radius: 5rem;\r\n      border: 1px solid rgba(204, 204, 220, 0.12);\r\n    }\r\n\r\n    .content-main-banner-unique {\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 0.5rem;\r\n      color: #FFFFFF;\r\n      font-weight: 400;\r\n      font-size: 1.5rem;\r\n      text-transform: uppercase;\r\n    }\r\n\r\n    .logo-banner-unique {\r\n      height: 4rem;\r\n      width: auto;\r\n    }\r\n\r\n    .text-banner-unique {\r\n      font-size: 2rem;\r\n      color: #FFFFFF;\r\n      text-align: center;\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 0.5rem;\r\n      font-family: Inter, Helvetica, Arial, sans-serif;\r\n      font-weight: bold;\r\n    }\r\n\r\n    /* Correção do text-divider */\r\n    .text-divider {\r\n      font-size: 1rem;\r\n      /* Tamanho ajustável */\r\n      color: #FFFFFF;\r\n    }\r\n\r\n    .icon-security-unique {\r\n      width: 2rem;\r\n      height: auto;\r\n    }\r\n  </style>\r\n</head>\r\n\r\n<body>\r\n  <!-- Estrutura do banner -->\r\n  <div class=\"main-container-banner-unique\">\r\n    <div class=\"content-main-banner-unique\">\r\n      <span class=\"text-banner-unique\">LATÊNCIA</span>\r\n      <span class=\"text-divider\"> | </span>\r\n      <span class=\"text-banner-unique\">Stats</span>\r\n      <img src=\"https://img.icons8.com/?size=100&id=X8t9nq1Y9xhF&format=png&color=FFFFFF\" alt=\"Security Icon\" class=\"icon-security-unique\">\r\n    </div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.5.7",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "id": 413,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<!DOCTYPE html>\r\n<html lang=\"pt-br\">\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Flowbix Legend</title>\r\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\r\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\r\n  <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\r\n  <style>\r\n    /* Container da Legenda */\r\n    .flowbix-legend-container {\r\n      background: rgba(0, 0, 0, 0.2);\r\n      width: 100%;\r\n      height: 100%;\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      width: auto;\r\n      padding: 0.8rem 1.5rem;\r\n      border-radius: 5rem;\r\n      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);\r\n      text-align: center;\r\n      border: 1px solid rgba(204, 204, 220, 0.12);\r\n      gap: 1.5rem;\r\n    }\r\n\r\n    /* Itens da legenda */\r\n    .legend-item {\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 0.5rem;\r\n      font-size: 1.3rem;\r\n      color: #FFFFFF;\r\n    }\r\n\r\n    /* Círculos coloridos para diferenciar */\r\n    .legend-circle {\r\n      width: 1rem;\r\n      height: 1rem;\r\n      border-radius: 50%;\r\n    }\r\n\r\n    .color-microseg {\r\n      background: orange;\r\n    }\r\n\r\n    .color-milisseg {\r\n      background: #00E96A;\r\n    }\r\n  </style>\r\n</head>\r\n\r\n<body>\r\n  <!-- Legenda compacta -->\r\n  <div class=\"flowbix-legend-container\">\r\n    <div class=\"legend-item\">\r\n      <span class=\"legend-circle color-microseg\"></span> µs = Microsegundos\r\n    </div>\r\n    <div class=\"legend-item\">\r\n      <span class=\"legend-circle color-milisseg\"></span> ms = Milissegundos\r\n    </div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.5.7",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "af6036ntdc740c"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "$HOST",
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "#ff001e",
+                  "index": 1,
+                  "text": "OFF"
+                }
+              },
+              "type": "value"
+            },
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "#ffffff",
+                  "index": 0,
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#00e96a"
+              },
+              {
+                "color": "#ff001e",
+                "value": 20
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 2,
+      "maxDataPoints": 100,
+      "maxPerRow": 8,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": false
+      },
+      "pluginVersion": "11.5.7",
+      "repeat": "HOST",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "af6036ntdc740c"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$GRUPO"
+          },
+          "host": {
+            "filter": "$HOST"
+          },
+          "item": {
+            "filter": "/ICMP response/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "stat"
+    }
+  ],
+  "preload": false,
+  "refresh": "1m",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "af6036ntdc740c"
+        },
+        "definition": "",
+        "hide": 2,
+        "includeAll": true,
+        "multi": true,
+        "name": "GRUPO",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "CPE_CAMPO_GRANDE",
+          "host": "",
+          "item": "",
+          "itemTag": "",
+          "queryType": "group",
+          "showDisabledItems": false
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "af6036ntdc740c"
+        },
+        "definition": "Zabbix - host",
+        "hide": 2,
+        "includeAll": true,
+        "multi": true,
+        "name": "HOST",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "$GRUPO",
+          "host": "/.*/",
+          "item": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "/^(?!abc|.*WEBSITES|.*test|.*ODBC|.*AUDITORIA|.*MONITOR-CPD|.*PCTEL|.*idrac)/",
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-12h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "LATÊNCIA DATACOM  CORE",
+  "uid": "efmtz3kovr4sge",
+  "version": 3,
+  "weekStart": ""
+}

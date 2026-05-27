@@ -1,0 +1,3104 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 158,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 16,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Banner</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n  <div class=\"banner-container\">\n    <div class=\"banner\">\n      <div class=\"left-img\">\n        <img src=\"https://support.huawei.com/enterpriseindex/layout/v5/img/logo_huawei.png\" width=\"165px\" />\n      </div>\n      <div class=\"text-center\">\n        <span>DATACOM - AGETEC </span>\n      </div>\n      <div class=\"right-img\">\n        <img src=\"\"link da img'\" width=\"140px\" />\n      </div>\n    </div>\n  </div>\n</body>\n\n</html>",
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalScripts": [],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "status": "ICMP: ICMP ping",
+        "styles": ".banner-container {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n}\r\n\r\n.banner {\r\n    position: relative;\r\n    width: 100%;\r\n    height: auto;\r\n    background-image: url('https://i.ibb.co/RhNQxVf/TITULO-DASH-ZABBIX-SEM-LETRA.png');\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 25px; /* Aumentado de 15px para 25px */\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 35px; /* Aumentado de 25px para 35px */\r\n}\r\n\r\n.left-img,\r\n.right-img {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.left-img img {\r\n    width: 185px; /* Aumentado de 165px para 185px */\r\n    height: auto;\r\n}\r\n\r\n.right-img img {\r\n    width: 160px; /* Aumentado de 140px para 160px */\r\n    height: auto;\r\n    transform: translateY(-1px);\r\n}\r\n\r\n.left-img {\r\n    margin-right: 15px; /* Aumentado de 10px para 15px */\r\n}\r\n\r\n.right-img {\r\n    margin-left: 15px; /* Aumentado de 10px para 15px */\r\n    margin-top: 0px;\r\n}\r\n\r\n.text-center {\r\n    flex-grow: 1;\r\n    text-align: center;\r\n}\r\n\r\n.banner span {\r\n    color: #ffffff;\r\n    font-size: 45px; /* Aumentado de 35px para 45px */\r\n    font-weight: bold;\r\n    font-family: 'Viking Squad', sans-serif;\r\n    text-shadow: 0 0 5px #87CEEB, 0 0 10px #87CEEB, 0 0 20px #00ffcc, 0 0 30px #00ffcc;\r\n    animation: text-glow 1.5s infinite alternate;\r\n    margin: 0;\r\n}\r\n\r\n.banner h1 {\r\n    color: #ffffff;\r\n    font-size: 36px; /* Aumentado de 26px para 36px */\r\n    text-transform: uppercase;\r\n    letter-spacing: 2px;\r\n    text-shadow: 0 0 5px #56d5dc, 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc;\r\n    animation: text-glow 1.5s infinite alternate;\r\n}\r\n\r\n@keyframes text-glow {\r\n    from {\r\n        text-shadow: 0 0 5px #56d5dc, 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 10px #56d5dc, 0 0 20px #56d5dc, 0 0 30px #56d5dc, 0 0 40px #56d5dc;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "4.5.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "host": {
+            "filter": "GRANDVILLAGE-4370"
+          },
+          "item": {
+            "filter": "DATACOM: ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 12,
+        "y": 0
+      },
+      "id": 20,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap\">\n  <style>\n    :root {\n      --primary-color: #00ffaa;\n      --secondary-color: #00d1ff;\n      --dark-bg: #0a1929;\n      --card-bg: linear-gradient(145deg, #003a5d, #006d8f);\n      --text-color: #e0f7ff;\n    }\n\n    body {\n      margin: 0;\n      padding: 0;\n      font-family: 'Montserrat', sans-serif;\n      background: var(--dark-bg);\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      min-height: 100vh;\n      color: var(--text-color);\n    }\n\n    .adapted-container {\n      display: flex;\n      align-items: center;\n      background: var(--card-bg);\n      padding: 15px 20px;\n      border-radius: 16px;\n      box-shadow:\n        0 5px 15px rgba(0, 0, 0, 0.3),\n        inset 0 0 10px rgba(0, 209, 255, 0.15);\n      width: 240px;\n      transition: all 0.3s ease;\n      position: relative;\n      overflow: hidden;\n      border: 1px solid rgba(0, 209, 255, 0.1);\n    }\n\n    .adapted-container:hover {\n      transform: translateY(-3px);\n      box-shadow:\n        0 8px 20px rgba(0, 0, 0, 0.4),\n        inset 0 0 12px rgba(0, 209, 255, 0.25);\n    }\n\n    .adapted-image {\n      width: 40px;\n      height: 40px;\n      margin-right: 15px;\n      border-radius: 8px;\n      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);\n      transition: all 0.2s ease;\n      object-fit: contain;\n      padding: 6px;\n      background: rgba(0, 0, 0, 0.15);\n      border: 1px solid rgba(0, 209, 255, 0.15);\n      filter: drop-shadow(0 0 5px rgba(0, 255, 170, 0.2));\n    }\n\n    .adapted-image:hover {\n      transform: scale(1.08) rotate(3deg);\n      filter: drop-shadow(0 0 8px rgba(0, 255, 170, 0.4));\n    }\n\n    .adapted-content {\n      display: flex;\n      flex-direction: column;\n      width: 100%;\n    }\n\n    .adapted-value {\n      color: var(--primary-color);\n      font-weight: 700;\n      font-size: 24px;\n      margin: 0;\n      letter-spacing: 0.3px;\n      text-shadow: 0 0 6px rgba(0, 255, 170, 0.4);\n      position: relative;\n      font-feature-settings: \"tnum\";\n      font-variant-numeric: tabular-nums;\n    }\n\n    .adapted-name {\n      color: rgba(255, 255, 255, 0.9);\n      font-weight: 600;\n      font-size: 12px;\n      margin-top: 3px;\n      text-transform: uppercase;\n      letter-spacing: 0.8px;\n      position: relative;\n    }\n\n    .ping-low {\n      color: #00ffaa;\n      text-shadow: 0 0 8px rgba(0, 255, 170, 0.5);\n    }\n\n    .ping-medium {\n      color: #ffc107;\n      text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);\n    }\n\n    .ping-high {\n      color: #ff3e3e;\n      text-shadow: 0 0 8px rgba(255, 62, 62, 0.5);\n    }\n\n    .status-bar {\n      height: 3px;\n      width: 100%;\n      background: rgba(255, 255, 255, 0.1);\n      border-radius: 2px;\n      margin-top: 10px;\n      overflow: hidden;\n    }\n\n    .status-progress {\n      height: 100%;\n      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));\n      border-radius: 2px;\n      animation: progress-pulse 3s ease-in-out infinite;\n      width: 70%;\n    }\n\n    @keyframes progress-pulse {\n      0% {\n        opacity: 0.7;\n        box-shadow: 0 0 6px var(--primary-color);\n      }\n\n      50% {\n        opacity: 1;\n        box-shadow: 0 0 10px var(--secondary-color);\n      }\n\n      100% {\n        opacity: 0.7;\n        box-shadow: 0 0 6px var(--primary-color);\n      }\n    }\n  </style>\n</head>\n\n<body>\n  <div class=\"adapted-container\">\n    <img src=\"https://www.svgrepo.com/show/278447/internet-internet-connection.svg\" alt=\"Connection Icon\" class=\"adapted-image\">\n    <div class=\"adapted-content\">\n      <div class=\"adapted-value-container\">\n        <span class=\"adapted-value ping-low\">{{data.[0].[0].Value}}</span>\n        <span class=\"adapted-name\">PING RESPONSE</span>\n        <div class=\"status-bar\">\n          <div class=\"status-progress\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    document.addEventListener('DOMContentLoaded', function() {\n      const pingValue = document.querySelector('.adapted-value');\n      const progressBar = document.querySelector('.status-progress');\n      \n      function simulatePing() {\n        const randomPing = Math.floor(Math.random() * 150) + 10;\n        pingValue.textContent = randomPing + ' ms';\n        \n        pingValue.className = 'adapted-value';\n        if(randomPing < 50) {\n          pingValue.classList.add('ping-low');\n          progressBar.style.width = '30%';\n        } else if(randomPing < 100) {\n          pingValue.classList.add('ping-medium');\n          progressBar.style.width = '60%';\n        } else {\n          pingValue.classList.add('ping-high');\n          progressBar.style.width = '90%';\n        }\n      }\n      \n      setInterval(simulatePing, 3000);\n      simulatePing();\n    });\n  </script>\n</body>\n\n</html>",
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalScripts": [],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "styles": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap\">\r\n  <style>\r\n    :root {\r\n      --primary-color: #00d1ff;\r\n      --secondary-color: #00ffaa;\r\n      --dark-bg: #0a1929;\r\n      --card-bg: linear-gradient(145deg, #003a5d, #006d8f);\r\n      --text-color: #e0f7ff;\r\n    }\r\n    \r\n    body {\r\n      margin: 0;\r\n      padding: 0;\r\n      font-family: 'Montserrat', sans-serif;\r\n      background: var(--dark-bg);\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      min-height: 100vh;\r\n      color: var(--text-color);\r\n    }\r\n    \r\n    .adapted-container {\r\n      display: flex;\r\n      align-items: center;\r\n      background: var(--card-bg);\r\n      padding: 16px 20px;\r\n      border-radius: 18px;\r\n      box-shadow: \r\n        0 6px 20px rgba(0, 0, 0, 0.3),\r\n        inset 0 0 10px rgba(0, 209, 255, 0.15);\r\n      width: 260px;\r\n      transition: all 0.3s ease;\r\n      position: relative;\r\n      overflow: hidden;\r\n      border: 1px solid rgba(0, 209, 255, 0.1);\r\n    }\r\n    \r\n    .adapted-container::before {\r\n      content: '';\r\n      position: absolute;\r\n      top: -40%;\r\n      left: -40%;\r\n      width: 180%;\r\n      height: 180%;\r\n      background: radial-gradient(circle, rgba(0, 255, 170, 0.08) 0%, transparent 70%);\r\n      transform: rotate(25deg);\r\n    }\r\n    \r\n    .adapted-container:hover {\r\n      transform: translateY(-4px);\r\n      box-shadow: \r\n        0 10px 25px rgba(0, 0, 0, 0.4),\r\n        inset 0 0 15px rgba(0, 209, 255, 0.25);\r\n    }\r\n    \r\n    .adapted-image {\r\n      width: 45px;\r\n      height: 45px;\r\n      margin-right: 18px;\r\n      border-radius: 10px;\r\n      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);\r\n      transition: all 0.2s ease;\r\n      object-fit: cover;\r\n      padding: 4px;\r\n      background: rgba(0, 0, 0, 0.15);\r\n      border: 1px solid rgba(0, 209, 255, 0.15);\r\n    }\r\n    \r\n    .adapted-image:hover {\r\n      transform: scale(1.1) rotate(3deg);\r\n      box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);\r\n    }\r\n    \r\n    .adapted-content {\r\n      display: flex;\r\n      flex-direction: column;\r\n      width: 100%;\r\n      position: relative;\r\n      z-index: 2;\r\n    }\r\n    \r\n    .adapted-value {\r\n      color: var(--secondary-color);\r\n      font-weight: 700;\r\n      font-size: 22px;\r\n      margin: 0;\r\n      letter-spacing: 0.3px;\r\n      text-shadow: 0 0 8px rgba(0, 255, 170, 0.4);\r\n      font-feature-settings: \"tnum\";\r\n      font-variant-numeric: tabular-nums;\r\n    }\r\n    \r\n    .adapted-name {\r\n      color: rgba(255, 255, 255, 0.9);\r\n      font-weight: 600;\r\n      font-size: 12px;\r\n      margin-top: 6px;\r\n      text-transform: uppercase;\r\n      letter-spacing: 0.8px;\r\n    }\r\n    \r\n    .status-bar {\r\n      height: 3px;\r\n      width: 100%;\r\n      background: rgba(255, 255, 255, 0.1);\r\n      border-radius: 2px;\r\n      margin-top: 12px;\r\n      overflow: hidden;\r\n    }\r\n    \r\n    .status-progress {\r\n      height: 100%;\r\n      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));\r\n      border-radius: 2px;\r\n      animation: progress-pulse 3s ease-in-out infinite;\r\n    }\r\n    \r\n    @keyframes progress-pulse {\r\n      0% { opacity: 0.7; box-shadow: 0 0 8px var(--primary-color); }\r\n      50% { opacity: 1; box-shadow: 0 0 12px var(--secondary-color); }\r\n      100% { opacity: 0.7; box-shadow: 0 0 8px var(--primary-color); }\r\n    }\r\n  </style>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"adapted-container\">\r\n    <img src=\"https://www.svgrepo.com/show/278447/internet-internet-connection.svg\" alt=\"Connection Icon\" class=\"adapted-image\">\r\n    <div class=\"adapted-content\">\r\n      <div class=\"adapted-value-container\">\r\n        <span class=\"adapted-value\">42 ms</span>\r\n        <span class=\"adapted-name\">PING RESPONSE</span>\r\n        <div class=\"status-bar\">\r\n          <div class=\"status-progress\" style=\"width: 30%;\"></div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</body>\r\n</html>",
+        "wrap": true
+      },
+      "pluginVersion": "4.5.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  100
+                ],
+                "name": "scale",
+                "params": [
+                  {
+                    "name": "factor",
+                    "options": [
+                      100,
+                      0.01,
+                      10,
+                      -1
+                    ],
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "1000"
+              ],
+              "text": "scale(100)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  0
+                ],
+                "name": "removeAboveValue",
+                "params": [
+                  {
+                    "name": "number",
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "3"
+              ],
+              "text": "removeAboveValue(0)"
+            }
+          ],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "ICMP response time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 0
+      },
+      "id": 22,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n  <div class=\"adapted-container\">\n    <img src=\"https://www.svgrepo.com/show/259519/circuit.svg\" alt=\"Adapted Image\" class=\"adapted-image\">\n    <div class=\"adapted-content\">\n      <div class=\"adapted-value-container\">\n        <span class=\"adapted-value\">{{data.[0].[0].Value}}%</span>\n        <span class=\"adapted-name\">CPU utilization</span>\n      </div>\n    </div>\n  </div>\n</body>\n\n</html>",
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalScripts": [],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "status": "MPU CPU Usage SN:2102355FTE10Q3100063",
+        "styles": ":root {\r\n  --primary-color: #56d5dc;\r\n  --secondary-color: #00a2ff;\r\n  --dark-bg: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);\r\n  --card-bg: linear-gradient(145deg, #004f6b, #007b9a);\r\n  --text-color: #e0f7ff;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\r\n  background: var(--dark-bg);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  min-height: 100vh;\r\n  color: var(--text-color);\r\n}\r\n\r\n.adapted-container {\r\n  display: flex;\r\n  align-items: center;\r\n  background: var(--card-bg);\r\n  padding: 15px 20px;\r\n  border-radius: 16px;\r\n  box-shadow:\r\n    0 5px 15px rgba(0, 0, 0, 0.3),\r\n    inset 0 0 10px rgba(0, 209, 255, 0.15);\r\n  width: 240px;\r\n  transition: all 0.3s ease;\r\n  position: relative;\r\n  overflow: hidden;\r\n  border: 1px solid rgba(0, 209, 255, 0.1);\r\n}\r\n\r\n.adapted-container:hover {\r\n  transform: translateY(-3px);\r\n  box-shadow:\r\n    0 8px 20px rgba(0, 0, 0, 0.4),\r\n    inset 0 0 12px rgba(0, 209, 255, 0.25);\r\n}\r\n\r\n.adapted-image {\r\n  width: 40px;\r\n  height: 40px;\r\n  margin-right: 15px;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);\r\n  transition: all 0.2s ease;\r\n  object-fit: contain;\r\n  padding: 6px;\r\n  background: rgba(0, 0, 0, 0.15);\r\n  border: 1px solid rgba(0, 209, 255, 0.15);\r\n  filter: drop-shadow(0 0 5px rgba(86, 213, 220, 0.2));\r\n}\r\n\r\n.adapted-image:hover {\r\n  transform: scale(1.08) rotate(3deg);\r\n  filter: drop-shadow(0 0 8px rgba(86, 213, 220, 0.4));\r\n}\r\n\r\n.adapted-content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n}\r\n\r\n.adapted-value-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  width: 100%;\r\n  position: relative;\r\n}\r\n\r\n.adapted-value {\r\n  color: var(--primary-color);\r\n  font-weight: 700;\r\n  font-size: 24px;\r\n  margin: 0;\r\n  letter-spacing: 0.3px;\r\n  text-shadow: 0 0 6px rgba(86, 213, 220, 0.4);\r\n  position: relative;\r\n  font-feature-settings: \"tnum\";\r\n  font-variant-numeric: tabular-nums;\r\n  animation: pulse-glow 1.5s ease-in-out infinite;\r\n}\r\n\r\n.adapted-name {\r\n  color: rgba(255, 255, 255, 0.9);\r\n  font-weight: 600;\r\n  font-size: 12px;\r\n  margin-top: 3px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 0.8px;\r\n  position: relative;\r\n  animation: text-glow 2s ease-in-out infinite alternate;\r\n}\r\n\r\n.status-bar {\r\n  height: 3px;\r\n  width: 100%;\r\n  background: rgba(255, 255, 255, 0.1);\r\n  border-radius: 2px;\r\n  margin-top: 10px;\r\n  overflow: hidden;\r\n}\r\n\r\n.status-progress {\r\n  height: 100%;\r\n  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));\r\n  border-radius: 2px;\r\n  animation: progress-pulse 3s ease-in-out infinite;\r\n  width: 70%;\r\n}\r\n\r\n@keyframes progress-pulse {\r\n  0% {\r\n    opacity: 0.7;\r\n    box-shadow: 0 0 6px var(--primary-color);\r\n  }\r\n  50% {\r\n    opacity: 1;\r\n    box-shadow: 0 0 10px var(--secondary-color);\r\n  }\r\n  100% {\r\n    opacity: 0.7;\r\n    box-shadow: 0 0 6px var(--primary-color);\r\n  }\r\n}\r\n\r\n@keyframes pulse-glow {\r\n  0% {\r\n    text-shadow: 0 0 8px var(--primary-color);\r\n  }\r\n  50% {\r\n    text-shadow: 0 0 15px var(--primary-color);\r\n  }\r\n  100% {\r\n    text-shadow: 0 0 8px var(--primary-color);\r\n  }\r\n}\r\n\r\n@keyframes text-glow {\r\n  from {\r\n    text-shadow: 0 0 5px #ffffff, 0 0 10px var(--primary-color);\r\n  }\r\n  to {\r\n    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);\r\n  }\r\n}\r\n\r\n@media (max-width: 600px) {\r\n  .adapted-container {\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 90%;\r\n    padding: 15px;\r\n  }\r\n\r\n  .adapted-image {\r\n    width: 40px;\r\n    height: 40px;\r\n    margin-right: 0;\r\n    margin-bottom: 15px;\r\n  }\r\n\r\n  .adapted-value {\r\n    font-size: 20px;\r\n    text-align: center;\r\n    width: 100%;\r\n  }\r\n\r\n  .adapted-name {\r\n    font-size: 11px;\r\n    margin-top: 5px;\r\n    text-align: center;\r\n    width: 100%;\r\n  }\r\n}",
+        "wrap": true
+      },
+      "pluginVersion": "4.5.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "CPU USADO 1 MIN"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 18,
+        "y": 0
+      },
+      "id": 23,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Verificar se há dados disponíveis\nif (!context || !context.panel || !context.panel.data || !context.panel.data.series || context.panel.data.series.length === 0) {\n  console.error(\"Dados do painel não encontrados ou séries vazias. Verifique a consulta.\");\n  return {\n    title: {\n      text: \"Erro: Sem Dados\",\n      left: \"center\",\n      textStyle: {\n        color: \"#ff0000\",\n        fontSize: 16,\n      },\n    },\n  };\n}\n\n// Definir a memória total como 4GB (em MB)\nconst FIXED_TOTAL_MEMORY_MB = 4096; // 4GB em MB\n\n// Inicializar métricas\nlet usedMemory = 0;\n\n// Processar as séries de dados\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  console.log(`Processando série ${seriesIndex + 1}:`, series.name);\n\n  const valueField = series.fields.find((field) => field.type === 'number');\n  if (!valueField) {\n    console.warn(`Série ${seriesIndex + 1} não contém campo de valores.`);\n    return;\n  }\n\n  const latestValue = valueField.values.get(valueField.values.length - 1);\n  console.log(`Último valor da série \"${series.name}\":`, latestValue);\n\n  // Converter valor para MB (de bytes para megabytes)\n  const valueInMB = Math.round(latestValue / (1024 * 1024));\n\n  // Identificar as métricas pelo nome da série\n  const seriesName = series.name.toLowerCase();\n  if (seriesName.includes(\"usada\")) {\n    usedMemory = valueInMB;\n  }\n});\n\n// Calcular a memória livre\nconst freeMemory = FIXED_TOTAL_MEMORY_MB - usedMemory;\n\n// Exibir logs para depuração\nconsole.log(\"Memória Total Fixa (MB):\", FIXED_TOTAL_MEMORY_MB);\nconsole.log(\"Memória Livre (MB):\", freeMemory);\nconsole.log(\"Memória Usada (MB):\", usedMemory);\n\n// Dados do gráfico\nconst pieData = [\n  { value: usedMemory, name: \"USADA\" },\n  { value: freeMemory, name: \"LIVRE\" },\n];\n\n// Configuração do gráfico de pizza\nreturn {\n  backgroundColor: \"transparent\",\n  title: {\n    text: \"Distribuição de Memória\",\n    left: \"center\",\n    textStyle: {\n      color: \"#00d1ff\",\n      fontSize: 18,\n      fontWeight: \"bold\",\n    },\n  },\n  tooltip: {\n    trigger: \"item\",\n    formatter: \"{b}: {c} MB ({d}%)\",\n    backgroundColor: \"rgba(50, 50, 50, 0.9)\",\n    borderColor: \"#00d1ff\",\n    borderWidth: 1,\n    textStyle: {\n      color: \"#ffffff\",\n    },\n  },\n  legend: {\n    orient: \"horizontal\",\n    bottom: \"0\",\n    textStyle: {\n      color: \"#ffffff\",\n    },\n    data: pieData.map((data) => data.name),\n  },\n  series: [\n    {\n      name: \"Memória\",\n      type: \"pie\",\n      radius: [\"50%\", \"70%\"], // Gráfico de anel maior\n      avoidLabelOverlap: true,\n      label: {\n        show: true,\n        position: \"outside\",\n        formatter: \"{b}\\n{c} MB ({d}%)\",\n        color: \"#ffffff\",\n        fontSize: 12,\n      },\n      labelLine: {\n        show: true,\n        lineStyle: {\n          color: \"#00d1ff\",\n          width: 2,\n        },\n      },\n      data: pieData,\n      itemStyle: {\n        borderRadius: 15, // Canto arredondado\n        borderColor: \"#121212\",\n        borderWidth: 4,\n        shadowColor: \"rgba(0, 0, 0, 0.5)\",\n        shadowBlur: 10,\n      },\n      emphasis: {\n        scale: true, // Aumentar ao passar o mouse\n        itemStyle: {\n          borderWidth: 6,\n          borderColor: \"#00d1ff\",\n        },\n      },\n      animationType: \"scale\", // Animação ao carregar\n      animationEasing: \"elasticOut\", // Efeito de elasticidade\n      animationDuration: 1000, // Tempo da animação\n    },\n  ],\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "MEMORIA USADA"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 4,
+        "w": 1,
+        "x": 23,
+        "y": 0
+      },
+      "id": 19,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const lastValue = sData[sData.length - 1]; // Pega o último valor (1 para UP, 0 para DOWN)\n\n  const isUp = lastValue === 1;\n\n  return {\n    type: 'stat',\n    radius: '85%',\n    center: ['50%', '55%'], // Centraliza o medidor\n    axisLine: {\n      lineStyle: {\n        width: 10,\n        color: [\n          [1, isUp ? '#00FFAA' : '#FF3E3E'], // Verde se UP, Vermelho se DOWN\n        ],\n      },\n    },\n    pointer: {\n      show: false, // Esconde o ponteiro\n    },\n    progress: {\n      show: true,\n      width: 10,\n      itemStyle: {\n        color: isUp ? '#00FFAA' : '#FF3E3E', // Progresso na mesma cor\n      },\n    },\n    detail: {\n      show: true,\n      formatter: isUp ? 'UP' : 'DOWN',\n      fontSize: 30,\n      color: isUp ? '#00FFAA' : '#FF3E3E',\n      fontWeight: 'bold',\n      offsetCenter: [0, '20%'],\n    },\n    title: {\n      show: false, // Remove o título interno\n    },\n    data: [\n      {\n        value: lastValue,\n        name: 'Status',\n      },\n    ],\n  };\n});\n\n// Define qual seta exibir com base no valor\nconst lastValue = series.length > 0 && series[0].data.length > 0 ? series[0].data[0].value : 0; // Garante um valor válido\nconst isUp = lastValue === 1;\n\nreturn {\n  backgroundColor: 'transparent', // Fundo escuro tecnológico\n  tooltip: {\n    show: true,\n    formatter: (params) =>\n      params.value === 1 ? 'Status: UP' : 'Status: DOWN',\n    backgroundColor: '#333',\n    borderColor: '#00FFAA',\n    textStyle: {\n      color: '#FFF',\n    },\n  },\n  series,\n  graphic: [\n    {\n      type: 'image',\n      left: 'center',\n      top: '15%',\n      style: {\n        image: isUp\n          ? 'https://cdn-icons-png.flaticon.com/128/5610/5610930.png' // URL para imagem de seta para cima\n          : 'https://cdn-icons-png.flaticon.com/128/14025/14025545.png', // URL para imagem de seta para baixo\n        width: 50,\n        height: 50,\n        opacity: 0.9,\n      },\n      animation: {\n        duration: 1500,\n        easing: 'elasticOut',\n        loop: true,\n      },\n    },\n    {\n      type: 'text',\n      left: 'center',\n      top: '65%',\n      style: {\n        text: isUp ? 'ONLINE' : 'OFFLINE',\n        fontSize: 20,\n        fontWeight: 'bold',\n        fill: isUp ? '#00FFAA' : '#FF3E3E',\n      },\n    },\n  ],\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 13,
+        "y": 4
+      },
+      "id": 14,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  // Obtém os dados da série\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer ||\n    s.fields.find((f) => f.type === 'number').values;\n  const lastValue = sData[sData.length - 1];\n  const tempValue = lastValue.toFixed(1); // Mostra temperatura com 1 decimal\n\n  // Cores dinâmicas baseadas no valor de temperatura\n  let pointerColor, detailColor;\n  if (lastValue <= 30) {\n    pointerColor = '#00C8FF';\n    detailColor = '#00C8FF';\n  } else if (lastValue <= 50) {\n    pointerColor = '#00FFAA';\n    detailColor = '#00FFAA';\n  } else if (lastValue <= 70) {\n    pointerColor = '#FFC107';\n    detailColor = '#FFC107';\n  } else {\n    pointerColor = '#FF3E3E';\n    detailColor = '#FF3E3E';\n  }\n\n  return {\n    type: 'gauge',\n    radius: '90%',\n    center: ['50%', '55%'],\n    startAngle: 180,\n    endAngle: 0,\n    min: 0,\n    max: 100, // Assumindo que a temperatura máxima é 100°C\n    splitNumber: 10,\n    axisLine: {\n      lineStyle: {\n        width: 20,\n        color: [\n          [0.3, '#00C8FF'],   // Azul claro para temperaturas baixas\n          [0.5, '#00FFAA'],   // Verde para temperaturas moderadas\n          [0.7, '#FFC107'],    // Amarelo para temperaturas altas\n          [1, '#FF3E3E']       // Vermelho para temperaturas críticas\n        ],\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 10\n      }\n    },\n    progress: {\n      show: true,\n      overlap: false,\n      width: 18,\n      roundCap: true,\n      clip: false,\n      itemStyle: {\n        color: {\n          type: 'linear',\n          x: 0,\n          y: 0,\n          x2: 1,\n          y2: 0,\n          colorStops: [{\n            offset: 0,\n            color: 'rgba(0, 200, 255, 0.3)'\n          }, {\n            offset: 1,\n            color: pointerColor\n          }]\n        },\n        shadowColor: 'rgba(0, 200, 255, 0.5)',\n        shadowBlur: 10\n      }\n    },\n    axisTick: {\n      show: true,\n      splitNumber: 5,\n      length: 8,\n      lineStyle: {\n        width: 2,\n        color: '#fff'\n      }\n    },\n    splitLine: {\n      show: true,\n      length: 15,\n      lineStyle: {\n        width: 3,\n        color: '#fff'\n      }\n    },\n    pointer: {\n      show: true,\n      icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',\n      length: '60%',\n      width: 16,\n      offsetCenter: [0, '-40%'],\n      itemStyle: {\n        color: pointerColor,\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 5,\n        shadowOffsetX: 1,\n        shadowOffsetY: 1\n      }\n    },\n    anchor: {\n      show: true,\n      size: 10,\n      itemStyle: {\n        color: '#fff',\n        borderColor: pointerColor,\n        borderWidth: 2,\n        shadowColor: 'rgba(0, 0, 0, 0.3)',\n        shadowBlur: 5\n      }\n    },\n    detail: {\n      valueAnimation: true,\n      formatter: `{value}°C`,\n      fontSize: 30,\n      fontWeight: 'bolder',\n      color: detailColor,\n      offsetCenter: [0, '30%'],\n      textStyle: {\n        textShadowColor: 'rgba(0, 0, 0, 0.3)',\n        textShadowBlur: 5,\n        textShadowOffsetX: 1,\n        textShadowOffsetY: 1\n      }\n    },\n    title: {\n      show: true,\n      offsetCenter: [0, '60%'],\n      color: '#fff',\n      fontSize: 14,\n      fontWeight: 'bold'\n    },\n    data: [{\n      value: tempValue,\n      name: 'TEMPERATURA ATUAL'\n    }]\n  };\n});\n\n// Efeitos adicionais\nconst animationDuration = 2000;\n\nreturn {\n  backgroundColor: 'transparent',\n  animationDuration: animationDuration,\n  animationEasing: 'elasticOut',\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b} : {c}°C',\n    backgroundColor: 'rgba(0,0,0,0.7)',\n    borderColor: '#00C8FF',\n    borderWidth: 1,\n    textStyle: {\n      color: '#FFF',\n      fontSize: 14\n    },\n    extraCssText: 'box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);'\n  },\n  series: series,\n  graphic: [\n    {\n      type: 'group',\n      left: 'center',\n      top: '85%',\n      children: [\n        {\n          type: 'text',\n          left: 'center',\n          style: {\n            text: 'SENSOR: NUCLEO 1',\n            fontSize: 0,\n            fontWeight: 'bold',\n            fill: '#00C8FF',\n            textShadowColor: 'rgba(0, 200, 255, 0.5)',\n            textShadowBlur: 5\n          }\n        }\n      ]\n    },\n    {\n      type: 'text',\n      left: 'center',\n      top: '5%',\n      style: {\n        text: 'MONITORAMENTO DE TEMPERATURA',\n        fontSize: 0,\n        fontWeight: 'bold',\n        fill: '#fff',\n        textShadowColor: 'rgba(0, 200, 255, 0.5)',\n        textShadowBlur: 5\n      }\n    }\n  ]\n};",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Temperatura Atual"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 14,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 5
+      },
+      "id": 21,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "4.5.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "ICMP response time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 10,
+        "x": 13,
+        "y": 10
+      },
+      "id": 17,
+      "options": {
+        "activeTheme": "Tema Bee Solutions",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Bee Solutions",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": "https://img.freepik.com/premium-photo/blue-modern-tech-guide-background-14_769134-338.jpg?w=740"
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": ""
+                },
+                "type": "style"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 11
+      },
+      "id": 26,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">Trafégo via </span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> NORTE SUL </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 8,
+        "y": 11
+      },
+      "id": 28,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">Trafégo via </span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> 32x </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 16,
+        "y": 11
+      },
+      "id": 30,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">Trafégo da </span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> INTERNETMAIS MOR </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 14
+      },
+      "id": 27,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface hundred-gigabit-ethernet-1/1/1(NORTE SUL HU2): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface hundred-gigabit-ethernet-1/1/1(NORTE SUL HU2): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 8,
+        "y": 14
+      },
+      "id": 29,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface hundred-gigabit-ethernet-1/1/2(FREEWAY 32X HU4): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface hundred-gigabit-ethernet-1/1/2(FREEWAY 32X HU4): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 16,
+        "y": 14
+      },
+      "id": 31,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface lag-1(INTERNETMAIS-MOR): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface lag-1(INTERNETMAIS-MOR): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 23
+      },
+      "id": 33,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">LAN</span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> SW-ALCATEL-SEMED </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 8,
+        "y": 23
+      },
+      "id": 35,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">LAN</span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> SW-ALCATEL-LABCEM </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 16,
+        "y": 23
+      },
+      "id": 34,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">LAN </span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> SW-ALCATEL-SAMU </span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 26
+      },
+      "id": 32,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/3(SW-ALCATEL-SEMED-2.1.29): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/3(SW-ALCATEL-SEMED-2.1.29): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 8,
+        "y": 26
+      },
+      "id": 37,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/4(SW-ALCATEL-LABCEM): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/4(SW-ALCATEL-LABCEM): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 16,
+        "y": 26
+      },
+      "id": 36,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "// Inicializar arrays para armazenar os dados das séries e os rótulos de tempo\nconst seriesData = [];\nlet timeLabels = [];\n\n// Função para gerar uma cor aleatória\nfunction getRandomColor() {\n  const letters = '0123456789ABCDEF';\n  let color = '#';\n  for (let i = 0; i < 6; i++) {\n    color += letters[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\n// Função para formatar o valor com a unidade correta\nfunction formatDataValue(value) {\n  if (value >= 1e9) {\n    return { value: (value / 1e9).toFixed(2), unit: 'GB' };\n  } else if (value >= 1e6) {\n    return { value: (value / 1e6).toFixed(2), unit: 'MB' };\n  } else if (value >= 1e3) {\n    return { value: (value / 1e3).toFixed(2), unit: 'KB' };\n  } else {\n    return { value: value.toFixed(2), unit: 'B' };\n  }\n}\n\n// Função para formatação dos rótulos do eixo Y com unidades\nfunction formatYAxisLabel(value) {\n  const formatted = formatDataValue(value);\n  return `${formatted.value} ${formatted.unit}`;\n}\n\n// Função para obter a unidade mais comum\nfunction getCommonUnit(series) {\n  return 'GB';\n}\n\n// Iterar pelos frames de dados do Grafana\ncontext.panel.data.series.forEach((series, seriesIndex) => {\n  const timeField = series.fields.find((field) => field.type === 'time');\n  const valueFields = series.fields.filter((field) => field.type === 'number');\n\n  valueFields.forEach((valueField, valueIndex) => {\n    const seriesName = valueField.config.displayNameFromDS || valueField.name || `Series ${seriesIndex + 1}.${valueIndex + 1}`;\n    const data = valueField.values.map(d => parseFloat(d));\n\n    if (timeLabels.length === 0 && timeField) {\n      timeLabels = timeField.values.map(time => new Date(time).toLocaleTimeString());\n    }\n\n    // Gerar uma cor aleatória para a linha e o preenchimento\n    const color = getRandomColor();\n\n    seriesData.push({\n      name: seriesName,\n      type: 'line',\n      smooth: true,\n      lineStyle: {\n        width: 2,\n        color: color // Cor da linha\n      },\n      showSymbol: false,\n      areaStyle: {\n        opacity: 0.2,\n        color: color // Cor do preenchimento (mesma cor da linha)\n      },\n      emphasis: {\n        focus: 'series'\n      },\n      data: data\n    });\n  });\n});\n\nconst commonUnit = getCommonUnit(seriesData);\n\nreturn {\n  color: seriesData.map(() => getRandomColor()),\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n        backgroundColor: '#1A1E24'\n      }\n    },\n    formatter: function (params) {\n      let tooltipText = '';\n      params.forEach(param => {\n        const seriesName = param.seriesName;\n        const dataIndex = param.dataIndex;\n        const data = seriesData.find(s => s.name === seriesName).data[dataIndex];\n        const formatted = formatDataValue(data);\n        tooltipText += `${seriesName}: ${formatted.value} ${formatted.unit}<br/>`;\n      });\n      return tooltipText;\n    }\n  },\n  legend: {\n    data: seriesData.map(s => s.name),\n    textStyle: {\n      color: '#fff',\n      fontSize: 14\n    },\n    itemWidth: 20,\n    itemHeight: 14\n  },\n  toolbox: {\n    orient: 'vertical',\n    left: 'right',\n    top: 'center',\n    feature: {\n      saveAsImage: {}\n    }\n  },\n  grid: {\n    left: '5%',\n    right: '5%',\n    bottom: '5%',\n    containLabel: true\n  },\n  xAxis: [{\n    type: 'category',\n    boundaryGap: false,\n    data: timeLabels,\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      textStyle: {\n        color: '#fff',\n        fontSize: 12\n      }\n    },\n    splitLine: {\n      show: false\n    }\n  }],\n  yAxis: [{\n    type: 'value',\n    axisLine: {\n      lineStyle: {\n        color: '#fff',\n        width: 2\n      }\n    },\n    axisLabel: {\n      formatter: formatYAxisLabel,\n      textStyle: {\n        color: '#fff',\n        fontSize: 14\n      }\n    },\n    splitLine: {\n      show: true,\n      lineStyle: {\n        color: '#444',\n        type: 'dashed'\n      }\n    }\n  }],\n  series: seriesData,\n  backgroundColor: 'transparent', // Cor de fundo escura\n  title: {\n    text: 'Análise de Uso de Banda',\n    left: 'center',\n    top: '20px',\n    textStyle: {\n      color: '#fff',\n      fontSize: 0\n    }\n  },\n  animationDuration: 1500, // Animação suave\n  animationEasing: 'elasticOut' // Efeito de animação\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/5(SW-ALCATEL-SAMU): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO-GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "DATACOM-AGETEC-4380"
+          },
+          "item": {
+            "filter": "Interface ten-gigabit-ethernet-1/1/5(SW-ALCATEL-SAMU): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Last *"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Sinal"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red"
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": -25
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": -20
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -15
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Field"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Interface"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 1,
+        "y": 35
+      },
+      "id": 3,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "AGETEC-4380"
+          },
+          "item": {
+            "filter": "/.*RX Power Lane 1/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "AGETEC-4380"
+          },
+          "item": {
+            "filter": "/.*RX Power$/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Sinal Rx das Interfaces",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/: Operational status/",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/Interface /",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Last *"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Sinal"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red"
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": -25
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": -20
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -15
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Field"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Interface"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 10,
+        "y": 35
+      },
+      "id": 24,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "AGETEC-4380"
+          },
+          "item": {
+            "filter": "/.*TX Power Lane 1/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "hide": false,
+          "host": {
+            "filter": "AGETEC-4380"
+          },
+          "item": {
+            "filter": "/.*TX Power$/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Sinal Tx das Interfaces",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/: Operational status/",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/Interface /",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Last *"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Up"
+                      },
+                      "2": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "Down"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "displayName",
+                "value": "Status"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Field"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Interface"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 7,
+        "x": 17,
+        "y": 35
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "Status"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "CAMPO GRANDE"
+          },
+          "host": {
+            "filter": "AGETEC-4380"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "Network Interfaces Status: Status"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Status das Interfaces",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/: Operational status/",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "/Interface /",
+            "renamePattern": ""
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Host",
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "Datacom",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Inteface",
+        "multi": true,
+        "name": "interface",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "Datacom",
+          "host": "$host",
+          "item": "/.*/",
+          "itemTag": "Network Interfaces Bits",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/Bits/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DASHBOARD - DATACOM - AGETEC",
+  "uid": "d48f619b-601d-4ba2-9aa2-e14ad5731ac0",
+  "version": 7,
+  "weekStart": ""
+}
