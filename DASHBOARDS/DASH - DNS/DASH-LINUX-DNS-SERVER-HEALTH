@@ -1,0 +1,3616 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 221,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 128,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<link\n  href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap\"\n  rel=\"stylesheet\">\n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n\n<style>\n  /* --- 1. CONFIGURAÇÃO DO FUNDO DO DASHBOARD (IMPORTANTE) --- */\n  :root {\n    //--dashboard-bg-color: #282A36;\n  }\n\n  .dashboard-row__title {\n    color: white !important;\n  }\n\n\n\n  /* Força o background no corpo do Grafana para sumir com o cinza padrão */\n  html,\n  body {\n    /* background: #0A253E; AZUL*/\n\n\n    /* background-image: radial-gradient(circle, #3a3f44 0%, #000000 90%) !important;\n    background-size: cover;\n    background-attachment: fixed;\n    font-family: 'Roboto', sans-serif; */\n\n\n    background-image: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Crect fill='%23010d05' width='540' height='450'/%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(21,930,463)'%3E%3Cstop offset='0' stop-color='%23011102'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='433' height='360.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.02'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E\") !important;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-attachment: fixed;\n  }\n\n  /* --- 2. HEADER CONTAINER --- */\n  .header-container {\n    background-color: rgba(0, 0, 0, 0.2);\n    //background-image: #1e1e38 !important;\n    color: #ffffff;\n    width: 100%;\n    height: 100%;\n    padding: 1.5rem;\n    box-sizing: border-box;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    border-radius: 1.5rem;\n    //border: 1px solid rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */\n  }\n\n  /* --- 3. SOBRESCRITAS GLOBAIS DO GRAFANA (DO SEU EXEMPLO) --- */\n  /* Aplica sombra e bordas arredondadas em TODOS os painéis do dashboard */\n  .css-itdw1b-panel-container,\n  .css-1ijfwvk-panel-container,\n  .css-7mshyc-panel-container,\n  .css-2qng6u-panel-container,\n  .css-18yh62t-panel-container {\n    background: rgba(0, 0, 0, 0.2);\n    /* Fundo dos painéis */\n    border-radius: 1.5rem;\n    //  border: 1px solid rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n\n  }\n\n  .css-1978mzo-canvas-content {\n    //background: #1e1e38;\n    /* Fundo dos painéis */\n  }\n\n  /* Seção da Esquerda (Logo) */\n  .header-left {\n    flex: 1;\n    display: flex;\n    justify-content: flex-start;\n  }\n\n  .logo {\n    height: 3.5rem;\n    width: auto;\n    display: block;\n  }\n\n  /* Seção Central (Títulos) */\n  .header-center {\n    flex: 2;\n    text-align: center;\n    padding: 0 20px;\n  }\n\n  .title {\n    font-size: 2.5rem;\n    font-weight: bold;\n    /* Mais negrito */\n    margin: 0;\n    color: #FFFFFF;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n\n  .subtitle {\n    font-size: 0.8rem;\n    font-weight: 400;\n    margin: 6px 0 0 0;\n    color: #FFF;\n    opacity: 0.8;\n    letter-spacing: 0.5px;\n    text-transform: uppercase;\n  }\n\n  /* Seção da Direita (Relógio) */\n  .header-right {\n    flex: 1;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    gap: 24px;\n  }\n\n  /* --- ALTERAÇÃO AQUI: ADICIONADO BACKGROUND AO RELÓGIO --- */\n  #clock {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 2.5rem;\n    font-weight: 500;\n    color: #e0e0e0;\n\n    /* Novo estilo de background */\n    background-color: rgba(0, 0, 0, 0.2);\n    padding: 8px 16px;\n    border-radius: 2rem;\n    border: 1px solid rgba(204, 204, 220, 0.12);\n  }\n\n  /* --- CLASSES EXTRAS DO SEU EXEMPLO (MANTIDAS) --- */\n  .css-18o2w4z {\n    font-size: 10rem;\n    color: white;\n  }\n\n  .flot-temp-elem {\n    color: white !important;\n    font-family: 'Roboto Mono', monospace;\n    font-weight: 400 !important;\n  }\n\n  .css-t12fgu {\n    color: rgba(255, 255, 255, 1);\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1rem;\n  }\n\n  /* Tabelas */\n  .ReactTable .rt-thead .rt-resizable-header-content {\n    color: white;\n    font-size: 1rem;\n    text-transform: uppercase;\n    font-weight: 700;\n  }\n\n  .ReactTable .rt-tr {\n    color: #ddd;\n    font-size: 1rem;\n  }\n\n  .css-1kfgvg7-thead {\n    background: linear-gradient(180deg, #0094FF 0%, #005BB5 100%);\n    padding: 0;\n    border-radius: 1rem 1rem 0 0;\n  }\n\n\n  .css-131hug8 label,\n  .css-m0z7c1 label {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 1.5rem;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n    text-transform: uppercase;\n    border: 1px solid rgba(204, 204, 220, 0.12);\n\n  }\n\n\n  .css-rebjtg-input-wrapper,\n  .css-1nmqu8c-input-wrapper {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 1.5rem !important;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n\n  }\n\n  .css-uflqqj-grafana-select-multi-value-container {\n    background: rgba(0, 0, 0, 0.2);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n    color: white;\n    border-radius: 1rem !important;\n    font-weight: bold;\n  }\n\n  .css-8nwx1l-singleValue {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 0.8rem !important;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n  }\n  }\n</style>\n\n<div class=\"header-container\">\n  <div class=\"header-left\">\n    <img src=\"https://storage.googleapis.com/flowbix-img/TimeGrafana/Freeway%20logo2.png\" alt=\"Flowbix Logo\" class=\"logo\">\n  </div>\n  <div class=\"header-center\">\n    <h1 class=\"title\">LINUX SERVER STATUS\n    </h1>\n    <p class=\"subtitle\">MONITORAMENTO DNS</p>\n  </div>\n  <div class=\"header-right\">\n    <div id=\"clock\">--:--:--</div>\n  </div>\n</div>\n\n<script>\n  // --- Lógica do Relógio ---\n    if (!window.grafanaHeaderClock) {\n        function updateClock() {\n            const clockElement = document.getElementById('clock');\n            if (clockElement) {\n                const now = new Date();\n                const hours = String(now.getHours()).padStart(2, '0');\n                const minutes = String(now.getMinutes()).padStart(2, '0');\n                const seconds = String(now.getSeconds()).padStart(2, '0');\n                clockElement.textContent = `${hours}:${minutes}:${seconds}`;\n            }\n        }\n        window.grafanaHeaderClock = setInterval(updateClock, 1000);\n        updateClock();\n    }\n</script>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "builder",
+          "format": "table",
+          "rawSql": "",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "DISPONIBILIDADE:",
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "transparent",
+                  "index": 1,
+                  "text": "DOWN🔴"
+                },
+                "1": {
+                  "color": "transparent",
+                  "index": 0,
+                  "text": "UP🟢"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "transparent",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 9,
+        "x": 0,
+        "y": 3
+      },
+      "id": 122,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#system-overview-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #tras161B22; /* Fundo escuro */\n    border-radius: 12px;\n    overflow: hidden; /* Evita que o conteúdo vaze */\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n.panel-title i {\n    color: #8b949e;\n    font-size: 1.2em;\n}\n\n/* Wrapper para Layout de 2 Colunas */\n.main-content-wrapper {\n    display: flex;\n    flex-grow: 1; \n    gap: 20px;    \n    overflow: hidden; \n    min-height: 0; \n}\n\n/* Coluna da Esquerda (Logo) */\n.logo-column {\n    flex-basis: 200px; \n    flex-shrink: 0;    \n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 10px;\n}\n\n.logo-column img {\n    max-width: 100%;\n    max-height: 150px; \n    height: auto;\n    object-fit: contain; \n}\n\n/* Coluna da Direita (Estatísticas) */\n.stats-column {\n    flex-grow: 1; \n    display: flex;\n    flex-direction: column; \n    gap: 10px;            /* <-- AJUSTADO (era 15px) */\n    overflow-y: auto;     \n    min-width: 0; \n    justify-content: space-around; /* Tenta distribuir o espaço vertical */\n}\n\n/* Cada item de estatística */\n.stat-item {\n    background: #191919;\n    border: 1px solid #30363d;\n    border-radius: 8px;\n    padding: 12px 20px; /* <-- AJUSTADO (era 15px vertical) */\n    display: flex;\n    align-items: center;\n    gap: 15px;\n}\n\n.stat-icon {\n    font-size: 1.8em; \n    width: 35px;     \n    text-align: center;\n    flex-shrink: 0; \n}\n\n.stat-text {\n    display: flex;\n    flex-direction: column;\n    overflow: hidden; \n    flex-grow: 1; \n}\n\n.stat-label {\n    font-size: 0.8em; \n    color: #8b949e;\n    text-transform: uppercase;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    margin-bottom: 4px;\n}\n\n.stat-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1.4em; \n    font-weight: 700;\n    color: #FFFFFF;\n    white-space: nowrap;\n    overflow: hidden; \n    text-overflow: ellipsis;\n}\n\n/* Cores específicas */\n.icon-agent-up { color: #2ecc71; }\n.icon-agent-down { color: #e74c3c; }\n.icon-processes { color: #3498db; }\n.icon-users { color: #9b59b6; }\n.icon-uptime { color: #1abc9c; }\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto; \n    font-size: 1em;\n    color: #8b949e;\n    padding: 20px;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"system-overview-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#system-overview-container');\n    if (!container) return;\n    \n    // --- ATUALIZAÇÃO: URL da Imagem ---\n    const logoUrl = \"https://storage.googleapis.com/flowbix-img/IMG%20DASHBOARD/linux-logo-png-image-11660298434qt5f32bbxj33333333.png\";\n\n    // --- Função Auxiliar para formatar Uptime (segundos) ---\n    function formatUptime(seconds) {\n        if (isNaN(seconds) || seconds < 0) return 'N/A';\n        if (seconds === 0) return '0s';\n\n        const d = Math.floor(seconds / (3600*24));\n        const h = Math.floor(seconds % (3600*24) / 3600);\n        const m = Math.floor(seconds % 3600 / 60);\n\n        let result = '';\n        if (d > 0) result += d + 'd ';\n        if (h > 0) result += h + 'h ';\n        if (m > 0 || (d === 0 && h === 0)) result += m + 'm'; \n        \n        return result.trim();\n    }\n    // ----------------------------------------------------\n\n    // Define a estrutura básica (título)\n    let titleHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-server\"></i>\n            <span>System Overview</span>\n        </div>`;\n    \n    // --- ATUALIZAÇÃO: Mensagem de \"Aguardando\" usa novo layout ---\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        container.innerHTML = titleHTML + `\n            <div class=\"main-content-wrapper\">\n                <div class=\"logo-column\"><img src=\"${logoUrl}\" alt=\"Linux Logo\"></div>\n                <div class=\"stats-column\"><div class=\"panel-message\">Aguardando dados...</div></div>\n            </div>`;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    // --- ATUALIZAÇÃO: Mensagem de \"Erro\" usa novo layout ---\n    if (!nameField || !valueField) {\n        container.innerHTML = titleHTML + `\n            <div class=\"main-content-wrapper\">\n                <div class=\"logo-column\"><img src=\"${logoUrl}\" alt=\"Linux Logo\"></div>\n                <div class=\"stats-column\"><div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div></div>\n            </div>`;\n        return;\n    }\n\n    // 3. Extrai os dados em um objeto\n    const stats = {\n        agentPing: null,\n        processes: null,\n        users: null,\n        uptime: null\n    };\n\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i);\n        const value = valueField.values.get(i);\n        const lowerName = name.toLowerCase();\n\n        if (lowerName.includes('zabbix agent ping')) stats.agentPing = value;\n        if (lowerName.includes('number of processes')) stats.processes = value;\n        if (lowerName.includes('number of logged in users')) stats.users = value;\n        if (lowerName.includes('system uptime')) stats.uptime = value;\n    }\n\n    // 4. Formata os valores e define ícones/classes\n    const agentStatusText = stats.agentPing === 1 ? 'Up' : 'Down';\n    const agentStatusClass = stats.agentPing === 1 ? 'icon-agent-up' : 'icon-agent-down';\n    const agentIcon = stats.agentPing === 1 ? 'fa-circle-check' : 'fa-circle-xmark';\n    \n    const processesValue = stats.processes !== null ? stats.processes : 'N/A';\n    const usersValue = stats.users !== null ? stats.users : 'N/A';\n    const uptimeValue = stats.uptime !== null ? formatUptime(stats.uptime) : 'N/A';\n\n    // --- ATUALIZAÇÃO: Constrói o HTML para os itens de estatística ---\n    let statItemsHTML = '';\n\n    // Zabbix Agent Ping\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid ${agentIcon} stat-icon ${agentStatusClass}\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Zabbix Agent</div>\n                <div class=\"stat-value\">${agentStatusText}</div>\n            </div>\n        </div>\n    `;\n\n    // Number of Processes\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-list-check stat-icon icon-processes\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Processes</div>\n                <div class=\"stat-value\">${processesValue}</div>\n            </div>\n        </div>\n    `;\n\n    // Number of Logged In Users\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-users stat-icon icon-users\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Logged In Users</div>\n                <div class=\"stat-value\">${usersValue}</div>\n            </div>\n        </div>\n    `;\n\n    // System Uptime\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-clock stat-icon icon-uptime\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">System Uptime</div>\n                <div class=\"stat-value\">${uptimeValue}</div>\n            </div>\n        </div>\n    `;\n    // --- FIM DA CONSTRUÇÃO DOS ITENS ---\n\n\n    // --- ATUALIZAÇÃO: Constrói o HTML final com o novo layout ---\n    container.innerHTML = titleHTML + `\n        <div class=\"main-content-wrapper\">\n            <div class=\"logo-column\">\n                <img src=\"${logoUrl}\" alt=\"Linux Logo\">\n            </div>\n            <div class=\"stats-column\">\n                ${statItemsHTML} \n            </div>\n        </div>\n    `;\n    // --- FIM DA ATUALIZAÇÃO FINAL ---\n\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: Zabbix agent ping"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: Number of processes"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: Number of logged in users"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: System uptime"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 5,
+        "x": 9,
+        "y": 3
+      },
+      "id": 120,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#cpu-icon-bar-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #dadda161B22; /* Fundo escuro */\n    border-radius: 12px;\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n.panel-title i {\n    color: #8b949e;\n    font-size: 1.2em;\n}\n\n/* Wrapper (centraliza) */\n.content-wrapper {\n    display: flex;\n    flex-direction: column;\n    justify-content: center; /* Centraliza verticalmente */\n    align-items: center; /* Centraliza horizontalmente */\n    flex-grow: 1; /* Ocupa o espaço disponível */\n    padding: 10px 0;\n}\n\n/* --- NOVO: Ícone Central --- */\n.central-icon-wrapper {\n    text-align: center;\n    margin-bottom: 20px; /* Espaço entre o ícone e o número */\n}\n\n.central-icon-wrapper i {\n    font-size: 5em; /* Tamanho do ícone grande */\n    transition: color 0.3s ease;\n}\n/* --- FIM DO NOVO --- */\n\n\n/* Texto do valor (o número grande) */\n.bar-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 3.5em; /* Tamanho grande */\n    font-weight: 700;\n    text-align: center;\n    margin-bottom: 25px; /* Espaço entre o número e a barra */\n    transition: color 0.3s ease;\n}\n\n.bar-value .percent-sign {\n    font-size: 0.5em;\n    font-weight: 400;\n    color: #8b949e;\n    margin-left: 2px;\n}\n\n/* Fundo da barra (o trilho) */\n.bar-track {\n    width: 100%;\n    max-width: 300px; /* Limita a largura da barra */\n    height: 14px;\n    background-color: #30363d;\n    border-radius: 7px;\n    overflow: hidden;\n}\n\n/* Preenchimento da barra (o progresso) */\n.bar-fill {\n    height: 100%;\n    border-radius: 7px;\n    transition: width 0.5s ease-out, background-color 0.3s ease;\n}\n\n/* --- ATUALIZAÇÃO: Classes de Status (cores) --- */\n/* Cor para o ícone central e o texto do valor */\n.status-ok { color: #ffffff; }\n.status-warning { color: #f39c12; }\n.status-danger { color: #e74c3c; }\n\n/* Cor de fundo para a barra de preenchimento */\n.bar-fill.status-ok { background-color: #2ecc71; }\n.bar-fill.status-warning { background-color: #f39c12; }\n.bar-fill.status-danger { background-color: #e74c3c; }\n/* --- FIM DA ATUALIZAÇÃO --- */\n\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto;\n    font-size: 1em;\n    color: #8b949e;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"cpu-icon-bar-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#cpu-icon-bar-container');\n    if (!container) return;\n\n    // Define a estrutura básica (título)\n    let titleHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-microchip\"></i>\n            <span>CPU Utilization</span>\n        </div>`;\n    let contentHTML = '';\n\n    // 2. Verifica se os dados estão prontos\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        contentHTML = `<div class=\"panel-message\">Aguardando dados...</div>`;\n        container.innerHTML = titleHTML + contentHTML;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        contentHTML = `<div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div>`;\n        container.innerHTML = titleHTML + contentHTML;\n        return;\n    }\n\n    // 3. Extrai o dado de \"CPU utilization\"\n    let rawValue = 0;\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i);\n        if (name.toLowerCase().includes('cpu utilization')) {\n            rawValue = valueField.values.get(i);\n            break; // Encontrou, pode parar\n        }\n    }\n\n    // 4. Converte o valor e define o status\n    // (Usa a correção anterior: o valor já é a porcentagem)\n    const percentage = rawValue; \n    // Formata para 2 casas decimais (ex: 0.14)\n    const displayValue = percentage.toFixed(2); \n\n    let statusClass = 'status-ok';\n    if (percentage >= 90) {\n        statusClass = 'status-danger';\n    } else if (percentage >= 70) {\n        statusClass = 'status-warning';\n    }\n\n    // 5. Constrói o HTML final (com o ícone central)\n    contentHTML = `\n        <div class=\"content-wrapper\">\n            \n            <div class=\"central-icon-wrapper\">\n                <i class=\"fa-solid fa-microchip ${statusClass}\"></i>\n            </div>\n            \n            <div class=\"bar-value ${statusClass}\">\n                ${displayValue}<span class=\"percent-sign\">%</span>\n            </div>\n            \n            <div class=\"bar-track\">\n                <div class=\"bar-fill ${statusClass}\" style=\"width: ${percentage}%;\"></div>\n            </div>\n        </div>\n    `;\n\n    container.innerHTML = titleHTML + contentHTML;\n\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: CPU utilization"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 5,
+        "x": 14,
+        "y": 3
+      },
+      "id": 121,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#mem-icon-bar-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #as161B22; /* Fundo escuro */\n    border-radius: 12px;\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n.panel-title i {\n    color: #8b949e;\n    font-size: 1.2em;\n}\n\n/* Wrapper (centraliza) */\n.content-wrapper {\n    display: flex;\n    flex-direction: column;\n    justify-content: center; /* Centraliza verticalmente */\n    align-items: center; /* Centraliza horizontalmente */\n    flex-grow: 1; /* Ocupa o espaço disponível */\n    padding: 10px 0;\n}\n\n/* Ícone Central */\n.central-icon-wrapper {\n    text-align: center;\n    margin-bottom: 20px; /* Espaço entre o ícone e o número */\n}\n\n.central-icon-wrapper i {\n    font-size: 5em; /* Tamanho do ícone grande */\n    transition: color 0.3s ease;\n}\n\n/* Texto do valor (o número grande) */\n.bar-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 3.5em; /* Tamanho grande */\n    font-weight: 700;\n    text-align: center;\n    margin-bottom: 25px; /* Espaço entre o número e a barra */\n    transition: color 0.3s ease;\n}\n\n.bar-value .percent-sign {\n    font-size: 0.5em;\n    font-weight: 400;\n    color: #8b949e;\n    margin-left: 2px;\n}\n\n/* Fundo da barra (o trilho) */\n.bar-track {\n    width: 100%;\n    max-width: 300px; /* Limita a largura da barra */\n    height: 14px;\n    background-color: #30363d;\n    border-radius: 7px;\n    overflow: hidden;\n}\n\n/* Preenchimento da barra (o progresso) */\n.bar-fill {\n    height: 100%;\n    border-radius: 7px;\n    transition: width 0.5s ease-out, background-color 0.3s ease;\n}\n\n/* Classes de Status (cores) */\n/* Cor para o ícone central e o texto do valor */\n.status-ok { color: #ffffff; }\n.status-warning { color: #f39c12; }\n.status-danger { color: #e74c3c; }\n\n/* Cor de fundo para a barra de preenchimento */\n.bar-fill.status-ok { background-color: #2ecc71; }\n.bar-fill.status-warning { background-color: #f39c12; }\n.bar-fill.status-danger { background-color: #e74c3c; }\n\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto;\n    font-size: 1em;\n    color: #8b949e;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"mem-icon-bar-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#mem-icon-bar-container');\n    if (!container) return;\n\n    // --- ATUALIZAÇÃO: Ícone e Título ---\n    let titleHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-memory\"></i>\n            <span>Memory Utilization</span>\n        </div>`;\n    let contentHTML = '';\n\n    // 2. Verifica se os dados estão prontos\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        contentHTML = `<div class=\"panel-message\">Aguardando dados...</div>`;\n        container.innerHTML = titleHTML + contentHTML;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        contentHTML = `<div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div>`;\n        container.innerHTML = titleHTML + contentHTML;\n        return;\n    }\n\n    // 3. Extrai o dado de \"Memory utilization\"\n    let rawValue = 0;\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i);\n        // --- ATUALIZAÇÃO: Procura por \"memory utilization\" ---\n        if (name.toLowerCase().includes('memory utilization')) {\n            rawValue = valueField.values.get(i);\n            break; // Encontrou, pode parar\n        }\n    }\n\n    // 4. Converte o valor e define o status\n    const percentage = rawValue; // O valor (12.3) já é a porcentagem\n    const displayValue = percentage.toFixed(2); // Formata para 2 casas (ex: \"12.30\")\n\n    let statusClass = 'status-ok';\n    if (percentage >= 90) { // Alerta de memória\n        statusClass = 'status-danger';\n    } else if (percentage >= 80) { // Aviso de memória\n        statusClass = 'status-warning';\n    }\n\n    // 5. Constrói o HTML final (com o ícone de memória)\n    contentHTML = `\n        <div class=\"content-wrapper\">\n            \n            <div class=\"central-icon-wrapper\">\n                <i class=\"fa-solid fa-memory ${statusClass}\"></i>\n            </div>\n            \n            <div class=\"bar-value ${statusClass}\">\n                ${displayValue}<span class=\"percent-sign\">%</span>\n            </div>\n            \n            <div class=\"bar-track\">\n                <div class=\"bar-fill ${statusClass}\" style=\"width: ${percentage}%;\"></div>\n            </div>\n        </div>\n    `;\n\n    container.innerHTML = titleHTML + contentHTML;\n\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: Memory utilization"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 5,
+        "x": 19,
+        "y": 3
+      },
+      "id": 85,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#disk-util-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #wewe161B22;\n    border-radius: 12px;\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n.panel-title i {\n    color: #8b949e;\n    font-size: 1.2em;\n}\n\n/* Grid para os discos */\n.disk-grid {\n    display: flex;\n    flex-direction: column;\n    gap: 15px; /* Espaçamento entre as barras */\n    overflow-y: auto;\n    flex-grow: 1;\n}\n\n/* --- ATUALIZAÇÃO AQUI --- */\n/* Item de disco individual */\n.disk-item {\n    background: #191919;\n    border: 1px solid #30363d;\n    border-radius: 8px;\n    padding: 15px 20px;\n    \n    /* Adições para fazer o item crescer */\n    display: flex;\n    flex-direction: column;\n    justify-content: center; /* Centraliza o conteúdo verticalmente */\n    flex-grow: 1;           /* Faz o item crescer para preencher o espaço */\n    min-height: 0;          /* Necessário para flex-grow em alguns navegadores */\n}\n/* --- FIM DA ATUALIZAÇÃO --- */\n\n\n/* Cabeçalho do item (Nome + Porcentagem) */\n.disk-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 12px;\n}\n\n.disk-name {\n    font-size: 1.0em;\n    font-weight: 600;\n    color: #f9fafb;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.disk-percentage {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1.2em;\n    font-weight: 700;\n}\n\n/* Barra de Progresso */\n.disk-bar-track {\n    width: 100%;\n    height: 10px; /* Barra fina */\n    background-color: #30363d;\n    border-radius: 5px;\n    overflow: hidden;\n}\n\n.disk-bar-fill {\n    height: 100%;\n    background-color: #2ecc71; /* Cor padrão */\n    border-radius: 5px;\n    transition: width 0.5s ease-out, background-color 0.3s ease;\n}\n\n/* Classes de Status (cores) */\n.status-ok { color: #2ecc71; }\n.status-warning { color: #f39c12; }\n.status-danger { color: #e74c3c; }\n\n.disk-bar-fill.status-ok { background-color: #2ecc71; }\n.disk-bar-fill.status-warning { background-color: #f39c12; }\n.disk-bar-fill.status-danger { background-color: #e74c3c; }\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto;\n    font-size: 1em;\n    color: #8b949e;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"disk-util-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#disk-util-container');\n    if (!container) return;\n\n    // 2. Define a estrutura básica (título)\n    let titleHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-hard-drive\"></i>\n            <span>Disk Utilization</span>\n        </div>`;\n    let contentHTML = '<div class=\"disk-grid\">'; // Abre o grid\n\n    // 3. Verifica se os dados estão prontos\n    if (!data.series || data.series.length === 0 || data.state !== 'Done' || data.series[0].fields.length === 0) {\n        contentHTML += `<div class=\"panel-message\">Aguardando dados...</div>`;\n        container.innerHTML = titleHTML + contentHTML + '</div>'; // Fecha o grid\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        contentHTML += `<div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div>`;\n        container.innerHTML = titleHTML + contentHTML + '</div>'; // Fecha o grid\n        return;\n    }\n\n    // 4. Itera pelos dados e constrói o HTML para cada disco\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i); // Ex: \"sda: Disk utilization\"\n        const rawValue = valueField.values.get(i); // Ex: 0.0317 ou 10.2\n\n        // Extrai o nome do disco (ex: \"sda\")\n        const diskName = name.split(':')[0];\n\n        // --- Lógica para lidar com valores em 0-1 (0.03) ou 0-100 (10.2) ---\n        let percentage = rawValue;\n        // Se o valor for menor ou igual a 1 (e não for 0), multiplica por 100\n        if (rawValue <= 1 && rawValue > 0) { \n            percentage = rawValue * 100; // Converte 0.0317 para 3.17\n        }\n        // Se rawValue for 10.2, 'percentage' continua 10.2\n        // Se rawValue for 0, 'percentage' continua 0\n        \n        const displayPercent = percentage.toFixed(2); // Formata para 2 casas decimais\n\n        // Define a cor\n        let statusClass = 'status-ok';\n        if (percentage >= 90) {\n            statusClass = 'status-danger';\n        } else if (percentage >= 80) {\n            statusClass = 'status-warning';\n        }\n        \n        // Adiciona o HTML do item de disco\n        contentHTML += `\n            <div class=\"disk-item\">\n                <div class=\"disk-header\">\n                    <span class=\"disk-name\"><i class=\"fa-solid fa-database\"></i> ${diskName}</span>\n                    <span class=\"disk-percentage ${statusClass}\">${displayPercent}%</span>\n                </div>\n                <div class=\"disk-bar-track\">\n                    <div class=\"disk-bar-fill ${statusClass}\" style=\"width: ${percentage}%;\"></div>\n                </div>\n            </div>\n        `;\n    }\n\n    // 5. Fecha o grid e insere no container\n    contentHTML += '</div>';\n    container.innerHTML = titleHTML + contentHTML;\n\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Disk utilization/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CPU utilization"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#72ff5f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 9,
+        "y": 14
+      },
+      "id": 123,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: CPU utilization"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Memory utilization"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#72ff5f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 14,
+        "y": 14
+      },
+      "id": 124,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "Linux: Memory utilization"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sda: Disk utilization"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#72ff5f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 19,
+        "y": 14
+      },
+      "id": 125,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Disk utilization/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 2,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "id": 55,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#disk-stats-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #tras161B22; /* Fundo escuro sólido */\n    border-radius: 12px;\n}\n\n/* Título do Painel */\n.panel-title {\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n\n/* Grid para as estatísticas */\n.stats-grid {\n    display: grid;\n    /* 2 colunas por padrão, mas se ajusta */\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 15px;\n    flex-grow: 1;\n    overflow-y: auto;\n}\n\n/* Cada item de estatística */\n.stat-item {\n    background: #191919;\n    border: 1px solid #30363d;\n    border-radius: 8px;\n    padding: 20px;\n    display: flex;\n    align-items: center;\n    gap: 15px;\n}\n\n.stat-icon {\n    font-size: 2em;\n    width: 40px;\n    text-align: center;\n}\n\n.stat-text {\n    display: flex;\n    flex-direction: column;\n    overflow: hidden; /* Para truncar texto se necessário */\n}\n\n.stat-label {\n    font-size: 0.85em;\n    color: #8b949e;\n    text-transform: uppercase;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.stat-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1.5em;\n    font-weight: 700;\n    color: #FFFFFF;\n    white-space: nowrap;\n}\n\n.stat-value .unit {\n    font-size: 0.6em;\n    font-weight: 400;\n    color: #8b949e;\n    margin-left: 4px;\n}\n\n/* Cores dos Ícones */\n.icon-write { color: #f39c12; }\n.icon-read { color: #3498db; }\n.icon-util { color: #9b59b6; }\n.icon-queue { color: #e74c3c; }\n.icon-wait { color: #1abc9c; }\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin-top: 20px;\n    font-size: 1em;\n    color: #8b949e;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400&display=swap\" rel=\"stylesheet\">\n\n<div id=\"disk-stats-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#disk-stats-container');\n    if (!container) return;\n\n    // 2. Verifica se os dados estão prontos\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        container.innerHTML = `<div class=\"panel-message\">Aguardando dados...</div>`;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        container.innerHTML = `<div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div>`;\n        return;\n    }\n\n    // 3. Extrai os dados em um objeto\n    const stats = {};\n    let diskName = 'disk'; // Nome padrão\n\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i);\n        const value = valueField.values.get(i);\n        const lowerName = name.toLowerCase();\n        \n        // Pega o nome do disco (ex: \"sda\")\n        if (i === 0) {\n            diskName = name.split(':')[0];\n        }\n\n        // Mapeia os nomes dos campos para chaves do objeto\n        if (lowerName.includes('write rate')) stats.writeRate = value;\n        if (lowerName.includes('read rate')) stats.readRate = value;\n        if (lowerName.includes('utilization')) stats.utilization = value;\n        if (lowerName.includes('avgqu-sz')) stats.queueSize = value;\n        if (lowerName.includes('w_await')) stats.writeWait = value;\n        if (lowerName.includes('r_await')) stats.readWait = value;\n    }\n\n    // 4. Formata os valores\n    const f = {\n        writeRate: (stats.writeRate || 0).toFixed(3),\n        readRate: (stats.readRate || 0).toFixed(3),\n        utilization: (stats.utilization || 0).toFixed(2),\n        queueSize: (stats.queueSize || 0).toFixed(7),\n        writeWait: (stats.writeWait || 0).toFixed(2),\n        readWait: (stats.readWait || 0).toFixed(2),\n    };\n\n    // 5. Constrói o HTML\n    // --- ATUALIZAÇÃO AQUI ---\n    container.innerHTML = `\n        <h3 class=\"panel-title\">Disk I/O Status (${diskName})</h3>\n        <div class=\"stats-grid\">\n            \n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-arrow-up stat-icon icon-write\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Write Rate</div>\n                    <div class=\"stat-value\">${f.writeRate}<span class=\"unit\">w/s</span></div>\n                </div>\n            </div>\n            \n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-arrow-down stat-icon icon-read\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Read Rate</div>\n                    <div class=\"stat-value\">${f.readRate}<span class=\"unit\">r/s</span></div>\n                </div>\n            </div>\n            \n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-chart-pie stat-icon icon-util\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Disk Utilization</div>\n                    <div class=\"stat-value\">${f.utilization}<span class=\"unit\">%</span></div>\n                </div>\n            </div>\n            \n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-layer-group stat-icon icon-queue\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Avg Queue Size</div>\n                    <div class=\"stat-value\">${f.queueSize}<span class=\"unit\"></span></div>\n                </div>\n            </div>\n\n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-stopwatch stat-icon icon-wait\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Write Wait (w_await)</div>\n                    <div class=\"stat-value\">${f.writeWait}<span class=\"unit\">ms</span></div>\n                </div>\n            </div>\n            \n            <div class=\"stat-item\">\n                <i class=\"fa-solid fa-stopwatch stat-icon icon-wait\"></i>\n                <div class=\"stat-text\">\n                    <div class=\"stat-label\">Read Wait (r_await)</div>\n                    <div class=\"stat-value\">${f.readWait}<span class=\"unit\">ms</span></div>\n                </div>\n            </div>\n            \n        </div>\n    `;\n    // --- FIM DA ATUALIZAÇÃO ---\n\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk utilization/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk write rate/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk write request avg waiting time \\(w_await\\)/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk average queue size \\(avgqu-sz\\)/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk read rate/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk sda"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:125",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:126",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:127",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/sd.: Disk read request avg waiting time \\(r_await\\)/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 25
+      },
+      "hideTimeOverride": true,
+      "id": 45,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#load-avg-panel-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    padding: 20px;\n    box-sizing: border-box;\n    background: #tra161B22; /* Fundo escuro */\n    border-radius: 12px;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #c9d1d9;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #30363d;\n    flex-shrink: 0;\n}\n.panel-title i {\n    color: #8b949e; /* Cor do ícone no título */\n    font-size: 1.2em; /* Tamanho do ícone no título */\n}\n\n/* Wrapper para os 3 blocos de estatística */\n.stats-wrapper {\n    display: flex;\n    justify-content: space-around; /* Distribui os 3 itens */\n    align-items: center;\n    flex-grow: 1; /* Ocupa o espaço vertical disponível */\n    gap: 20px;\n    padding: 10px 0;\n}\n\n/* Bloco de estatística individual (1m, 5m, 15m) */\n.stat-block {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    background: #191919; /* Fundo para cada bloco */\n    border: 1px solid #30363d;\n    border-radius: 8px;\n    padding: 15px 25px; /* Preenchimento interno */\n    flex: 1; /* Faz com que todos tenham a mesma largura */\n    max-width: 30%; /* Limita a largura para não ficarem muito grandes */\n}\n\n/* --- NOVO: Estilo para os ícones dentro de cada bloco de estatística --- */\n.stat-block .stat-icon {\n    font-size: 1.6em;\n    color: #8b949e; /* Cor padrão dos ícones nos blocos */\n    margin-bottom: 5px; /* Espaço abaixo do ícone */\n}\n\n/* Valor numérico grande */\n.stat-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1.5em; /* Reduzido um pouco para acomodar o ícone */\n    font-weight: 700;\n    line-height: 1;\n    margin-bottom: 5px; /* Espaço abaixo do valor */\n}\n\n/* Rótulo (1 Minuto, 5 Minutos, etc.) */\n.stat-label {\n    font-size: 0.85em;\n    font-weight: 600;\n    color: #8b949e;\n    text-transform: uppercase;\n    text-align: center;\n}\n\n/* Cores para cada valor (e agora também para o ícone do bloco) */\n.stat-1m .stat-value, .stat-1m .stat-icon { color: #3498db; }  /* Azul */\n.stat-5m .stat-value, .stat-5m .stat-icon { color: #2ecc71; }  /* Verde */\n.stat-15m .stat-value, .stat-15m .stat-icon { color: #9b59b6; } /* Roxo */\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto;\n    font-size: 1em;\n    color: #8b949e;\n}\n\n/* Media queries para responsividade */\n@media (max-width: 768px) {\n    .stats-wrapper {\n        flex-direction: column; /* Empilha os blocos em telas pequenas */\n        padding: 0;\n    }\n    .stat-block {\n        max-width: 100%; /* Ocupa toda a largura disponível */\n        width: 100%;\n        padding: 10px;\n    }\n    .stat-value {\n        font-size: 2em; /* Reduz um pouco o tamanho da fonte */\n    }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"load-avg-panel-container\">\n    <div class=\"panel-title\">\n        <i class=\"fa-solid fa-gauge-high\"></i> <span>CPU Load Average</span>\n    </div>\n    <div class=\"stats-wrapper\">\n        </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    // 1. Encontra o container\n    const container = htmlNode.querySelector('#load-avg-panel-container');\n    if (!container) return; // Esta checagem é importante\n\n    // 2. Verifica se os dados estão prontos\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        // --- CORREÇÃO AQUI ---\n        // Constrói o HTML completo para a mensagem de \"Aguardando\"\n        container.innerHTML = `\n            <div class=\"panel-title\">\n                <i class=\"fa-solid fa-gauge-high\"></i>\n                <span>CPU Load Average</span>\n            </div>\n            <div class=\"panel-message\">Aguardando dados...</div>\n        `;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        // --- CORREÇÃO AQUI ---\n        // Constrói o HTML completo para a mensagem de \"Erro\"\n        container.innerHTML = `\n            <div class=\"panel-title\">\n                <i class=\"fa-solid fa-gauge-high\"></i>\n                <span>CPU Load Average</span>\n            </div>\n            <div class=\"panel-message\" style=\"color: #e74c3c;\">Erro: Colunas \"Field\" e \"Last *\" não encontradas.</div>\n        `;\n        return;\n    }\n\n    // 3. Extrai os dados em um objeto\n    const stats = {\n        '1m': 0,\n        '5m': 0,\n        '15m': 0\n    };\n\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = nameField.values.get(i);\n        const value = valueField.values.get(i);\n\n        if (name.includes('1m avg')) stats['1m'] = value;\n        if (name.includes('5m avg')) stats['5m'] = value;\n        if (name.includes('15m avg')) stats['15m'] = value;\n    }\n\n    // 4. Formata os valores com 2 casas decimais\n    const f = {\n        '1m': (stats['1m'] || 0).toFixed(2),\n        '5m': (stats['5m'] || 0).toFixed(2),\n        '15m': (stats['15m'] || 0).toFixed(2)\n    };\n\n    // 5. Constrói o HTML final e insere no container\n    // --- CORREÇÃO AQUI ---\n    // Constrói o HTML *completo* (título + wrapper + blocos)\n    container.innerHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-gauge-high\"></i> \n            <span>CPU Load Average</span>\n        </div>\n        <div class=\"stats-wrapper\">\n            <div class=\"stat-block stat-1m\">\n                <i class=\"fa-solid fa-hourglass-start stat-icon\"></i>\n                <div class=\"stat-value\">${f['1m']}</div>\n                <div class=\"stat-label\">1 Min</div>\n            </div>\n            \n            <div class=\"stat-block stat-5m\">\n                <i class=\"fa-solid fa-hourglass-half stat-icon\"></i>\n                <div class=\"stat-value\">${f['5m']}</div>\n                <div class=\"stat-label\">5 Min</div>\n            </div>\n            \n            <div class=\"stat-block stat-15m\">\n                <i class=\"fa-solid fa-hourglass-end stat-icon\"></i>\n                <div class=\"stat-value\">${f['15m']}</div>\n                <div class=\"stat-label\">15 Min</div>\n            </div>\n        </div>\n    `;\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:33",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:34",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Load average",
+                " "
+              ],
+              "text": "replaceAlias(Load average,  )"
+            },
+            {
+              "$$hashKey": "object:35",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/Linux\\: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "$$hashKey": "object:32",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Load/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "timeFrom": "3h",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 72,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Load average (15m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#33c61f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Load average (1m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#003fe0",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Load average (5m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Linux: Load average (5m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3e63ff",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Linux: Load average (1m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e3b602",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Linux: Load average (15m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14a302",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Linux: Load average (1m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#9cff8d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Load average (15m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4aaed0",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Load average (1m avg)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 8,
+        "y": 25
+      },
+      "id": 58,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:65",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:66",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:67",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Load/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 45,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface ens192: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#04743a",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface ens192: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "rgb(4, 104, 116)",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface ens160: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1cb008",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface ens160: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0141a2",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface eth0: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14a302",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface eth0: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3e63ff",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface eth1: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e3b602",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "  Interface eth1: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff780b",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface ens160: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4aaed0",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface ens160: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 48,
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean",
+            "lastNotNull",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxHeight": 600,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.7",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:343",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:344",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:342",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Bits received/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:367",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            },
+            {
+              "$$hashKey": "object:368",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$Host:",
+                " "
+              ],
+              "text": "replaceAlias($Host:,  )"
+            },
+            {
+              "$$hashKey": "object:369",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$Host"
+          },
+          "item": {
+            "filter": "/Bits sent/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "FREEWAY_DNS_UNBOUND_108v6",
+          "value": "FREEWAY_DNS_UNBOUND_108v6"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/LINUX_DNS/",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {
+    "hidden": true
+  },
+  "timezone": "browser",
+  "title": "SERVIDORES LINUX STATUS",
+  "uid": "ef2b3d0rdgt1ccC",
+  "version": 9,
+  "weekStart": ""
+}

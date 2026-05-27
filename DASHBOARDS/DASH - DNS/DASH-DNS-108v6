@@ -1,0 +1,1923 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 186,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 24,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<link\n  href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap\"\n  rel=\"stylesheet\">\n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n\n<style>\n  /* --- 1. CONFIGURAÇÃO DO FUNDO DO DASHBOARD (IMPORTANTE) --- */\n  :root {\n    //--dashboard-bg-color: #282A36;\n  }\n\n  .dashboard-row__title {\n    color: white !important;\n  }\n\n\n\n  /* Força o background no corpo do Grafana para sumir com o cinza padrão */\n  html,\n  body {\n    /* background: #0A253E; AZUL*/\n\n\n    /* background-image: radial-gradient(circle, #3a3f44 0%, #000000 90%) !important;\n    background-size: cover;\n    background-attachment: fixed;\n    font-family: 'Roboto', sans-serif; */\n\n\n    background-image: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Crect fill='%23010d05' width='540' height='450'/%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(21,930,463)'%3E%3Cstop offset='0' stop-color='%23011102'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='433' height='360.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.02'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E\") !important;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-attachment: fixed;\n  }\n\n  /* --- 2. HEADER CONTAINER --- */\n  .header-container {\n    background-color: rgba(0, 0, 0, 0.2);\n    //background-image: #1e1e38 !important;\n    color: #ffffff;\n    width: 100%;\n    height: 100%;\n    padding: 1.5rem;\n    box-sizing: border-box;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    border-radius: 1.5rem;\n    //border: 1px solid rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */\n  }\n\n  /* --- 3. SOBRESCRITAS GLOBAIS DO GRAFANA (DO SEU EXEMPLO) --- */\n  /* Aplica sombra e bordas arredondadas em TODOS os painéis do dashboard */\n  .css-itdw1b-panel-container,\n  .css-1ijfwvk-panel-container,\n  .css-7mshyc-panel-container,\n  .css-2qng6u-panel-container,\n  .css-18yh62t-panel-container {\n    background: rgba(0, 0, 0, 0.2);\n    /* Fundo dos painéis */\n    border-radius: 1.5rem;\n    //  border: 1px solid rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n\n  }\n\n  .css-1978mzo-canvas-content {\n    //background: #1e1e38;\n    /* Fundo dos painéis */\n  }\n\n  /* Seção da Esquerda (Logo) */\n  .header-left {\n    flex: 1;\n    display: flex;\n    justify-content: flex-start;\n  }\n\n  .logo {\n    height: 3.5rem;\n    width: auto;\n    display: block;\n  }\n\n  /* Seção Central (Títulos) */\n  .header-center {\n    flex: 2;\n    text-align: center;\n    padding: 0 20px;\n  }\n\n  .title {\n    font-size: 2.5rem;\n    font-weight: bold;\n    /* Mais negrito */\n    margin: 0;\n    color: #FFFFFF;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n\n  .subtitle {\n    font-size: 0.8rem;\n    font-weight: 400;\n    margin: 6px 0 0 0;\n    color: #FFF;\n    opacity: 0.8;\n    letter-spacing: 0.5px;\n    text-transform: uppercase;\n  }\n\n  /* Seção da Direita (Relógio) */\n  .header-right {\n    flex: 1;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    gap: 24px;\n  }\n\n  /* --- ALTERAÇÃO AQUI: ADICIONADO BACKGROUND AO RELÓGIO --- */\n  #clock {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 2.5rem;\n    font-weight: 500;\n    color: #e0e0e0;\n\n    /* Novo estilo de background */\n    background-color: rgba(0, 0, 0, 0.2);\n    padding: 8px 16px;\n    border-radius: 2rem;\n    border: 1px solid rgba(204, 204, 220, 0.12);\n  }\n\n  /* --- CLASSES EXTRAS DO SEU EXEMPLO (MANTIDAS) --- */\n  .css-18o2w4z {\n    font-size: 10rem;\n    color: white;\n  }\n\n  .flot-temp-elem {\n    color: white !important;\n    font-family: 'Roboto Mono', monospace;\n    font-weight: 400 !important;\n  }\n\n  .css-t12fgu {\n    color: rgba(255, 255, 255, 1);\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1rem;\n  }\n\n  /* Tabelas */\n  .ReactTable .rt-thead .rt-resizable-header-content {\n    color: white;\n    font-size: 1rem;\n    text-transform: uppercase;\n    font-weight: 700;\n  }\n\n  .ReactTable .rt-tr {\n    color: #ddd;\n    font-size: 1rem;\n  }\n\n  .css-1kfgvg7-thead {\n    background: linear-gradient(180deg, #0094FF 0%, #005BB5 100%);\n    padding: 0;\n    border-radius: 1rem 1rem 0 0;\n  }\n\n\n  .css-131hug8 label,\n  .css-m0z7c1 label {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 1.5rem;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n    text-transform: uppercase;\n    border: 1px solid rgba(204, 204, 220, 0.12);\n\n  }\n\n\n  .css-rebjtg-input-wrapper,\n  .css-1nmqu8c-input-wrapper {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 1.5rem !important;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n\n  }\n\n  .css-uflqqj-grafana-select-multi-value-container {\n    background: rgba(0, 0, 0, 0.2);\n    border: 1px solid rgba(204, 204, 220, 0.12);\n    color: white;\n    border-radius: 1rem !important;\n    font-weight: bold;\n  }\n\n  .css-8nwx1l-singleValue {\n    background: rgba(0, 0, 0, 0.2) !important;\n    border-radius: 0.8rem !important;\n    color: white !important;\n    font-family: 'Roboto', sans-serif !important;\n  }\n  }\n</style>\n\n<div class=\"header-container\">\n  <div class=\"header-left\">\n    <img src=\"https://storage.googleapis.com/flowbix-img/TimeGrafana/Freeway%20logo2.png\" alt=\"Flowbix Logo\" class=\"logo\">\n  </div>\n  <div class=\"header-center\">\n    <h1 class=\"title\">DNS - UNBOUND - IPv4_IPv6\n    </h1>\n    <p class=\"subtitle\">MONITORAMENTO DNS</p>\n  </div>\n  <div class=\"header-right\">\n    <div id=\"clock\">--:--:--</div>\n  </div>\n</div>\n\n<script>\n  // --- Lógica do Relógio ---\n    if (!window.grafanaHeaderClock) {\n        function updateClock() {\n            const clockElement = document.getElementById('clock');\n            if (clockElement) {\n                const now = new Date();\n                const hours = String(now.getHours()).padStart(2, '0');\n                const minutes = String(now.getMinutes()).padStart(2, '0');\n                const seconds = String(now.getSeconds()).padStart(2, '0');\n                clockElement.textContent = `${hours}:${minutes}:${seconds}`;\n            }\n        }\n        window.grafanaHeaderClock = setInterval(updateClock, 1000);\n        updateClock();\n    }\n</script>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "builder",
+          "format": "table",
+          "rawSql": "",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 100
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 3
+      },
+      "id": 20,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "* {\n  box-sizing: border-box;\n}\n\n#stat-root {\n  width: 100%;\n  height: 100%;\n}\n\n.stat-card {\n  --bg-1: rgba(8, 28, 12, 0.96);\n  --bg-2: rgba(25, 92, 28, 0.96);\n  --border: rgba(255,255,255,0.08);\n  --text-main: #f8fafc;\n  --text-soft: rgba(255,255,255,0.72);\n  --text-dim: rgba(255,255,255,0.52);\n\n  position: relative;\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  overflow: hidden;\n  border-radius: 14px;\n  border: 1px solid var(--border);\n  background:\n    radial-gradient(circle at top left, rgba(34,197,94,0.10), transparent 35%),\n    radial-gradient(circle at bottom right, rgba(134,239,172,0.06), transparent 32%),\n    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);\n  box-shadow:\n    inset 0 1px 0 rgba(255,255,255,0.04),\n    0 8px 20px rgba(0,0,0,0.22);\n  font-family: Inter, Arial, sans-serif;\n  color: var(--text-main);\n}\n\n.stat-overlay {\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n  background:\n    linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0) 28%),\n    linear-gradient(0deg, rgba(0,0,0,0.07), rgba(0,0,0,0) 38%);\n}\n\n.stat-content {\n  position: relative;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  padding: clamp(8px, 0.9vw, 12px);\n  display: grid;\n  grid-template-rows: auto 1fr auto;\n  gap: 8px;\n}\n\n.stat-top {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) auto;\n  align-items: start;\n  gap: 10px;\n}\n\n.stat-meta {\n  min-width: 0;\n}\n\n.stat-title {\n  font-size: clamp(11px, 1vw, 16px);\n  line-height: 1.05;\n  font-weight: 800;\n  color: #ffffff;\n  letter-spacing: -0.02em;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-subtitle {\n  margin-top: 3px;\n  font-size: clamp(8px, 0.7vw, 10px);\n  color: var(--text-soft);\n  font-weight: 700;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-value-wrap {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n  gap: 4px;\n  min-width: 0;\n}\n\n.stat-value {\n  font-size: clamp(26px, 4.2vw, 54px);\n  line-height: 0.9;\n  font-weight: 900;\n  letter-spacing: -0.05em;\n  color: #ffffff;\n  text-shadow: 0 0 10px rgba(255,255,255,0.06);\n  white-space: nowrap;\n}\n\n.stat-delta {\n  padding: 3px 8px;\n  border-radius: 999px;\n  font-size: clamp(8px, 0.7vw, 10px);\n  font-weight: 800;\n  border: 1px solid rgba(255,255,255,0.10);\n  background: rgba(255,255,255,0.05);\n  color: #f8fafc;\n  white-space: nowrap;\n}\n\n.stat-delta.up {\n  background: rgba(34,197,94,0.14);\n  color: #dcfce7;\n  border-color: rgba(34,197,94,0.24);\n}\n\n.stat-delta.down {\n  background: rgba(239,68,68,0.14);\n  color: #fee2e2;\n  border-color: rgba(239,68,68,0.24);\n}\n\n.stat-chart-area {\n  position: relative;\n  min-height: 0;\n  height: 100%;\n  overflow: hidden;\n  border-radius: 10px;\n}\n\n.stat-chart-svg {\n  width: 100%;\n  height: 100%;\n  display: block;\n}\n\n.stat-footer {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 6px;\n  align-items: end;\n}\n\n.stat-footer-item {\n  min-width: 0;\n}\n\n.stat-footer-label {\n  display: block;\n  font-size: clamp(7px, 0.65vw, 9px);\n  color: var(--text-dim);\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  margin-bottom: 2px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-footer-value {\n  display: block;\n  font-size: clamp(11px, 1vw, 16px);\n  color: #ffffff;\n  font-weight: 900;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-empty,\n.stat-error {\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  padding: 12px;\n  color: rgba(255,255,255,0.82);\n  font-family: Inter, Arial, sans-serif;\n  border-radius: 14px;\n  border: 1px dashed rgba(255,255,255,0.10);\n  background: rgba(255,255,255,0.03);\n  font-size: 12px;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"stat-root\">\n  <div class=\"stat-empty\">Carregando dados...</div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const root = htmlNode.querySelector('#stat-root');\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value) || 0);\n}\n\nfunction formatDecimal(value, digits = 1) {\n  return new Intl.NumberFormat('pt-BR', {\n    minimumFractionDigits: digits,\n    maximumFractionDigits: digits\n  }).format(Number(value) || 0);\n}\n\nfunction getFieldByCandidates(fields, candidates) {\n  const normalizedFields = fields.map(f => ({\n    raw: f,\n    name: String(f.name || '').toLowerCase().trim(),\n    type: String(f.type || '').toLowerCase().trim()\n  }));\n\n  for (const candidate of candidates) {\n    const found = normalizedFields.find(f => f.name === candidate.toLowerCase());\n    if (found) return found.raw;\n  }\n\n  return null;\n}\n\nfunction getFirstTimeField(fields) {\n  return fields.find(f => String(f.type || '').toLowerCase() === 'time') || null;\n}\n\nfunction getFirstNumericField(fields) {\n  return fields.find(f => String(f.type || '').toLowerCase() === 'number') || null;\n}\n\nfunction buildPath(points) {\n  if (!points.length) return '';\n  return points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');\n}\n\nfunction buildAreaPath(points, height) {\n  if (!points.length) return '';\n  const line = buildPath(points);\n  const first = points[0];\n  const last = points[points.length - 1];\n  return `${line} L ${last.x} ${height} L ${first.x} ${height} Z`;\n}\n\nfunction getMinMax(values) {\n  let min = Infinity;\n  let max = -Infinity;\n\n  values.forEach(v => {\n    if (v < min) min = v;\n    if (v > max) max = v;\n  });\n\n  if (!isFinite(min) || !isFinite(max)) {\n    min = 0;\n    max = 1;\n  }\n\n  if (min === max) {\n    min = min - 1;\n    max = max + 1;\n  }\n\n  return { min, max };\n}\n\ntry {\n  const series = htmlGraphics?.data?.series || [];\n\n  if (!series.length) {\n    root.innerHTML = '<div class=\"stat-empty\">Sem dados</div>';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  const timeField = getFirstTimeField(fields);\n\n  const valueField =\n    getFieldByCandidates(fields, [\n      'clientes ativos',\n      'value',\n      'valor',\n      'count',\n      'total',\n      'last'\n    ]) || getFirstNumericField(fields);\n\n  if (!valueField) {\n    root.innerHTML = `\n      <div class=\"stat-error\">\n        Campo numérico não encontrado.<br><br>\n        Fields encontrados: ${escapeHtml(fields.map(f => f.name).join(', '))}\n      </div>\n    `;\n    return;\n  }\n\n  const rawValues = Array.from(valueField.values || []).map(v => Number(v));\n  const rawTimes = timeField ? Array.from(timeField.values || []) : rawValues.map((_, i) => i);\n\n  const rows = rawValues\n    .map((value, i) => ({ time: rawTimes[i], value }))\n    .filter(r => !isNaN(r.value));\n\n  if (!rows.length) {\n    root.innerHTML = '<div class=\"stat-empty\">Sem registros válidos</div>';\n    return;\n  }\n\n  const lastValue = rows[rows.length - 1].value;\n  const prevValue = rows.length > 1 ? rows[rows.length - 2].value : lastValue;\n  const minValue = Math.min(...rows.map(r => r.value));\n  const maxValue = Math.max(...rows.map(r => r.value));\n  const avgValue = rows.reduce((acc, r) => acc + r.value, 0) / rows.length;\n\n  const deltaRaw = lastValue - prevValue;\n  const deltaPercent = prevValue !== 0 ? (deltaRaw / prevValue) * 100 : 0;\n\n  const chartWidth = 1000;\n  const chartHeight = 90;\n  const topPadding = 6;\n  const bottomPadding = 4;\n\n  const { min, max } = getMinMax(rows.map(r => r.value));\n\n  const points = rows.map((row, i) => {\n    const x = (i * chartWidth) / Math.max(rows.length - 1, 1);\n    const y =\n      topPadding +\n      (chartHeight - topPadding - bottomPadding) *\n        (1 - (row.value - min) / (max - min));\n    return { x, y };\n  });\n\n  const linePath = buildPath(points);\n  const areaPath = buildAreaPath(points, chartHeight);\n\n  let deltaClass = '';\n  let deltaText = 'Estável';\n\n  if (deltaRaw > 0) {\n    deltaClass = 'up';\n    deltaText = `▲ ${formatDecimal(Math.abs(deltaPercent), 1)}%`;\n  } else if (deltaRaw < 0) {\n    deltaClass = 'down';\n    deltaText = `▼ ${formatDecimal(Math.abs(deltaPercent), 1)}%`;\n  }\n\n  const panelTitle = escapeHtml(valueField.name || 'Stat');\n\n  root.innerHTML = `\n    <div class=\"stat-card\">\n      <div class=\"stat-overlay\"></div>\n\n      <div class=\"stat-content\">\n        <div class=\"stat-top\">\n          <div class=\"stat-meta\">\n            <div class=\"stat-title\">${panelTitle}</div>\n            <div class=\"stat-subtitle\">Monitoramento em tempo real clientes Ativos</div>\n          </div>\n\n          <div class=\"stat-value-wrap\">\n            <div class=\"stat-value\">${formatNumber(lastValue)}</div>\n            <div class=\"stat-delta ${deltaClass}\">${deltaText}</div>\n          </div>\n        </div>\n\n        <div class=\"stat-chart-area\">\n          <svg class=\"stat-chart-svg\" viewBox=\"0 0 ${chartWidth} ${chartHeight}\" preserveAspectRatio=\"none\">\n            <defs>\n              <linearGradient id=\"areaGradientCompact\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n                <stop offset=\"0%\" stop-color=\"rgba(255,255,255,0.34)\" />\n                <stop offset=\"100%\" stop-color=\"rgba(255,255,255,0.08)\" />\n              </linearGradient>\n\n              <linearGradient id=\"lineGradientCompact\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n                <stop offset=\"0%\" stop-color=\"#d9f99d\" />\n                <stop offset=\"55%\" stop-color=\"#bbf7d0\" />\n                <stop offset=\"100%\" stop-color=\"#86efac\" />\n              </linearGradient>\n\n              <filter id=\"glowCompact\">\n                <feGaussianBlur stdDeviation=\"2.2\" result=\"blur\" />\n                <feMerge>\n                  <feMergeNode in=\"blur\" />\n                  <feMergeNode in=\"SourceGraphic\" />\n                </feMerge>\n              </filter>\n            </defs>\n\n            <path d=\"${areaPath}\" fill=\"url(#areaGradientCompact)\"></path>\n\n            <path\n              d=\"${linePath}\"\n              fill=\"none\"\n              stroke=\"url(#lineGradientCompact)\"\n              stroke-width=\"1.8\"\n              stroke-linecap=\"round\"\n              stroke-linejoin=\"round\"\n              filter=\"url(#glowCompact)\"\n            ></path>\n\n            ${\n              points.length\n                ? `<circle\n                    cx=\"${points[points.length - 1].x}\"\n                    cy=\"${points[points.length - 1].y}\"\n                    r=\"3.2\"\n                    fill=\"#dcfce7\"\n                    stroke=\"#86efac\"\n                    stroke-width=\"1.4\"\n                  ></circle>`\n                : ''\n            }\n          </svg>\n        </div>\n\n        <div class=\"stat-footer\">\n          <div class=\"stat-footer-item\">\n            <span class=\"stat-footer-label\">Mínimo</span>\n            <span class=\"stat-footer-value\">${formatNumber(minValue)}</span>\n          </div>\n\n          <div class=\"stat-footer-item\">\n            <span class=\"stat-footer-label\">Média</span>\n            <span class=\"stat-footer-value\">${formatDecimal(avgValue, 1)}</span>\n          </div>\n\n          <div class=\"stat-footer-item\" style=\"text-align:right;\">\n            <span class=\"stat-footer-label\">Máximo</span>\n            <span class=\"stat-footer-value\">${formatNumber(maxValue)}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  `;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  root.innerHTML = `<div class=\"stat-error\">Erro ao renderizar: ${escapeHtml(msg)}</div>`;\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Clientes Ativos"
+          },
+          "itemTag": {
+            "filter": "Clientes Ativos"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#808080",
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 6,
+        "y": 3
+      },
+      "id": 16,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "* {\n  box-sizing: border-box;\n}\n\n#stat-root {\n  width: 100%;\n  height: 100%;\n}\n\n.stat-card {\n  --bg-1: rgba(18, 52, 15, 0.96);\n  --bg-2: rgba(45, 116, 31, 0.96);\n  --border: rgba(255,255,255,0.08);\n  --text-main: #f8fafc;\n  --text-soft: rgba(255,255,255,0.75);\n  --text-dim: rgba(255,255,255,0.55);\n\n  position: relative;\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  overflow: hidden;\n  border-radius: 12px;\n  border: 1px solid var(--border);\n  background:\n    radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 34%),\n    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);\n  box-shadow:\n    inset 0 1px 0 rgba(255,255,255,0.04),\n    0 8px 20px rgba(0,0,0,0.18);\n  font-family: Inter, Arial, sans-serif;\n  color: var(--text-main);\n}\n\n.stat-overlay {\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n  background:\n    linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0) 28%),\n    linear-gradient(0deg, rgba(0,0,0,0.08), rgba(0,0,0,0) 36%);\n}\n\n.stat-content {\n  position: relative;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  padding: clamp(8px, 0.9vw, 12px);\n  display: grid;\n  grid-template-rows: auto 1fr auto;\n  gap: 8px;\n}\n\n.stat-top {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) auto;\n  align-items: start;\n  gap: 10px;\n}\n\n.stat-meta {\n  min-width: 0;\n}\n\n.stat-title {\n  font-size: clamp(12px, 1vw, 18px);\n  line-height: 1.05;\n  font-weight: 800;\n  color: #ffffff;\n  letter-spacing: -0.02em;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-subtitle {\n  margin-top: 3px;\n  font-size: clamp(8px, 0.7vw, 10px);\n  color: var(--text-soft);\n  font-weight: 700;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-value-wrap {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n  gap: 4px;\n  min-width: 0;\n}\n\n.stat-value {\n  font-size: clamp(28px, 4.6vw, 62px);\n  line-height: 0.9;\n  font-weight: 900;\n  letter-spacing: -0.05em;\n  color: #ffffff;\n  text-shadow: 0 0 10px rgba(255,255,255,0.06);\n  white-space: nowrap;\n}\n\n.stat-delta {\n  padding: 3px 8px;\n  border-radius: 999px;\n  font-size: clamp(8px, 0.7vw, 10px);\n  font-weight: 800;\n  border: 1px solid rgba(255,255,255,0.10);\n  background: rgba(255,255,255,0.06);\n  color: #f8fafc;\n  white-space: nowrap;\n}\n\n.stat-delta.up {\n  background: rgba(34,197,94,0.16);\n  color: #dcfce7;\n  border-color: rgba(34,197,94,0.26);\n}\n\n.stat-delta.down {\n  background: rgba(239,68,68,0.14);\n  color: #fee2e2;\n  border-color: rgba(239,68,68,0.22);\n}\n\n.stat-chart-area {\n  position: relative;\n  min-height: 0;\n  height: 100%;\n  overflow: hidden;\n  border-radius: 10px;\n}\n\n.stat-chart-svg {\n  width: 100%;\n  height: 100%;\n  display: block;\n}\n\n.stat-footer {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 6px;\n  align-items: end;\n}\n\n.stat-footer-item {\n  min-width: 0;\n}\n\n.stat-footer-label {\n  display: block;\n  font-size: clamp(7px, 0.65vw, 9px);\n  color: var(--text-dim);\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  margin-bottom: 2px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-footer-value {\n  display: block;\n  font-size: clamp(11px, 1vw, 16px);\n  color: #ffffff;\n  font-weight: 900;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.stat-empty,\n.stat-error {\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  padding: 12px;\n  color: rgba(255,255,255,0.82);\n  font-family: Inter, Arial, sans-serif;\n  border-radius: 12px;\n  border: 1px dashed rgba(255,255,255,0.10);\n  background: rgba(255,255,255,0.03);\n  font-size: 12px;\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"stat-root\">\n  <div class=\"stat-empty\">Carregando dados...</div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const root = htmlNode.querySelector('#stat-root');\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value) || 0);\n}\n\nfunction formatDecimal(value, digits = 1) {\n  return new Intl.NumberFormat('pt-BR', {\n    minimumFractionDigits: digits,\n    maximumFractionDigits: digits\n  }).format(Number(value) || 0);\n}\n\nfunction getFieldByCandidates(fields, candidates) {\n  const normalizedFields = fields.map(f => ({\n    raw: f,\n    name: String(f.name || '').toLowerCase().trim(),\n    type: String(f.type || '').toLowerCase().trim()\n  }));\n\n  for (const candidate of candidates) {\n    const found = normalizedFields.find(f => f.name === candidate.toLowerCase());\n    if (found) return found.raw;\n  }\n\n  return null;\n}\n\nfunction getFirstTimeField(fields) {\n  return fields.find(f => String(f.type || '').toLowerCase() === 'time') || null;\n}\n\nfunction getFirstNumericField(fields) {\n  return fields.find(f => String(f.type || '').toLowerCase() === 'number') || null;\n}\n\nfunction buildPath(points) {\n  if (!points.length) return '';\n  return points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');\n}\n\nfunction buildAreaPath(points, height) {\n  if (!points.length) return '';\n  const line = buildPath(points);\n  const first = points[0];\n  const last = points[points.length - 1];\n  return `${line} L ${last.x} ${height} L ${first.x} ${height} Z`;\n}\n\nfunction getMinMax(values) {\n  let min = Infinity;\n  let max = -Infinity;\n\n  values.forEach(v => {\n    if (v < min) min = v;\n    if (v > max) max = v;\n  });\n\n  if (!isFinite(min) || !isFinite(max)) {\n    min = 0;\n    max = 1;\n  }\n\n  if (min === max) {\n    min = min - 1;\n    max = max + 1;\n  }\n\n  return { min, max };\n}\n\ntry {\n  const series = htmlGraphics?.data?.series || [];\n\n  if (!series.length) {\n    root.innerHTML = '<div class=\"stat-empty\">Sem dados</div>';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  const timeField = getFirstTimeField(fields);\n\n  const valueField =\n    getFieldByCandidates(fields, [\n      'status noerror',\n      'noerror',\n      'value',\n      'valor',\n      'count',\n      'total',\n      'last'\n    ]) || getFirstNumericField(fields);\n\n  if (!valueField) {\n    root.innerHTML = `\n      <div class=\"stat-error\">\n        Campo numérico não encontrado.<br><br>\n        Fields encontrados: ${escapeHtml(fields.map(f => f.name).join(', '))}\n      </div>\n    `;\n    return;\n  }\n\n  const rawValues = Array.from(valueField.values || []).map(v => Number(v));\n  const rawTimes = timeField ? Array.from(timeField.values || []) : rawValues.map((_, i) => i);\n\n  const rows = rawValues\n    .map((value, i) => ({ time: rawTimes[i], value }))\n    .filter(r => !isNaN(r.value));\n\n  if (!rows.length) {\n    root.innerHTML = '<div class=\"stat-empty\">Sem registros válidos</div>';\n    return;\n  }\n\n  const lastValue = rows[rows.length - 1].value;\n  const prevValue = rows.length > 1 ? rows[rows.length - 2].value : lastValue;\n  const minValue = Math.min(...rows.map(r => r.value));\n  const maxValue = Math.max(...rows.map(r => r.value));\n  const avgValue = rows.reduce((acc, r) => acc + r.value, 0) / rows.length;\n\n  const deltaRaw = lastValue - prevValue;\n  const deltaPercent = prevValue !== 0 ? (deltaRaw / prevValue) * 100 : 0;\n\n  const chartWidth = 1000;\n  const chartHeight = 90;\n  const topPadding = 6;\n  const bottomPadding = 4;\n\n  const { min, max } = getMinMax(rows.map(r => r.value));\n\n  const points = rows.map((row, i) => {\n    const x = (i * chartWidth) / Math.max(rows.length - 1, 1);\n    const y =\n      topPadding +\n      (chartHeight - topPadding - bottomPadding) *\n        (1 - (row.value - min) / (max - min));\n    return { x, y };\n  });\n\n  const linePath = buildPath(points);\n  const areaPath = buildAreaPath(points, chartHeight);\n\n  let deltaClass = '';\n  let deltaText = 'Estável';\n\n  if (deltaRaw > 0) {\n    deltaClass = 'up';\n    deltaText = `▲ ${formatDecimal(Math.abs(deltaPercent), 1)}%`;\n  } else if (deltaRaw < 0) {\n    deltaClass = 'down';\n    deltaText = `▼ ${formatDecimal(Math.abs(deltaPercent), 1)}%`;\n  }\n\n  const panelTitle = 'Status Noerror';\n\n  root.innerHTML = `\n    <div class=\"stat-card\">\n      <div class=\"stat-overlay\"></div>\n\n      <div class=\"stat-content\">\n        <div class=\"stat-top\">\n          <div class=\"stat-meta\">\n            <div class=\"stat-title\">${panelTitle}</div>\n            <div class=\"stat-subtitle\">Clientes com resposta válida</div>\n          </div>\n\n          <div class=\"stat-value-wrap\">\n            <div class=\"stat-value\">${formatNumber(lastValue)}</div>\n            <div class=\"stat-delta ${deltaClass}\">${deltaText}</div>\n          </div>\n        </div>\n\n        <div class=\"stat-chart-area\">\n          <svg class=\"stat-chart-svg\" viewBox=\"0 0 ${chartWidth} ${chartHeight}\" preserveAspectRatio=\"none\">\n            <defs>\n              <linearGradient id=\"areaGradientNoerror\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n                <stop offset=\"0%\" stop-color=\"rgba(255,255,255,0.34)\" />\n                <stop offset=\"100%\" stop-color=\"rgba(255,255,255,0.08)\" />\n              </linearGradient>\n\n              <linearGradient id=\"lineGradientNoerror\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n                <stop offset=\"0%\" stop-color=\"#dcfce7\" />\n                <stop offset=\"55%\" stop-color=\"#bbf7d0\" />\n                <stop offset=\"100%\" stop-color=\"#86efac\" />\n              </linearGradient>\n\n              <filter id=\"glowNoerror\">\n                <feGaussianBlur stdDeviation=\"2.2\" result=\"blur\" />\n                <feMerge>\n                  <feMergeNode in=\"blur\" />\n                  <feMergeNode in=\"SourceGraphic\" />\n                </feMerge>\n              </filter>\n            </defs>\n\n            <path d=\"${areaPath}\" fill=\"url(#areaGradientNoerror)\"></path>\n\n            <path\n              d=\"${linePath}\"\n              fill=\"none\"\n              stroke=\"url(#lineGradientNoerror)\"\n              stroke-width=\"1.8\"\n              stroke-linecap=\"round\"\n              stroke-linejoin=\"round\"\n              filter=\"url(#glowNoerror)\"\n            ></path>\n\n            ${\n              points.length\n                ? `<circle\n                    cx=\"${points[points.length - 1].x}\"\n                    cy=\"${points[points.length - 1].y}\"\n                    r=\"3.2\"\n                    fill=\"#dcfce7\"\n                    stroke=\"#86efac\"\n                    stroke-width=\"1.4\"\n                  ></circle>`\n                : ''\n            }\n          </svg>\n        </div>\n\n        <div class=\"stat-footer\">\n          <div class=\"stat-footer-item\">\n            <span class=\"stat-footer-label\">Mínimo</span>\n            <span class=\"stat-footer-value\">${formatNumber(minValue)}</span>\n          </div>\n\n          <div class=\"stat-footer-item\">\n            <span class=\"stat-footer-label\">Média</span>\n            <span class=\"stat-footer-value\">${formatDecimal(avgValue, 1)}</span>\n          </div>\n\n          <div class=\"stat-footer-item\" style=\"text-align:right;\">\n            <span class=\"stat-footer-label\">Máximo</span>\n            <span class=\"stat-footer-value\">${formatNumber(maxValue)}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  `;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  root.innerHTML = `<div class=\"stat-error\">Erro ao renderizar: ${escapeHtml(msg)}</div>`;\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Status Noerror"
+          },
+          "itemTag": {
+            "filter": "DNS Status"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "DISPONIBILIDADE:",
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "transparent",
+                  "index": 1,
+                  "text": "DOWN🔴"
+                },
+                "1": {
+                  "color": "transparent",
+                  "index": 0,
+                  "text": "UP🟢"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "transparent",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 26,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "/* Container Principal */\n#system-overview-container {\n    font-family: 'Inter', sans-serif;\n    color: #E0E6F1;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n\n    /* Fundo no mesmo estilo do TOP 10 Destinations */\n    background:\n        radial-gradient(circle at top right, rgba(0, 140, 255, 0.10), transparent 35%),\n        radial-gradient(circle at bottom left, rgba(0, 80, 180, 0.08), transparent 30%),\n        linear-gradient(180deg, #09111f 0%, #060d18 100%);\n\n    border: 1px solid rgba(80, 140, 255, 0.12);\n    box-shadow:\n        inset 0 0 30px rgba(0, 140, 255, 0.05),\n        0 0 12px rgba(0, 0, 0, 0.25);\n\n    border-radius: 12px;\n    overflow: hidden;\n}\n\n/* Título do Painel */\n.panel-title {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 1.1rem;\n    font-weight: 600;\n    color: #dbe7ff;\n    margin: 0 0 15px 0;\n    padding-bottom: 15px;\n    border-bottom: 1px solid rgba(120, 170, 255, 0.12);\n    flex-shrink: 0;\n}\n\n.panel-title i {\n    color: #7ea6ff;\n    font-size: 1.2em;\n}\n\n/* Wrapper para Layout de 2 Colunas */\n.main-content-wrapper {\n    display: flex;\n    flex-grow: 1;\n    gap: 20px;\n    overflow: hidden;\n    min-height: 0;\n}\n\n/* Coluna da Esquerda (Logo) */\n.logo-column {\n    flex-basis: 200px;\n    flex-shrink: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 10px;\n}\n\n.logo-column img {\n    max-width: 100%;\n    max-height: 150px;\n    height: auto;\n    object-fit: contain;\n    filter: drop-shadow(0 0 12px rgba(0, 180, 255, 0.18));\n}\n\n/* Coluna da Direita (Estatísticas) */\n.stats-column {\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    overflow-y: auto;\n    min-width: 0;\n    justify-content: space-around;\n    padding-right: 4px;\n}\n\n/* Scrollbar */\n.stats-column::-webkit-scrollbar {\n    width: 8px;\n}\n\n.stats-column::-webkit-scrollbar-track {\n    background: rgba(255, 255, 255, 0.03);\n    border-radius: 10px;\n}\n\n.stats-column::-webkit-scrollbar-thumb {\n    background: rgba(126, 166, 255, 0.25);\n    border-radius: 10px;\n}\n\n.stats-column::-webkit-scrollbar-thumb:hover {\n    background: rgba(126, 166, 255, 0.40);\n}\n\n/* Cada item de estatística */\n.stat-item {\n    background: linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.015) 100%);\n    border: 1px solid rgba(120, 170, 255, 0.10);\n    border-radius: 10px;\n    padding: 12px 20px;\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    backdrop-filter: blur(4px);\n    box-shadow:\n        inset 0 1px 0 rgba(255, 255, 255, 0.03),\n        0 0 10px rgba(0, 0, 0, 0.15);\n    transition: all 0.2s ease;\n}\n\n.stat-item:hover {\n    border-color: rgba(120, 170, 255, 0.20);\n    box-shadow:\n        inset 0 1px 0 rgba(255, 255, 255, 0.04),\n        0 0 14px rgba(0, 140, 255, 0.08);\n}\n\n.stat-icon {\n    font-size: 1.8em;\n    width: 35px;\n    text-align: center;\n    flex-shrink: 0;\n}\n\n.stat-text {\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n    flex-grow: 1;\n}\n\n.stat-label {\n    font-size: 0.78em;\n    color: #8ea4c7;\n    text-transform: uppercase;\n    letter-spacing: 0.6px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    margin-bottom: 4px;\n}\n\n.stat-value {\n    font-family: 'Roboto Mono', monospace;\n    font-size: 1.35em;\n    font-weight: 700;\n    color: #ffffff;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n/* Cores específicas */\n.icon-agent-up { color: #2ecc71; }\n.icon-agent-down { color: #e74c3c; }\n.icon-processes { color: #4da3ff; }\n.icon-users { color: #b57cff; }\n.icon-uptime { color: #2dd4bf; }\n\n/* Mensagem de carregamento/erro */\n.panel-message {\n    text-align: center;\n    margin: auto;\n    font-size: 1em;\n    color: #9fb2d1;\n    padding: 20px;\n}\n\n/* Responsividade */\n@media (max-width: 768px) {\n    .main-content-wrapper {\n        flex-direction: column;\n    }\n\n    .logo-column {\n        flex-basis: auto;\n        min-height: 120px;\n    }\n\n    .logo-column img {\n        max-height: 110px;\n    }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<div id=\"system-overview-container\"></div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "(function() {\n    const container = htmlNode.querySelector('#system-overview-container');\n    if (!container) return;\n\n    const logoUrl = \"https://storage.googleapis.com/flowbix-img/IMG%20DASHBOARD/linux-logo-png-image-11660298434qt5f32bbxj33333333.png\";\n\n    function formatUptime(seconds) {\n        if (isNaN(seconds) || seconds < 0) return 'N/A';\n        if (seconds === 0) return '0s';\n\n        const d = Math.floor(seconds / (3600 * 24));\n        const h = Math.floor((seconds % (3600 * 24)) / 3600);\n        const m = Math.floor((seconds % 3600) / 60);\n\n        let result = '';\n        if (d > 0) result += d + 'd ';\n        if (h > 0) result += h + 'h ';\n        if (m > 0 || (d === 0 && h === 0)) result += m + 'm';\n\n        return result.trim();\n    }\n\n    let titleHTML = `\n        <div class=\"panel-title\">\n            <i class=\"fa-solid fa-server\"></i>\n            <span>System Overview</span>\n        </div>`;\n\n    if (!data.series || data.series.length === 0 || data.state !== 'Done') {\n        container.innerHTML = titleHTML + `\n            <div class=\"main-content-wrapper\">\n                <div class=\"logo-column\">\n                    <img src=\"${logoUrl}\" alt=\"Linux Logo\">\n                </div>\n                <div class=\"stats-column\">\n                    <div class=\"panel-message\">Aguardando dados...</div>\n                </div>\n            </div>`;\n        return;\n    }\n\n    const series = data.series[0];\n    const nameField = series.fields.find(f => f.name === 'Field');\n    const valueField = series.fields.find(f => f.name === 'Last *');\n\n    if (!nameField || !valueField) {\n        container.innerHTML = titleHTML + `\n            <div class=\"main-content-wrapper\">\n                <div class=\"logo-column\">\n                    <img src=\"${logoUrl}\" alt=\"Linux Logo\">\n                </div>\n                <div class=\"stats-column\">\n                    <div class=\"panel-message\" style=\"color: #e74c3c;\">\n                        Erro: Colunas \"Field\" e \"Last *\" não encontradas.\n                    </div>\n                </div>\n            </div>`;\n        return;\n    }\n\n    const stats = {\n        agentPing: null,\n        processes: null,\n        users: null,\n        uptime: null\n    };\n\n    for (let i = 0; i < nameField.values.length; i++) {\n        const name = String(nameField.values.get(i) || '');\n        const value = valueField.values.get(i);\n        const lowerName = name.toLowerCase();\n\n        if (lowerName.includes('zabbix agent ping')) stats.agentPing = value;\n        if (lowerName.includes('number of processes')) stats.processes = value;\n        if (lowerName.includes('number of logged in users')) stats.users = value;\n        if (lowerName.includes('system uptime')) stats.uptime = value;\n    }\n\n    const agentStatusText = stats.agentPing === 1 ? 'Up' : 'Down';\n    const agentStatusClass = stats.agentPing === 1 ? 'icon-agent-up' : 'icon-agent-down';\n    const agentIcon = stats.agentPing === 1 ? 'fa-circle-check' : 'fa-circle-xmark';\n\n    const processesValue = stats.processes !== null ? stats.processes : 'N/A';\n    const usersValue = stats.users !== null ? stats.users : 'N/A';\n    const uptimeValue = stats.uptime !== null ? formatUptime(stats.uptime) : 'N/A';\n\n    let statItemsHTML = '';\n\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid ${agentIcon} stat-icon ${agentStatusClass}\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Zabbix Agent</div>\n                <div class=\"stat-value\">${agentStatusText}</div>\n            </div>\n        </div>\n    `;\n\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-list-check stat-icon icon-processes\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Processes</div>\n                <div class=\"stat-value\">${processesValue}</div>\n            </div>\n        </div>\n    `;\n\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-users stat-icon icon-users\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">Logged In Users</div>\n                <div class=\"stat-value\">${usersValue}</div>\n            </div>\n        </div>\n    `;\n\n    statItemsHTML += `\n        <div class=\"stat-item\">\n            <i class=\"fa-solid fa-clock stat-icon icon-uptime\"></i>\n            <div class=\"stat-text\">\n                <div class=\"stat-label\">System Uptime</div>\n                <div class=\"stat-value\">${uptimeValue}</div>\n            </div>\n        </div>\n    `;\n\n    container.innerHTML = titleHTML + `\n        <div class=\"main-content-wrapper\">\n            <div class=\"logo-column\">\n                <img src=\"${logoUrl}\" alt=\"Linux Logo\">\n            </div>\n            <div class=\"stats-column\">\n                ${statItemsHTML}\n            </div>\n        </div>\n    `;\n})();",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "median",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY_DNS_UNBOUND_108v6"
+          },
+          "item": {
+            "filter": "Linux: Zabbix agent ping"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY_DNS_UNBOUND_108v6"
+          },
+          "item": {
+            "filter": "Linux: Number of processes"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY_DNS_UNBOUND_108v6"
+          },
+          "item": {
+            "filter": "Linux: Number of logged in users"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:82",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ", in %",
+                " "
+              ],
+              "text": "replaceAlias(, in %,  )"
+            },
+            {
+              "$$hashKey": "object:83",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Utilization of",
+                " "
+              ],
+              "text": "replaceAlias(Utilization of,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY_DNS_UNBOUND_108v6"
+          },
+          "item": {
+            "filter": "Linux: System uptime"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#2689a3",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 20,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 1,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".bar-card {\n  --panel-bg: rgba(7, 12, 24, 0.88);\n  --panel-border: rgba(255, 255, 255, 0.08);\n  --text-main: #f8fbff;\n  --text-soft: #9fb3d9;\n  --text-dim: #7c93bd;\n  --row-hover: rgba(59, 130, 246, 0.08);\n  --track: rgba(255,255,255,0.07);\n\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  padding: 14px;\n  border-radius: 18px;\n  border: 1px solid var(--panel-border);\n  background:\n    radial-gradient(circle at top left, rgba(59,130,246,0.14), transparent 34%),\n    radial-gradient(circle at bottom right, rgba(6,182,212,0.12), transparent 34%),\n    linear-gradient(180deg, rgba(9,15,30,0.96), rgba(6,10,22,0.96));\n  color: var(--text-main);\n  font-family: Inter, Arial, sans-serif;\n  box-shadow:\n    inset 0 1px 0 rgba(255,255,255,0.04),\n    0 10px 30px rgba(0,0,0,0.22);\n  overflow: hidden;\n}\n\n.bar-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  gap: 12px;\n  margin-bottom: 12px;\n}\n\n.bar-title {\n  font-size: 24px;\n  font-weight: 800;\n  line-height: 1.1;\n  letter-spacing: -0.02em;\n}\n\n.bar-subtitle {\n  margin-top: 4px;\n  color: var(--text-soft);\n  font-size: 13px;\n  font-weight: 500;\n}\n\n.bar-pill {\n  flex-shrink: 0;\n  padding: 6px 12px;\n  border-radius: 999px;\n  font-size: 11px;\n  font-weight: 800;\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n  color: #dbeafe;\n  border: 1px solid rgba(96,165,250,0.28);\n  background: linear-gradient(180deg, rgba(37,99,235,0.24), rgba(30,64,175,0.16));\n  box-shadow: 0 0 14px rgba(59,130,246,0.12);\n}\n\n.bar-summary {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 12px;\n  margin-bottom: 14px;\n}\n\n.summary-item {\n  min-height: 78px;\n  padding: 12px 14px;\n  border-radius: 14px;\n  background: rgba(255,255,255,0.025);\n  border: 1px solid rgba(255,255,255,0.06);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.summary-label {\n  color: var(--text-soft);\n  font-size: 11px;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-weight: 700;\n  margin-bottom: 6px;\n}\n\n.summary-value {\n  font-size: 28px;\n  line-height: 1;\n  font-weight: 800;\n  color: #ffffff;\n}\n\n#summary-top {\n  font-size: 22px;\n  word-break: break-word;\n}\n\n#summary-share {\n  color: #f8fafc;\n}\n\n.bars-wrap {\n  height: calc(100% - 155px);\n  min-height: 240px;\n  overflow-y: auto;\n  overflow-x: hidden;\n  padding-right: 6px;\n}\n\n.bars-wrap::-webkit-scrollbar {\n  width: 8px;\n}\n\n.bars-wrap::-webkit-scrollbar-track {\n  background: rgba(255,255,255,0.04);\n  border-radius: 999px;\n}\n\n.bars-wrap::-webkit-scrollbar-thumb {\n  background: linear-gradient(180deg, rgba(59,130,246,0.7), rgba(6,182,212,0.7));\n  border-radius: 999px;\n}\n\n.bar-row {\n  display: grid;\n  grid-template-columns: 56px minmax(120px, 220px) minmax(220px, 1fr) 90px 70px;\n  align-items: center;\n  gap: 12px;\n  padding: 10px 8px;\n  border-radius: 12px;\n  transition: background 0.2s ease, transform 0.2s ease;\n}\n\n.bar-row:hover {\n  background: var(--row-hover);\n  transform: translateX(2px);\n}\n\n.bar-rank {\n  width: 48px;\n  height: 30px;\n  border-radius: 999px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 13px;\n  font-weight: 800;\n  color: #dbeafe;\n  background: rgba(255,255,255,0.06);\n  border: 1px solid rgba(255,255,255,0.08);\n}\n\n.bar-rank.top1 {\n  color: #111827;\n  background: linear-gradient(90deg, #facc15, #f59e0b);\n  border-color: rgba(255,255,255,0.16);\n}\n\n.bar-rank.top2 {\n  color: #111827;\n  background: linear-gradient(90deg, #cbd5e1, #94a3b8);\n  border-color: rgba(255,255,255,0.16);\n}\n\n.bar-rank.top3 {\n  color: #fff;\n  background: linear-gradient(90deg, #fb923c, #f97316);\n  border-color: rgba(255,255,255,0.16);\n}\n\n.bar-domain {\n  color: #e5eefc;\n  font-size: 15px;\n  font-weight: 700;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.bar-track {\n  position: relative;\n  width: 100%;\n  height: 14px;\n  border-radius: 999px;\n  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.035));\n  overflow: hidden;\n  box-shadow: inset 0 1px 2px rgba(0,0,0,0.35);\n}\n\n.bar-fill {\n  height: 100%;\n  min-width: 10px;\n  border-radius: 999px;\n  background: linear-gradient(90deg, #22c55e 0%, #06b6d4 50%, #3b82f6 100%);\n  box-shadow:\n    0 0 14px rgba(59,130,246,0.28),\n    inset 0 0 8px rgba(255,255,255,0.12);\n  transition: width 0.6s ease;\n}\n\n.bar-fill.top1 {\n  background: linear-gradient(90deg, #fde047 0%, #facc15 45%, #f59e0b 100%);\n  box-shadow: 0 0 16px rgba(250,204,21,0.35);\n}\n\n.bar-fill.top2 {\n  background: linear-gradient(90deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);\n  box-shadow: 0 0 14px rgba(203,213,225,0.22);\n}\n\n.bar-fill.top3 {\n  background: linear-gradient(90deg, #fdba74 0%, #fb923c 50%, #f97316 100%);\n  box-shadow: 0 0 14px rgba(249,115,22,0.24);\n}\n\n.bar-value {\n  text-align: right;\n  font-size: 15px;\n  font-weight: 800;\n  color: #f8fbff;\n}\n\n.bar-percent {\n  text-align: right;\n  font-size: 14px;\n  font-weight: 700;\n  color: var(--text-soft);\n}\n\n.bars-empty {\n  height: 100%;\n  min-height: 180px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: var(--text-soft);\n  font-size: 14px;\n  border: 1px dashed rgba(255,255,255,0.08);\n  border-radius: 14px;\n  background: rgba(255,255,255,0.02);\n  padding: 20px;\n}\n\n@media (max-width: 1100px) {\n  .bar-summary {\n    grid-template-columns: 1fr;\n  }\n\n  .bars-wrap {\n    height: auto;\n    min-height: 260px;\n    max-height: 420px;\n  }\n\n  .bar-row {\n    grid-template-columns: 50px minmax(110px, 1fr) minmax(160px, 1fr) 80px 60px;\n    gap: 10px;\n  }\n\n  .bar-title {\n    font-size: 20px;\n  }\n\n  .summary-value {\n    font-size: 22px;\n  }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div class=\"bar-card\">\n  <div class=\"bar-header\">\n    <div>\n      <div class=\"bar-title\">Top 10 domínios últimos 5 min</div>\n      <div class=\"bar-subtitle\">Distribuição por domínio consultado</div>\n    </div>\n    <div class=\"bar-pill\">SOC DNS</div>\n  </div>\n\n  <div class=\"bar-summary\">\n    <div class=\"summary-item\">\n      <span class=\"summary-label\">Total</span>\n      <span id=\"summary-total\" class=\"summary-value\">0</span>\n    </div>\n\n    <div class=\"summary-item\">\n      <span class=\"summary-label\">Top domínio</span>\n      <span id=\"summary-top\" class=\"summary-value\">-</span>\n    </div>\n\n    <div class=\"summary-item\">\n      <span class=\"summary-label\">Dominância</span>\n      <span id=\"summary-share\" class=\"summary-value\">0%</span>\n    </div>\n  </div>\n\n  <div class=\"bars-wrap\" id=\"bars-wrap\">\n    <div class=\"bars-empty\">Carregando dados...</div>\n  </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const barsWrap = htmlNode.querySelector('#bars-wrap');\nconst summaryTotal = htmlNode.querySelector('#summary-total');\nconst summaryTop = htmlNode.querySelector('#summary-top');\nconst summaryShare = htmlNode.querySelector('#summary-share');\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value) || 0);\n}\n\nfunction getFieldByCandidates(fields, candidates) {\n  const normalizedFields = fields.map(f => ({\n    raw: f,\n    name: String(f.name || '').toLowerCase().trim()\n  }));\n\n  for (const candidate of candidates) {\n    const found = normalizedFields.find(f => f.name === candidate.toLowerCase());\n    if (found) return found.raw;\n  }\n\n  return null;\n}\n\ntry {\n  const series = htmlGraphics?.data?.series || [];\n\n  if (!series.length) {\n    barsWrap.innerHTML = '<div class=\"bars-empty\">Sem dados</div>';\n    summaryTotal.textContent = '0';\n    summaryTop.textContent = '-';\n    summaryShare.textContent = '0%';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  const fieldDominio = getFieldByCandidates(fields, [\n    'dominio',\n    'domain',\n    'destino',\n    'origem',\n    'query name',\n    'label',\n    'name',\n    'title'\n  ]);\n\n  const fieldValor = getFieldByCandidates(fields, [\n    'qut',\n    'value',\n    'valor',\n    'requisicoes',\n    'count',\n    'total',\n    'qt',\n    'quantidade'\n  ]);\n\n  if (!fieldDominio || !fieldValor) {\n    barsWrap.innerHTML = `\n      <div class=\"bars-empty\">\n        Campos não encontrados.<br><br>\n        <strong>Fields encontrados:</strong><br>\n        ${escapeHtml(fields.map(f => f.name).join(', '))}\n      </div>\n    `;\n    summaryTotal.textContent = '0';\n    summaryTop.textContent = '-';\n    summaryShare.textContent = '0%';\n    return;\n  }\n\n  const dominios = Array.from(fieldDominio.values || []).map(v => String(v ?? ''));\n  const valores = Array.from(fieldValor.values || []).map(v => Number(v) || 0);\n\n  if (!dominios.length || !valores.length) {\n    barsWrap.innerHTML = '<div class=\"bars-empty\">Sem registros</div>';\n    summaryTotal.textContent = '0';\n    summaryTop.textContent = '-';\n    summaryShare.textContent = '0%';\n    return;\n  }\n\n  const rows = dominios.map((dominio, i) => ({\n    dominio,\n    valor: valores[i] || 0\n  }));\n\n  const filteredRows = rows.filter(r => r.dominio && r.valor >= 0);\n\n  if (!filteredRows.length) {\n    barsWrap.innerHTML = '<div class=\"bars-empty\">Sem registros válidos</div>';\n    summaryTotal.textContent = '0';\n    summaryTop.textContent = '-';\n    summaryShare.textContent = '0%';\n    return;\n  }\n\n  const total = filteredRows.reduce((acc, row) => acc + row.valor, 0);\n  const maxValue = Math.max(...filteredRows.map(r => r.valor), 1);\n\n  const topRow = filteredRows.reduce((prev, curr) => {\n    return curr.valor > prev.valor ? curr : prev;\n  }, filteredRows[0]);\n\n  const dominance = total > 0 ? (topRow.valor / total) * 100 : 0;\n\n  summaryTotal.textContent = formatNumber(total);\n  summaryTop.textContent = escapeHtml(topRow.dominio);\n  summaryShare.textContent = `${dominance.toFixed(1)}%`;\n\n  let rowsHtml = '';\n\n  filteredRows.forEach((row, i) => {\n    const dominio = escapeHtml(row.dominio);\n    const valor = row.valor;\n    const percentOfMax = maxValue > 0 ? (valor / maxValue) * 100 : 0;\n    const percentOfTotal = total > 0 ? (valor / total) * 100 : 0;\n\n    let rankClass = '';\n    let fillClass = '';\n\n    if (i === 0) {\n      rankClass = 'top1';\n      fillClass = 'top1';\n    } else if (i === 1) {\n      rankClass = 'top2';\n      fillClass = 'top2';\n    } else if (i === 2) {\n      rankClass = 'top3';\n      fillClass = 'top3';\n    }\n\n    const safeWidth = valor > 0 ? Math.max(percentOfMax, 1.5) : 0;\n\n    rowsHtml += `\n      <div class=\"bar-row\">\n        <div class=\"bar-rank ${rankClass}\">#${i + 1}</div>\n        <div class=\"bar-domain\" title=\"${dominio}\">${dominio}</div>\n        <div class=\"bar-track\">\n          <div class=\"bar-fill ${fillClass}\" style=\"width:${safeWidth}%;\"></div>\n        </div>\n        <div class=\"bar-value\">${formatNumber(valor)}</div>\n        <div class=\"bar-percent\">${percentOfTotal.toFixed(1)}%</div>\n      </div>\n    `;\n  });\n\n  barsWrap.innerHTML = rowsHtml;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  barsWrap.innerHTML = `<div class=\"bars-empty\">Erro ao renderizar: ${escapeHtml(msg)}</div>`;\n  summaryTotal.textContent = '0';\n  summaryTop.textContent = '-';\n  summaryShare.textContent = '0%';\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "11.2.2",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[\n    {\n        \"dominio\": \"googleapis.com\",\n        \"qut\": \"270\",\n        \"pct\": \"5.4\"\n    },\n    {\n        \"dominio\": \"google.com\",\n        \"qut\": \"236\",\n        \"pct\": \"4.7\"\n    },\n    {\n        \"dominio\": \"facebook.com\",\n        \"qut\": \"160\",\n        \"pct\": \"3.2\"\n    },\n    {\n        \"dominio\": \"netflix.com\",\n        \"qut\": \"151\",\n        \"pct\": \"3.0\"\n    },\n    {\n        \"dominio\": \"weerrhoop.cc\",\n        \"qut\": \"146\",\n        \"pct\": \"2.9\"\n    },\n    {\n        \"dominio\": \"jhkkjkj.com\",\n        \"qut\": \"146\",\n        \"pct\": \"2.9\"\n    },\n    {\n        \"dominio\": \"ojsbdjn.com\",\n        \"qut\": \"145\",\n        \"pct\": \"2.9\"\n    },\n    {\n        \"dominio\": \"co.uk\",\n        \"qut\": \"119\",\n        \"pct\": \"2.4\"\n    },\n    {\n        \"dominio\": \"kwai.net\",\n        \"qut\": \"106\",\n        \"pct\": \"2.1\"\n    },\n    {\n        \"dominio\": \"com.br\",\n        \"qut\": \"86\",\n        \"pct\": \"1.7\"\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://$servidor:8053/api/consulta/?token=$token&file=7",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "string",
+                "targetField": "dominio"
+              },
+              {
+                "destinationType": "number",
+                "targetField": "qut"
+              }
+            ],
+            "fields": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#1c3646",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "requisicoes"
+            },
+            "properties": [
+              {
+                "id": "color"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": null
+                    },
+                    {
+                      "color": "dark-blue",
+                      "value": 80
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 15
+      },
+      "id": 3,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "* {\n  box-sizing: border-box;\n}\n\n.soc-panel {\n  --bg-panel: rgba(7, 12, 24, 0.82);\n  --bg-header: rgba(15, 23, 42, 0.95);\n  --bg-row: rgba(255, 255, 255, 0.015);\n  --bg-row-hover: rgba(59, 130, 246, 0.08);\n  --border-soft: rgba(148, 163, 184, 0.14);\n  --text-main: #f8fbff;\n  --text-soft: #9fb3d9;\n  --text-dim: #7c93bd;\n  --accent: #3b82f6;\n  --accent-2: #06b6d4;\n  --accent-3: #22c55e;\n  --gold: #f59e0b;\n  --silver: #94a3b8;\n  --bronze: #f97316;\n\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  padding: 12px;\n  overflow: hidden;\n  font-family: Inter, Arial, sans-serif;\n  color: var(--text-main);\n  background:\n    radial-gradient(circle at top left, rgba(59,130,246,0.10), transparent 34%),\n    radial-gradient(circle at bottom right, rgba(6,182,212,0.10), transparent 34%),\n    linear-gradient(180deg, rgba(10,14,28,0.88) 0%, rgba(6,10,22,0.94) 100%);\n  border: 1px solid rgba(255,255,255,0.06);\n  border-radius: 18px;\n  backdrop-filter: blur(8px);\n  box-shadow:\n    0 12px 30px rgba(0, 0, 0, 0.28),\n    inset 0 1px 0 rgba(255,255,255,0.04);\n}\n\n.soc-header {\n  flex: 0 0 auto;\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  gap: 12px;\n  margin-bottom: 12px;\n}\n\n.soc-title {\n  font-size: 22px;\n  font-weight: 800;\n  letter-spacing: 0.2px;\n  color: #ffffff;\n}\n\n.soc-subtitle {\n  margin-top: 4px;\n  font-size: 12px;\n  color: var(--text-soft);\n  letter-spacing: 0.3px;\n}\n\n.soc-pill {\n  flex: 0 0 auto;\n  padding: 7px 12px;\n  border-radius: 999px;\n  font-size: 11px;\n  font-weight: 800;\n  letter-spacing: 0.8px;\n  color: #dbeafe;\n  background: linear-gradient(90deg, rgba(59,130,246,0.16), rgba(6,182,212,0.16));\n  border: 1px solid rgba(96, 165, 250, 0.24);\n  box-shadow: 0 0 18px rgba(59,130,246,0.12);\n}\n\n.soc-table-wrap {\n  flex: 1 1 auto;\n  min-height: 0;\n  overflow-y: auto;\n  overflow-x: hidden;\n  border-radius: 14px;\n  background: var(--bg-panel);\n  border: 1px solid var(--border-soft);\n}\n\n.soc-table-wrap::-webkit-scrollbar {\n  width: 8px;\n}\n\n.soc-table-wrap::-webkit-scrollbar-track {\n  background: rgba(255,255,255,0.03);\n  border-radius: 10px;\n}\n\n.soc-table-wrap::-webkit-scrollbar-thumb {\n  background: rgba(59,130,246,0.38);\n  border-radius: 10px;\n}\n\n.soc-table {\n  width: 100%;\n  border-collapse: collapse;\n  table-layout: fixed;\n}\n\n.soc-table thead {\n  position: sticky;\n  top: 0;\n  z-index: 20;\n}\n\n.soc-table thead th {\n  padding: 14px 14px;\n  text-align: left;\n  font-size: 12px;\n  font-weight: 800;\n  letter-spacing: 0.7px;\n  text-transform: uppercase;\n  color: #dbeafe;\n  background: linear-gradient(180deg, rgba(18,27,50,0.98), rgba(13,20,39,0.98));\n  border-bottom: 1px solid var(--border-soft);\n}\n\n.soc-table tbody tr {\n  background: var(--bg-row);\n  transition: background 0.2s ease, transform 0.2s ease;\n}\n\n.soc-table tbody tr:hover {\n  background: var(--bg-row-hover);\n}\n\n.soc-table tbody td {\n  padding: 12px 14px;\n  border-bottom: 1px solid rgba(255,255,255,0.05);\n  vertical-align: middle;\n}\n\n.col-rank {\n  width: 84px;\n}\n\n.col-source {\n  width: 40%;\n}\n\n.col-req {\n  width: auto;\n}\n\n.rank-wrap {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.rank-badge {\n  min-width: 42px;\n  height: 28px;\n  padding: 0 10px;\n  border-radius: 999px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n  font-weight: 800;\n  color: #dbeafe;\n  background: rgba(59,130,246,0.14);\n  border: 1px solid rgba(96,165,250,0.26);\n}\n\n.rank-badge.top1 {\n  color: #fff7d6;\n  background: rgba(245, 158, 11, 0.18);\n  border-color: rgba(245, 158, 11, 0.35);\n  box-shadow: 0 0 16px rgba(245, 158, 11, 0.18);\n}\n\n.rank-badge.top2 {\n  color: #eef2ff;\n  background: rgba(148,163,184,0.18);\n  border-color: rgba(148,163,184,0.35);\n}\n\n.rank-badge.top3 {\n  color: #fff0e8;\n  background: rgba(249,115,22,0.16);\n  border-color: rgba(249,115,22,0.32);\n}\n\n.rank-dot {\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: rgba(34,197,94,0.85);\n  box-shadow: 0 0 10px rgba(34,197,94,0.55);\n}\n\n.source-wrap {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  min-width: 0;\n}\n\n.source-icon {\n  width: 28px;\n  height: 28px;\n  flex: 0 0 auto;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  background: rgba(59,130,246,0.10);\n  border: 1px solid rgba(96,165,250,0.18);\n  font-size: 14px;\n}\n\n.source-text {\n  min-width: 0;\n  font-size: 14px;\n  font-weight: 700;\n  color: var(--text-main);\n  word-break: break-all;\n}\n\n.req-cell {\n  width: 100%;\n}\n\n.req-wrap {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  width: 100%;\n}\n\n.req-top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n}\n\n.req-value {\n  font-size: 14px;\n  font-weight: 800;\n  color: #ffffff;\n}\n\n.req-percent {\n  font-size: 12px;\n  font-weight: 700;\n  color: var(--text-soft);\n}\n\n.req-bar {\n  width: 100%;\n  height: 12px;\n  border-radius: 999px;\n  overflow: hidden;\n  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));\n  border: 1px solid rgba(255,255,255,0.05);\n  position: relative;\n}\n\n.req-bar-fill {\n  height: 100%;\n  min-width: 8px;\n  border-radius: 999px;\n  background: linear-gradient(90deg, #22c55e 0%, #06b6d4 45%, #3b82f6 100%);\n  box-shadow:\n    0 0 12px rgba(59,130,246,0.28),\n    inset 0 0 8px rgba(255,255,255,0.10);\n  transition: width 0.6s ease;\n}\n\n.req-bar-fill.top1 {\n  background: linear-gradient(90deg, #f59e0b 0%, #facc15 100%);\n  box-shadow: 0 0 18px rgba(245,158,11,0.28);\n}\n\n.req-bar-fill.top2 {\n  background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);\n}\n\n.req-bar-fill.top3 {\n  background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);\n}\n\n.top1-row {\n  background: linear-gradient(90deg, rgba(245,158,11,0.09), rgba(245,158,11,0.02));\n}\n\n.top2-row {\n  background: linear-gradient(90deg, rgba(148,163,184,0.08), rgba(148,163,184,0.02));\n}\n\n.top3-row {\n  background: linear-gradient(90deg, rgba(249,115,22,0.08), rgba(249,115,22,0.02));\n}\n\n.loading-cell,\n.empty-cell,\n.error-cell {\n  padding: 18px 14px;\n  text-align: center;\n  color: var(--text-soft);\n  font-weight: 700;\n}\n\n@media (max-width: 1000px) {\n  .soc-title {\n    font-size: 19px;\n  }\n\n  .col-source {\n    width: 34%;\n  }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div class=\"soc-panel\">\n  <div class=\"soc-header\">\n    <div>\n      <div class=\"soc-title\">Top 10 Destinations</div>\n      <div class=\"soc-subtitle\">Últimos 5 minutos • DNS destination overview</div>\n    </div>\n    <div class=\"soc-pill\">SOC MONITORING</div>\n  </div>\n\n  <div class=\"soc-table-wrap\">\n    <table class=\"soc-table\">\n      <thead>\n        <tr>\n          <th class=\"col-rank\">Rank</th>\n          <th class=\"col-source\">Destinos</th>\n          <th class=\"col-req\">Requisições</th>\n        </tr>\n      </thead>\n      <tbody id=\"tbody-destinos\">\n        <tr>\n          <td colspan=\"3\" class=\"loading-cell\">Carregando dados...</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const tbody = htmlNode.querySelector('#tbody-destinos');\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value) || 0);\n}\n\nfunction getIPIcon(ip) {\n  return String(ip).includes(':') ? '🧬' : '🎯';\n}\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction getFieldByCandidates(fields, candidates) {\n  const normalizedFields = fields.map(f => ({\n    raw: f,\n    name: String(f.name || '').toLowerCase().trim()\n  }));\n\n  for (const candidate of candidates) {\n    const found = normalizedFields.find(f => f.name === candidate.toLowerCase());\n    if (found) return found.raw;\n  }\n\n  return null;\n}\n\ntry {\n  const series = htmlGraphics?.data?.series || [];\n\n  if (!series.length) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"empty-cell\">Sem dados</td></tr>';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  const fieldDestinos = getFieldByCandidates(fields, [\n    'destinos',\n    'destino',\n    'destination',\n    'query name',\n    'name',\n    'label',\n    'source'\n  ]);\n\n  const fieldRequisicoes = getFieldByCandidates(fields, [\n    'requisicoes',\n    'requisições',\n    'count',\n    'total',\n    'value',\n    'valor',\n    'quantidade',\n    'qt'\n  ]);\n\n  if (!fieldDestinos || !fieldRequisicoes) {\n    tbody.innerHTML = `\n      <tr>\n        <td colspan=\"3\" class=\"error-cell\">\n          Campos não encontrados.<br><br>\n          Fields encontrados: ${escapeHtml(fields.map(f => f.name).join(', '))}\n        </td>\n      </tr>\n    `;\n    return;\n  }\n\n  const destinos = Array.from(fieldDestinos.values || []).map(v => String(v ?? ''));\n  const requisicoes = Array.from(fieldRequisicoes.values || []).map(v => Number(v) || 0);\n\n  if (!destinos.length || !requisicoes.length) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"empty-cell\">Sem registros</td></tr>';\n    return;\n  }\n\n  const rowsData = destinos.map((destino, i) => ({\n    destino,\n    req: requisicoes[i] || 0\n  })).filter(item => item.destino);\n\n  if (!rowsData.length) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"empty-cell\">Sem registros válidos</td></tr>';\n    return;\n  }\n\n  const maxReq = Math.max(...rowsData.map(r => r.req), 1);\n\n  let rows = '';\n\n  rowsData.forEach((item, i) => {\n    const destinoRaw = item.destino;\n    const destino = escapeHtml(destinoRaw);\n    const req = item.req;\n\n    const percent = maxReq > 0 ? (req / maxReq) * 100 : 0;\n    const widthPercent = req > 0 ? Math.max(percent, 1.2) : 0;\n    const displayPercent = percent < 0.1 && req > 0 ? '&lt;0.1%' : `${percent.toFixed(1)}%`;\n    const icon = getIPIcon(destinoRaw);\n\n    let rowClass = '';\n    let badgeClass = '';\n    let barClass = '';\n\n    if (i === 0) {\n      rowClass = 'top1-row';\n      badgeClass = 'top1';\n      barClass = 'top1';\n    } else if (i === 1) {\n      rowClass = 'top2-row';\n      badgeClass = 'top2';\n      barClass = 'top2';\n    } else if (i === 2) {\n      rowClass = 'top3-row';\n      badgeClass = 'top3';\n      barClass = 'top3';\n    }\n\n    rows += `\n      <tr class=\"${rowClass}\">\n        <td>\n          <div class=\"rank-wrap\">\n            <span class=\"rank-badge ${badgeClass}\">#${i + 1}</span>\n            <span class=\"rank-dot\"></span>\n          </div>\n        </td>\n        <td>\n          <div class=\"source-wrap\">\n            <span class=\"source-icon\">${icon}</span>\n            <span class=\"source-text\" title=\"${destino}\">${destino}</span>\n          </div>\n        </td>\n        <td class=\"req-cell\">\n          <div class=\"req-wrap\">\n            <div class=\"req-top\">\n              <span class=\"req-value\">${formatNumber(req)}</span>\n              <span class=\"req-percent\">${displayPercent}</span>\n            </div>\n            <div class=\"req-bar\">\n              <div class=\"req-bar-fill ${barClass}\" style=\"width:${widthPercent}%;\"></div>\n            </div>\n          </div>\n        </td>\n      </tr>\n    `;\n  });\n\n  tbody.innerHTML = rows;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  tbody.innerHTML = `\n    <tr>\n      <td colspan=\"3\" class=\"error-cell\">\n        Erro ao renderizar: ${escapeHtml(msg)}\n      </td>\n    </tr>\n  `;\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "dominio",
+              "text": "destinos",
+              "type": "string"
+            },
+            {
+              "selector": "qut",
+              "text": "requisicoes",
+              "type": "number"
+            }
+          ],
+          "data": "[\n    {\n        \"dominio\": \"192.168.0.170\",\n        \"qut\": \"2409\",\n        \"pct\": \"47.8\"\n    },\n    {\n        \"dominio\": \"2804:db8:1000::170\",\n        \"qut\": \"682\",\n        \"pct\": \"13.5\"\n    },\n    {\n        \"dominio\": \"192.33.14.30\",\n        \"qut\": \"128\",\n        \"pct\": \"2.5\"\n    },\n    {\n        \"dominio\": \"66.235.155.1\",\n        \"qut\": \"23\",\n        \"pct\": \"0.5\"\n    },\n    {\n        \"dominio\": \"66.235.154.1\",\n        \"qut\": \"17\",\n        \"pct\": \"0.3\"\n    },\n    {\n        \"dominio\": \"184.26.161.192\",\n        \"qut\": \"13\",\n        \"pct\": \"0.3\"\n    },\n    {\n        \"dominio\": \"193.0.14.129\",\n        \"qut\": \"13\",\n        \"pct\": \"0.3\"\n    },\n    {\n        \"dominio\": \"2400:cb00:2049:1::a29f:408\",\n        \"qut\": \"12\",\n        \"pct\": \"0.2\"\n    },\n    {\n        \"dominio\": \"212.102.32.200\",\n        \"qut\": \"10\",\n        \"pct\": \"0.2\"\n    },\n    {\n        \"dominio\": \"45.57.8.1\",\n        \"qut\": \"10\",\n        \"pct\": \"0.2\"\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://$servidor:8053/api/consulta/?token=$token&file=2",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#1c3646",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#1c3646"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "requisicoes"
+            },
+            "properties": [
+              {
+                "id": "color"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-blue"
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 80
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 0,
+        "y": 29
+      },
+      "id": 2,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": "* {\n  box-sizing: border-box;\n}\n\n.soc-panel {\n  --bg-panel: rgba(7, 12, 24, 0.82);\n  --bg-header: rgba(15, 23, 42, 0.95);\n  --bg-row: rgba(255, 255, 255, 0.015);\n  --bg-row-hover: rgba(59, 130, 246, 0.08);\n  --border-soft: rgba(148, 163, 184, 0.14);\n  --text-main: #f8fbff;\n  --text-soft: #9fb3d9;\n  --text-dim: #7c93bd;\n  --accent: #3b82f6;\n  --accent-2: #06b6d4;\n  --accent-3: #22c55e;\n  --gold: #f59e0b;\n  --silver: #94a3b8;\n  --bronze: #f97316;\n\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  padding: 12px;\n  overflow: hidden;\n  font-family: Inter, Arial, sans-serif;\n  color: var(--text-main);\n  background:\n    radial-gradient(circle at top left, rgba(59,130,246,0.10), transparent 34%),\n    radial-gradient(circle at bottom right, rgba(6,182,212,0.10), transparent 34%),\n    linear-gradient(180deg, rgba(10,14,28,0.88) 0%, rgba(6,10,22,0.94) 100%);\n  border: 1px solid rgba(255,255,255,0.06);\n  border-radius: 18px;\n  backdrop-filter: blur(8px);\n  box-shadow:\n    0 12px 30px rgba(0, 0, 0, 0.28),\n    inset 0 1px 0 rgba(255,255,255,0.04);\n}\n\n.soc-header {\n  flex: 0 0 auto;\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  gap: 12px;\n  margin-bottom: 12px;\n}\n\n.soc-title {\n  font-size: 22px;\n  font-weight: 800;\n  letter-spacing: 0.2px;\n  color: #ffffff;\n}\n\n.soc-subtitle {\n  margin-top: 4px;\n  font-size: 12px;\n  color: var(--text-soft);\n  letter-spacing: 0.3px;\n}\n\n.soc-pill {\n  flex: 0 0 auto;\n  padding: 7px 12px;\n  border-radius: 999px;\n  font-size: 11px;\n  font-weight: 800;\n  letter-spacing: 0.8px;\n  color: #dbeafe;\n  background: linear-gradient(90deg, rgba(59,130,246,0.16), rgba(6,182,212,0.16));\n  border: 1px solid rgba(96, 165, 250, 0.24);\n  box-shadow: 0 0 18px rgba(59,130,246,0.12);\n}\n\n.soc-table-wrap {\n  flex: 1 1 auto;\n  min-height: 0;\n  overflow-y: auto;\n  overflow-x: hidden;\n  border-radius: 14px;\n  background: var(--bg-panel);\n  border: 1px solid var(--border-soft);\n}\n\n.soc-table-wrap::-webkit-scrollbar {\n  width: 8px;\n}\n\n.soc-table-wrap::-webkit-scrollbar-track {\n  background: rgba(255,255,255,0.03);\n  border-radius: 10px;\n}\n\n.soc-table-wrap::-webkit-scrollbar-thumb {\n  background: rgba(59,130,246,0.38);\n  border-radius: 10px;\n}\n\n.soc-table {\n  width: 100%;\n  border-collapse: collapse;\n  table-layout: fixed;\n}\n\n.soc-table thead {\n  position: sticky;\n  top: 0;\n  z-index: 20;\n}\n\n.soc-table thead th {\n  padding: 14px 14px;\n  text-align: left;\n  font-size: 12px;\n  font-weight: 800;\n  letter-spacing: 0.7px;\n  text-transform: uppercase;\n  color: #dbeafe;\n  background: linear-gradient(180deg, rgba(18,27,50,0.98), rgba(13,20,39,0.98));\n  border-bottom: 1px solid var(--border-soft);\n}\n\n.soc-table tbody tr {\n  background: var(--bg-row);\n  transition: background 0.2s ease, transform 0.2s ease;\n}\n\n.soc-table tbody tr:hover {\n  background: var(--bg-row-hover);\n}\n\n.soc-table tbody td {\n  padding: 12px 14px;\n  border-bottom: 1px solid rgba(255,255,255,0.05);\n  vertical-align: middle;\n}\n\n.col-rank {\n  width: 84px;\n}\n\n.col-source {\n  width: 40%;\n}\n\n.col-req {\n  width: auto;\n}\n\n.rank-wrap {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.rank-badge {\n  min-width: 42px;\n  height: 28px;\n  padding: 0 10px;\n  border-radius: 999px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n  font-weight: 800;\n  color: #dbeafe;\n  background: rgba(59,130,246,0.14);\n  border: 1px solid rgba(96,165,250,0.26);\n}\n\n.rank-badge.top1 {\n  color: #fff7d6;\n  background: rgba(245, 158, 11, 0.18);\n  border-color: rgba(245, 158, 11, 0.35);\n  box-shadow: 0 0 16px rgba(245, 158, 11, 0.18);\n}\n\n.rank-badge.top2 {\n  color: #eef2ff;\n  background: rgba(148,163,184,0.18);\n  border-color: rgba(148,163,184,0.35);\n}\n\n.rank-badge.top3 {\n  color: #fff0e8;\n  background: rgba(249,115,22,0.16);\n  border-color: rgba(249,115,22,0.32);\n}\n\n.rank-dot {\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: rgba(34,197,94,0.85);\n  box-shadow: 0 0 10px rgba(34,197,94,0.55);\n}\n\n.source-wrap {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  min-width: 0;\n}\n\n.source-icon {\n  width: 28px;\n  height: 28px;\n  flex: 0 0 auto;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  background: rgba(59,130,246,0.10);\n  border: 1px solid rgba(96,165,250,0.18);\n  font-size: 14px;\n}\n\n.source-text {\n  min-width: 0;\n  font-size: 14px;\n  font-weight: 700;\n  color: var(--text-main);\n  word-break: break-all;\n}\n\n.req-cell {\n  width: 100%;\n}\n\n.req-wrap {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  width: 100%;\n}\n\n.req-top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n}\n\n.req-value {\n  font-size: 14px;\n  font-weight: 800;\n  color: #ffffff;\n}\n\n.req-percent {\n  font-size: 12px;\n  font-weight: 700;\n  color: var(--text-soft);\n}\n\n.req-bar {\n  width: 100%;\n  height: 12px;\n  border-radius: 999px;\n  overflow: hidden;\n  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));\n  border: 1px solid rgba(255,255,255,0.05);\n  position: relative;\n}\n\n.req-bar-fill {\n  height: 100%;\n  min-width: 8px;\n  border-radius: 999px;\n  background: linear-gradient(90deg, #22c55e 0%, #06b6d4 45%, #3b82f6 100%);\n  box-shadow:\n    0 0 12px rgba(59,130,246,0.28),\n    inset 0 0 8px rgba(255,255,255,0.10);\n  transition: width 0.6s ease;\n}\n\n.req-bar-fill.top1 {\n  background: linear-gradient(90deg, #f59e0b 0%, #facc15 100%);\n  box-shadow: 0 0 18px rgba(245,158,11,0.28);\n}\n\n.req-bar-fill.top2 {\n  background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);\n}\n\n.req-bar-fill.top3 {\n  background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);\n}\n\n.top1-row {\n  background: linear-gradient(90deg, rgba(245,158,11,0.09), rgba(245,158,11,0.02));\n}\n\n.top2-row {\n  background: linear-gradient(90deg, rgba(148,163,184,0.08), rgba(148,163,184,0.02));\n}\n\n.top3-row {\n  background: linear-gradient(90deg, rgba(249,115,22,0.08), rgba(249,115,22,0.02));\n}\n\n.loading-cell,\n.empty-cell,\n.error-cell {\n  padding: 18px 14px;\n  text-align: center;\n  color: var(--text-soft);\n  font-weight: 700;\n}\n\n@media (max-width: 1000px) {\n  .soc-title {\n    font-size: 19px;\n  }\n\n  .col-source {\n    width: 34%;\n  }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div class=\"soc-panel\">\n  <div class=\"soc-header\">\n    <div>\n      <div class=\"soc-title\">Top 10 Sources</div>\n      <div class=\"soc-subtitle\">Últimos 5 minutos • DNS requests overview</div>\n    </div>\n    <div class=\"soc-pill\">SOC MONITORING</div>\n  </div>\n\n  <div class=\"soc-table-wrap\">\n    <table class=\"soc-table\">\n      <thead>\n        <tr>\n          <th class=\"col-rank\">Rank</th>\n          <th class=\"col-source\">Origens</th>\n          <th class=\"col-req\">Requisições</th>\n        </tr>\n      </thead>\n      <tbody id=\"tbody-origens\">\n        <tr>\n          <td colspan=\"3\" class=\"loading-cell\">Carregando dados...</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const tbody = htmlNode.querySelector('#tbody-origens');\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value));\n}\n\nfunction getIPIcon(ip) {\n  return String(ip).includes(':') ? '🧬' : '🌐';\n}\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction getFieldByName(fields, targetName) {\n  const normalized = targetName.toLowerCase();\n  return fields.find(f => String(f.name).toLowerCase() === normalized);\n}\n\ntry {\n  const series = htmlGraphics.data.series;\n\n  if (!series || !series.length) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"empty-cell\">Sem dados</td></tr>';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  const fieldOrigens = getFieldByName(fields, 'origens');\n  const fieldRequisicoes = getFieldByName(fields, 'requisicoes');\n\n  if (!fieldOrigens || !fieldRequisicoes) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"error-cell\">Campos \"origens\" e \"requisicoes\" não encontrados</td></tr>';\n    return;\n  }\n\n  const origens = Array.from(fieldOrigens.values || []);\n  const requisicoes = Array.from(fieldRequisicoes.values || []).map(v => Number(v) || 0);\n\n  if (!origens.length || !requisicoes.length) {\n    tbody.innerHTML = '<tr><td colspan=\"3\" class=\"empty-cell\">Sem registros</td></tr>';\n    return;\n  }\n\n  const maxReq = Math.max(...requisicoes, 1);\n\n  let rows = '';\n\n  for (let i = 0; i < origens.length; i++) {\n    const origemRaw = origens[i];\n    const origem = escapeHtml(origemRaw);\n    const req = requisicoes[i];\n    const percent = (req / maxReq) * 100;\n    const widthPercent = Math.max(percent, req > 0 ? 1.2 : 0);\n    const displayPercent = percent < 0.1 && req > 0 ? '<0.1%' : `${percent.toFixed(1)}%`;\n    const icon = getIPIcon(origemRaw);\n\n    let rowClass = '';\n    let badgeClass = '';\n    let barClass = '';\n\n    if (i === 0) {\n      rowClass = 'top1-row';\n      badgeClass = 'top1';\n      barClass = 'top1';\n    } else if (i === 1) {\n      rowClass = 'top2-row';\n      badgeClass = 'top2';\n      barClass = 'top2';\n    } else if (i === 2) {\n      rowClass = 'top3-row';\n      badgeClass = 'top3';\n      barClass = 'top3';\n    }\n\n    rows += `\n      <tr class=\"${rowClass}\">\n        <td>\n          <div class=\"rank-wrap\">\n            <span class=\"rank-badge ${badgeClass}\">#${i + 1}</span>\n            <span class=\"rank-dot\"></span>\n          </div>\n        </td>\n        <td>\n          <div class=\"source-wrap\">\n            <span class=\"source-icon\">${icon}</span>\n            <span class=\"source-text\">${origem}</span>\n          </div>\n        </td>\n        <td class=\"req-cell\">\n          <div class=\"req-wrap\">\n            <div class=\"req-top\">\n              <span class=\"req-value\">${formatNumber(req)}</span>\n              <span class=\"req-percent\">${displayPercent}</span>\n            </div>\n            <div class=\"req-bar\">\n              <div class=\"req-bar-fill ${barClass}\" style=\"width:${widthPercent}%;\"></div>\n            </div>\n          </div>\n        </td>\n      </tr>\n    `;\n  }\n\n  tbody.innerHTML = rows;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  tbody.innerHTML = `<tr><td colspan=\"3\" class=\"error-cell\">Erro ao renderizar: ${escapeHtml(msg)}</td></tr>`;\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "dominio",
+              "text": "origens",
+              "type": "string"
+            },
+            {
+              "selector": "qut",
+              "text": "requisicoes",
+              "type": "number"
+            }
+          ],
+          "data": "[\n    {\n        \"dominio\": \"192.168.10.170\",\n        \"qut\": \"1231\",\n        \"pct\": \"24.4\"\n    },\n    {\n        \"dominio\": \"192.168.10.202\",\n        \"qut\": \"900\",\n        \"pct\": \"17.9\"\n    },\n    {\n        \"dominio\": \"2804:db8:1000::170\",\n        \"qut\": \"718\",\n        \"pct\": \"14.2\"\n    },\n    {\n        \"dominio\": \"192.168.10.239\",\n        \"qut\": \"70\",\n        \"pct\": \"1.4\"\n    },\n    {\n        \"dominio\": \"2804:db8:8000:5a2:e16d:fdc:9ac3:2d04\",\n        \"qut\": \"68\",\n        \"pct\": \"1.3\"\n    },\n    {\n        \"dominio\": \"192.168.10.235\",\n        \"qut\": \"35\",\n        \"pct\": \"0.7\"\n    },\n    {\n        \"dominio\": \"2804:db8:8000:6f4:a633:d7ff:fee1:1030\",\n        \"qut\": \"32\",\n        \"pct\": \"0.6\"\n    },\n    {\n        \"dominio\": \"100.65.5.61\",\n        \"qut\": \"32\",\n        \"pct\": \"0.6\"\n    },\n    {\n        \"dominio\": \"192.168.10.225\",\n        \"qut\": \"31\",\n        \"pct\": \"0.6\"\n    },\n    {\n        \"dominio\": \"100.65.4.248\",\n        \"qut\": \"31\",\n        \"pct\": \"0.6\"\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://$servidor:8053/api/consulta/?token=$token&file=1",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 29
+      },
+      "id": 4,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ":root {\n  --panel-bg: rgba(7, 12, 24, 0.84);\n  --panel-border: rgba(255, 255, 255, 0.08);\n  --header-bg: rgba(15, 23, 42, 0.90);\n  --text-main: #f8fbff;\n  --text-soft: #9fb3d9;\n  --text-dim: #7c93bd;\n  --row-hover: rgba(59, 130, 246, 0.08);\n  --track: rgba(255,255,255,0.06);\n}\n\n* {\n  box-sizing: border-box;\n}\n\n.dns-card {\n  width: 100%;\n  height: 100%;\n  min-height: 0;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  padding: 12px;\n  border-radius: 18px;\n  background: linear-gradient(180deg, rgba(10,14,28,0.72) 0%, rgba(6,10,22,0.82) 100%);\n  border: 1px solid var(--panel-border);\n  backdrop-filter: blur(8px);\n  box-shadow:\n    0 12px 30px rgba(0, 0, 0, 0.28),\n    inset 0 1px 0 rgba(255,255,255,0.04);\n  font-family: Inter, Arial, sans-serif;\n  color: var(--text-main);\n}\n\n.dns-header {\n  flex: 0 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 12px;\n  margin-bottom: 12px;\n}\n\n.dns-title {\n  font-size: 22px;\n  font-weight: 800;\n  color: #fff;\n  letter-spacing: 0.2px;\n}\n\n.dns-subtitle {\n  margin-top: 4px;\n  font-size: 12px;\n  color: var(--text-soft);\n  letter-spacing: 0.3px;\n}\n\n.dns-pill {\n  padding: 7px 12px;\n  border-radius: 999px;\n  font-size: 11px;\n  font-weight: 800;\n  color: #dbeafe;\n  letter-spacing: 0.8px;\n  background: linear-gradient(90deg, rgba(59,130,246,0.16), rgba(6,182,212,0.16));\n  border: 1px solid rgba(96, 165, 250, 0.24);\n  box-shadow: 0 0 18px rgba(59,130,246,0.12);\n}\n\n.dns-content {\n  flex: 1 1 auto;\n  min-height: 0;\n  display: grid;\n  grid-template-columns: 1.1fr 0.9fr;\n  gap: 14px;\n  overflow: hidden;\n}\n\n.chart-area,\n.legend-area {\n  min-height: 0;\n  border-radius: 14px;\n  background: var(--panel-bg);\n  border: 1px solid rgba(148, 163, 184, 0.14);\n}\n\n.chart-area {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px;\n}\n\n.donut-svg {\n  width: 100%;\n  height: 100%;\n  max-width: 420px;\n  max-height: 420px;\n}\n\n.donut-track {\n  fill: none;\n  stroke: rgba(255,255,255,0.06);\n  stroke-width: 34;\n}\n\n.donut-segment {\n  fill: none;\n  stroke-width: 34;\n  stroke-linecap: butt;\n  transition: opacity 0.25s ease, filter 0.25s ease;\n  cursor: default;\n}\n\n.donut-segment:hover {\n  opacity: 0.92;\n  filter: brightness(1.08);\n}\n\n.donut-inner-ring {\n  fill: rgba(8, 14, 28, 0.95);\n  stroke: rgba(255,255,255,0.05);\n  stroke-width: 1;\n}\n\n.center-label {\n  font-size: 16px;\n  font-weight: 700;\n  fill: #9fb3d9;\n}\n\n.center-value {\n  font-size: 34px;\n  font-weight: 800;\n  fill: #ffffff;\n}\n\n.center-share {\n  font-size: 16px;\n  font-weight: 700;\n  fill: #7dd3fc;\n}\n\n.legend-area {\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\n\n.legend-header {\n  flex: 0 0 auto;\n  display: grid;\n  grid-template-columns: 1fr 92px 64px;\n  gap: 10px;\n  padding: 14px 14px;\n  font-size: 12px;\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.7px;\n  color: #dbeafe;\n  background: linear-gradient(180deg, rgba(18,27,50,0.98), rgba(13,20,39,0.98));\n  border-bottom: 1px solid rgba(148, 163, 184, 0.14);\n}\n\n.legend-list {\n  flex: 1 1 auto;\n  min-height: 0;\n  overflow-y: auto;\n}\n\n.legend-list::-webkit-scrollbar {\n  width: 8px;\n}\n\n.legend-list::-webkit-scrollbar-thumb {\n  background: rgba(59,130,246,0.38);\n  border-radius: 10px;\n}\n\n.legend-row {\n  display: grid;\n  grid-template-columns: 1fr 92px 64px;\n  gap: 10px;\n  align-items: center;\n  padding: 12px 14px;\n  border-bottom: 1px solid rgba(255,255,255,0.05);\n  transition: background 0.2s ease;\n}\n\n.legend-row:hover {\n  background: var(--row-hover);\n}\n\n.legend-left {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  min-width: 0;\n}\n\n.legend-dot {\n  width: 12px;\n  height: 12px;\n  border-radius: 999px;\n  flex: 0 0 auto;\n  box-shadow: 0 0 10px rgba(255,255,255,0.10);\n}\n\n.legend-name {\n  font-size: 14px;\n  font-weight: 700;\n  color: var(--text-main);\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.legend-value {\n  text-align: right;\n  font-size: 14px;\n  font-weight: 800;\n  color: #fff;\n}\n\n.legend-percent {\n  text-align: right;\n  font-size: 13px;\n  font-weight: 700;\n  color: var(--text-soft);\n}\n\n.legend-empty {\n  padding: 18px 14px;\n  text-align: center;\n  color: var(--text-soft);\n  font-weight: 700;\n}\n\n@media (max-width: 900px) {\n  .dns-content {\n    grid-template-columns: 1fr;\n  }\n\n  .chart-area {\n    min-height: 320px;\n  }\n\n  .legend-area {\n    min-height: 260px;\n  }\n}",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div class=\"dns-card\">\n  <div class=\"dns-header\">\n    <div>\n      <div class=\"dns-title\">Top tipos últimos 5 min</div>\n      <div class=\"dns-subtitle\">Distribuição por tipo de consulta DNS</div>\n    </div>\n    <div class=\"dns-pill\">SOC DNS</div>\n  </div>\n\n  <div class=\"dns-content\">\n    <div class=\"chart-area\">\n      <svg id=\"dns-donut\" viewBox=\"0 0 420 420\" class=\"donut-svg\">\n        <g id=\"donut-segments\"></g>\n        <circle cx=\"210\" cy=\"210\" r=\"92\" class=\"donut-inner-ring\"></circle>\n\n        <text x=\"210\" y=\"192\" text-anchor=\"middle\" class=\"center-label\">Total</text>\n        <text x=\"210\" y=\"225\" text-anchor=\"middle\" id=\"center-total\" class=\"center-value\">0</text>\n        <text x=\"210\" y=\"252\" text-anchor=\"middle\" id=\"center-share\" class=\"center-share\">0%</text>\n      </svg>\n    </div>\n\n    <div class=\"legend-area\">\n      <div class=\"legend-header\">\n        <span>Tipo</span>\n        <span>Valor</span>\n        <span>%</span>\n      </div>\n      <div id=\"legend-list\" class=\"legend-list\">\n        <div class=\"legend-empty\">Carregando dados...</div>\n      </div>\n    </div>\n  </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const segmentsGroup = htmlNode.querySelector('#donut-segments');\nconst legendList = htmlNode.querySelector('#legend-list');\nconst centerTotal = htmlNode.querySelector('#center-total');\nconst centerShare = htmlNode.querySelector('#center-share');\n\nfunction escapeHtml(value) {\n  return String(value)\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#039;');\n}\n\nfunction formatNumber(value) {\n  return new Intl.NumberFormat('pt-BR').format(Number(value));\n}\n\nfunction polarToCartesian(cx, cy, r, angleDeg) {\n  const angleRad = ((angleDeg - 90) * Math.PI) / 180.0;\n  return {\n    x: cx + r * Math.cos(angleRad),\n    y: cy + r * Math.sin(angleRad)\n  };\n}\n\nfunction describeArc(cx, cy, r, startAngle, endAngle) {\n  const start = polarToCartesian(cx, cy, r, endAngle);\n  const end = polarToCartesian(cx, cy, r, startAngle);\n  const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';\n\n  return [\n    'M', start.x, start.y,\n    'A', r, r, 0, largeArcFlag, 0, end.x, end.y\n  ].join(' ');\n}\n\nfunction getFieldByCandidates(fields, candidates) {\n  const normalized = fields.map(f => ({\n    field: f,\n    name: String(f.name || '').toLowerCase().trim()\n  }));\n\n  for (const candidate of candidates) {\n    const found = normalized.find(f => f.name === candidate.toLowerCase());\n    if (found) return found.field;\n  }\n\n  return null;\n}\n\nconst palette = [\n  '#22c55e',\n  '#3b82f6',\n  '#06b6d4',\n  '#f59e0b',\n  '#ef4444',\n  '#8b5cf6',\n  '#ec4899',\n  '#94a3b8',\n  '#10b981',\n  '#f97316',\n  '#14b8a6',\n  '#6366f1'\n];\n\ntry {\n  const series = htmlGraphics.data.series;\n\n  if (!series || !series.length) {\n    segmentsGroup.innerHTML = '';\n    legendList.innerHTML = '<div class=\"legend-empty\">Sem dados</div>';\n    centerTotal.textContent = '0';\n    centerShare.textContent = '0%';\n    return;\n  }\n\n  const frame = series[0];\n  const fields = frame.fields || [];\n\n  console.log('Fields disponíveis:', fields.map(f => f.name));\n\n  const fieldTipo = getFieldByCandidates(fields, [\n    'tipo',\n    'tipos',\n    'type',\n    'query_type',\n    'record_type',\n    'dominio',\n    'domain',\n    'title'\n  ]);\n\n  const fieldValor = getFieldByCandidates(fields, [\n    'value',\n    'valor',\n    'requisicoes',\n    'count',\n    'total',\n    'qut',\n    'qt',\n    'quantidade'\n  ]);\n\n  if (!fieldTipo || !fieldValor) {\n    segmentsGroup.innerHTML = '';\n    legendList.innerHTML = `\n      <div class=\"legend-empty\">\n        Campos de tipo e valor não encontrados<br><br>\n        Fields encontrados: ${escapeHtml(fields.map(f => f.name).join(', '))}\n      </div>\n    `;\n    centerTotal.textContent = '0';\n    centerShare.textContent = '0%';\n    return;\n  }\n\n  const labels = Array.from(fieldTipo.values || []);\n  const values = Array.from(fieldValor.values || []).map(v => Number(v) || 0);\n\n  if (!labels.length || !values.length) {\n    segmentsGroup.innerHTML = '';\n    legendList.innerHTML = '<div class=\"legend-empty\">Sem registros</div>';\n    centerTotal.textContent = '0';\n    centerShare.textContent = '0%';\n    return;\n  }\n\n  const total = values.reduce((acc, v) => acc + v, 0);\n  const maxValue = Math.max(...values, 0);\n  const maxIndex = values.findIndex(v => v === maxValue);\n  const dominantShare = total > 0 ? (maxValue / total) * 100 : 0;\n\n  centerTotal.textContent = formatNumber(total);\n  centerShare.textContent = labels[maxIndex]\n    ? `${labels[maxIndex]} • ${dominantShare.toFixed(1)}%`\n    : '0%';\n\n  const cx = 210;\n  const cy = 210;\n  const radius = 128;\n\n  let currentAngle = 0;\n  let segmentHtml = '';\n\n  segmentHtml += `<circle class=\"donut-track\" cx=\"${cx}\" cy=\"${cy}\" r=\"${radius}\"></circle>`;\n\n  for (let i = 0; i < labels.length; i++) {\n    const label = labels[i];\n    const value = values[i];\n    const pct = total > 0 ? (value / total) * 100 : 0;\n    const angle = total > 0 ? (value / total) * 360 : 0;\n    const color = palette[i % palette.length];\n\n    const startAngle = currentAngle;\n    const endAngle = currentAngle + Math.max(angle, value > 0 ? 1.2 : 0);\n\n    const path = describeArc(cx, cy, radius, startAngle, endAngle);\n\n    segmentHtml += `\n      <path\n        class=\"donut-segment\"\n        d=\"${path}\"\n        stroke=\"${color}\"\n        data-label=\"${escapeHtml(label)}\"\n        data-value=\"${value}\"\n        data-percent=\"${pct.toFixed(1)}\"\n      ></path>\n    `;\n\n    currentAngle += angle;\n  }\n\n  segmentsGroup.innerHTML = segmentHtml;\n\n  let legendHtml = '';\n\n  for (let i = 0; i < labels.length; i++) {\n    const label = escapeHtml(labels[i]);\n    const value = values[i];\n    const pct = total > 0 ? (value / total) * 100 : 0;\n    const color = palette[i % palette.length];\n\n    legendHtml += `\n      <div class=\"legend-row\">\n        <div class=\"legend-left\">\n          <span class=\"legend-dot\" style=\"background:${color};\"></span>\n          <span class=\"legend-name\">${label}</span>\n        </div>\n        <div class=\"legend-value\">${formatNumber(value)}</div>\n        <div class=\"legend-percent\">${pct.toFixed(1)}%</div>\n      </div>\n    `;\n  }\n\n  legendList.innerHTML = legendHtml;\n\n} catch (error) {\n  const msg = error && error.message ? error.message : 'Erro desconhecido';\n  segmentsGroup.innerHTML = '';\n  legendList.innerHTML = `<div class=\"legend-empty\">Erro ao renderizar: ${escapeHtml(msg)}</div>`;\n  centerTotal.textContent = '0';\n  centerShare.textContent = '0%';\n}",
+        "overflow": "visible",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "11.2.2",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "dominio",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "qut",
+              "text": "",
+              "type": "number"
+            }
+          ],
+          "data": "[\n    {\n        \"dominio\": \"A\",\n        \"qut\": \"3732\",\n        \"pct\": \"74.0\"\n    },\n    {\n        \"dominio\": \"AAAA\",\n        \"qut\": \"1128\",\n        \"pct\": \"22.4\"\n    },\n    {\n        \"dominio\": \"#65\",\n        \"qut\": \"152\",\n        \"pct\": \"3.0\"\n    },\n    {\n        \"dominio\": \"CNAME\",\n        \"qut\": \"12\",\n        \"pct\": \"0.2\"\n    },\n    {\n        \"dominio\": \"DS\",\n        \"qut\": \"6\",\n        \"pct\": \"0.1\"\n    },\n    {\n        \"dominio\": \"#64\",\n        \"qut\": \"4\",\n        \"pct\": \"0.1\"\n    },\n    {\n        \"dominio\": \"TXT\",\n        \"qut\": \"3\",\n        \"pct\": \"0.1\"\n    },\n    {\n        \"dominio\": \"PTR\",\n        \"qut\": \"3\",\n        \"pct\": \"0.1\"\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "ebfb493c-ba38-4785-82f0-67456240b4ed"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://$servidor:8053/api/consulta/?token=$token&file=3",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "string",
+                "targetField": "dominio"
+              },
+              {
+                "destinationType": "number",
+                "targetField": "qut"
+              }
+            ],
+            "fields": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 100,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status Noerror"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4cfb10",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status Servfail"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#f2495c94",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 43
+      },
+      "id": 19,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "itemTag": {
+            "filter": "DNS Status"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Histórico de requisições e status do DNS -",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 100,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface eth1: Bits received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4cfb10",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "fieldMinMax"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface eth1: Bits sent"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#f3f4f8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 43
+      },
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/$host: /",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/Bits/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Tráfego das Interfaces -",
+      "transparent": true,
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+        },
+        "definition": "Zabbix - group",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Grupo",
+        "multi": true,
+        "name": "grupo",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*/",
+          "host": "",
+          "item": "",
+          "itemTag": "",
+          "queryType": "group"
+        },
+        "refresh": 1,
+        "regex": "/DNS/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "FREEWAY_DNS_UNBOUND_108v6",
+          "value": "FREEWAY_DNS_UNBOUND_108v6"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Host",
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "$grupo",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "/FREEWAY_DNS_UNBOUND_108v6/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "172.16.30.238",
+          "value": "172.16.30.238"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Servidor",
+        "multi": false,
+        "name": "servidor",
+        "options": [
+          {
+            "selected": true,
+            "text": "172.16.30.238",
+            "value": "172.16.30.238"
+          }
+        ],
+        "query": "172.16.30.238",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "bc00527c-5398-11f0-91c3-00155d011904",
+          "value": "bc00527c-5398-11f0-91c3-00155d011904"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "label": "Token",
+        "multi": false,
+        "name": "token",
+        "options": [
+          {
+            "selected": true,
+            "text": "bc00527c-5398-11f0-91c3-00155d011904",
+            "value": "bc00527c-5398-11f0-91c3-00155d011904"
+          }
+        ],
+        "query": "bc00527c-5398-11f0-91c3-00155d011904",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Dashboard Análise DNS-FREEWAY_108v6",
+  "uid": "dbf116d2-a218-4130-a182-11177a2ef545",
+  "version": 55,
+  "weekStart": ""
+}
