@@ -1,0 +1,1595 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 203,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e1e4d2e3-fd1f-4959-89b9-8fa1f92a8e44"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "inlineEditing": true,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "semi-dark-blue"
+            },
+            "image": {
+              "field": "",
+              "fixed": "https://www.datacom.com.br/uploads/product/3df3e1af39d68e487a0b5d37683b4cdd.jpg",
+              "mode": "fixed"
+            },
+            "size": "fill"
+          },
+          "border": {
+            "color": {
+              "fixed": "transparent"
+            },
+            "width": 3
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [],
+          "name": "Element 1701973842774",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e1e4d2e3-fd1f-4959-89b9-8fa1f92a8e44"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "type": "canvas"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#18494e",
+            "mode": "fixed"
+          },
+          "displayName": "CONSOLIDADO GERAL P/ HOST (STATUS)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 21,
+        "x": 3,
+        "y": 0
+      },
+      "id": 9,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select now();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#000000",
+            "mode": "fixed"
+          },
+          "displayName": "Total de Hosts (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 3,
+        "y": 2
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(DISTINCT ht.hostid) from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nwhere it.key_ = 'icmpping' AND g.name in ($grupos);",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#235763",
+            "mode": "fixed"
+          },
+          "displayName": "Total de Hosts Ativos (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 7,
+        "y": 2
+      },
+      "id": 15,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(DISTINCT ht.hostid) from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nleft join (select itemid, max(clock) AS max_clock from history_uint WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds} group by itemid) max_hu on max_hu.itemid = it.itemid\r\nleft join history_uint hu on hu.itemid = max_hu.itemid and hu.clock = max_hu.max_clock\r\nwhere it.key_ = 'icmpping' and ht.status = 0 and hu.value is not null AND g.name in ($grupos) AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds};",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-green",
+            "mode": "fixed"
+          },
+          "displayName": "Total de Hosts Onlines (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 11,
+        "y": 2
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(DISTINCT ht.hostid) from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nleft join (select itemid, max(clock) AS max_clock from history_uint WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds} group by itemid) max_hu on max_hu.itemid = it.itemid\r\nleft join history_uint hu on hu.itemid = max_hu.itemid and hu.clock = max_hu.max_clock\r\nwhere it.key_ = 'icmpping' and ht.status = 0 and hu.value = 1 AND g.name in ($grupos) AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds};",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-red",
+            "mode": "fixed"
+          },
+          "displayName": "Total de Hosts Offlines (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 15,
+        "y": 2
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(DISTINCT ht.hostid) from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nleft join (select itemid, max(clock) AS max_clock from history_uint WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds} group by itemid) max_hu on max_hu.itemid = it.itemid\r\nleft join history_uint hu on hu.itemid = max_hu.itemid and hu.clock = max_hu.max_clock\r\nwhere it.key_ = 'icmpping' and ht.status = 0 and hu.value = 0 AND g.name in ($grupos) AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds};",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#616567",
+            "mode": "fixed"
+          },
+          "displayName": "Total de Hosts Inativos (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 19,
+        "y": 2
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(DISTINCT ht.hostid) from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nwhere it.key_ = 'icmpping' and ht.status = 1 AND g.name in ($grupos);",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#18494e",
+            "mode": "fixed"
+          },
+          "displayName": "TABELA DE HOSTS (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 0,
+        "y": 5
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select now();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#18494e",
+            "mode": "fixed"
+          },
+          "displayName": "RELAÇÃO ONLINE X OFFLINE (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
+      "id": 17,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select now();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 19,
+      "options": {
+        "activeTheme": "Tema Evandro",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Evandro",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": "https://i.ibb.co/qKdxWYk/Technology-Background-DASH.jpg"
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": ""
+                },
+                "type": "style"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e7d3023e-c8ac-4bc6-bfbb-276ab9ffc766"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "super-light-green",
+                  "index": 0
+                },
+                "to": 5
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 5,
+                "result": {
+                  "color": "green",
+                  "index": 1
+                },
+                "to": 10
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 10,
+                "result": {
+                  "color": "semi-dark-green",
+                  "index": 2
+                },
+                "to": 30
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 30,
+                "result": {
+                  "color": "dark-green",
+                  "index": 3
+                },
+                "to": 45
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 45,
+                "result": {
+                  "color": "light-yellow",
+                  "index": 4
+                },
+                "to": 60
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 60,
+                "result": {
+                  "color": "semi-dark-yellow",
+                  "index": 5
+                },
+                "to": 120
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#173c48",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ULT.VALOR"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "Down"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "Up"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "HOSTID"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "targetBlank": true,
+                    "title": "",
+                    "url": "http://172.16.30.111/zabbix/zabbix.php?sort=name&sortorder=ASC&show_details=0&action=latest.view&hostids%5B%5D=${__value.text}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 23,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 6,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "TEMPO RESPOSTA"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT DISTINCT \r\n    ht.hostid AS 'HOSTID',\r\n    ht.name AS 'HOST',\r\n    CASE \r\n        WHEN i.ip <> '' THEN i.ip \r\n        ELSE i.dns \r\n    END AS 'IP/DNS',\r\n    CONCAT(ROUND(hu.value * 1000, 2), ' ms') AS \"TEMPO RESPOSTA\",\r\n    CONVERT_TZ(from_unixtime(hu.clock), '+00:00', '+03:00') AS \"HORA MEDIDA\"\r\nFROM items it\r\nINNER JOIN hosts ht ON it.hostid = ht.hostid\r\nINNER JOIN hosts_groups hg ON hg.hostid = ht.hostid\r\nINNER JOIN hstgrp g ON g.groupid = hg.groupid\r\nINNER JOIN interface i ON i.hostid = it.hostid\r\nLEFT JOIN (\r\n    SELECT itemid, MAX(clock) AS max_clock \r\n    FROM history \r\n    WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n    GROUP BY itemid\r\n) max_hu ON max_hu.itemid = it.itemid\r\nLEFT JOIN history hu ON hu.itemid = max_hu.itemid AND hu.clock = max_hu.max_clock\r\nWHERE it.key_ = 'icmppingsec'\r\n    AND ht.status = 0\r\n    AND hu.value IS NOT NULL\r\n    AND g.name IN ($grupos)\r\n    AND hu.clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n    AND it.name = 'ICMP response time';\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Onlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Offlines"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 23,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 16,
+      "options": {
+        "displayLabels": [
+          "name",
+          "value",
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": [
+            "value",
+            "percent"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    (SELECT COUNT(DISTINCT ht.hostid)\r\n     FROM items it\r\n     INNER JOIN hosts ht ON it.hostid = ht.hostid\r\n     INNER JOIN hosts_groups hg ON (hg.hostid = ht.hostid)\r\n     INNER JOIN hstgrp g ON (g.groupid = hg.groupid)\r\n     WHERE it.key_ = 'icmpping' AND ht.status = 0 AND g.name IN ($grupos)) AS total,\r\n    (SELECT COUNT(DISTINCT ht.hostid)\r\n     FROM items it\r\n     INNER JOIN hosts ht ON it.hostid = ht.hostid\r\n     INNER JOIN hosts_groups hg ON (hg.hostid = ht.hostid)\r\n     INNER JOIN hstgrp g ON (g.groupid = hg.groupid)\r\n     LEFT JOIN (\r\n         SELECT itemid, MAX(clock) AS max_clock \r\n         FROM history_uint \r\n         WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n         GROUP BY itemid\r\n     ) max_hu ON max_hu.itemid = it.itemid\r\n     LEFT JOIN history_uint hu ON hu.itemid = max_hu.itemid AND hu.clock = max_hu.max_clock\r\n     WHERE it.key_ = 'icmpping' AND ht.status = 0 AND g.name IN ($grupos) AND hu.value = 1 AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}) AS Onlines,\r\n    (SELECT COUNT(DISTINCT ht.hostid)\r\n     FROM items it\r\n     INNER JOIN hosts ht ON it.hostid = ht.hostid\r\n     INNER JOIN hosts_groups hg ON (hg.hostid = ht.hostid)\r\n     INNER JOIN hstgrp g ON (g.groupid = hg.groupid)\r\n     LEFT JOIN (\r\n         SELECT itemid, MAX(clock) AS max_clock \r\n         FROM history_uint \r\n         WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n         GROUP BY itemid\r\n     ) max_hu ON max_hu.itemid = it.itemid\r\n     LEFT JOIN history_uint hu ON hu.itemid = max_hu.itemid AND hu.clock = max_hu.max_clock\r\n     WHERE it.key_ = 'icmpping' AND ht.status = 0 AND g.name IN ($grupos) AND hu.value = 0 AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}) AS Offlines;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Relação de Onlines X Offlines",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "total": true
+            },
+            "indexByName": {},
+            "renameByName": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#18494e",
+            "mode": "fixed"
+          },
+          "displayName": "STATUS P/ HOST (ICMP)",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 31
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select now();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "links": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "Down"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "Up"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red"
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 28,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 2,
+      "links": [],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select DISTINCT ht.name host,hu.value last,it.itemid itemid from items it\r\ninner join hosts ht on it.hostid = ht.hostid\r\ninner join hosts_groups hg on (hg.hostid = ht.hostid)\r\ninner join hstgrp g on (g.groupid = hg.groupid)\r\nleft join (select itemid, max(clock) AS max_clock from history_uint WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds} group by itemid) max_hu on max_hu.itemid = it.itemid\r\nleft join history_uint hu on hu.itemid = max_hu.itemid and hu.clock = max_hu.max_clock\r\nwhere it.key_ = 'icmpping' and ht.status = 0 and hu.value is not null AND g.name in ($grupos) AND clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds};\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "rowsToFields",
+          "options": {}
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    }
+  ],
+  "refresh": "1m",
+  "revision": 1,
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "beesolutions.com.br",
+          "value": "beesolutions.com.br"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "label": "URL",
+        "multi": false,
+        "name": "url",
+        "options": [
+          {
+            "selected": true,
+            "text": "beesolutions.com.br",
+            "value": "beesolutions.com.br"
+          }
+        ],
+        "query": "beesolutions.com.br",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+        },
+        "definition": "Zabbix - group",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Grupos",
+        "multi": true,
+        "name": "grupos",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*/",
+          "host": "",
+          "item": "",
+          "itemTag": "",
+          "queryType": "group"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Hosts",
+        "multi": true,
+        "name": "hosts",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "$grupos",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DASHBOARD GERAL STATUS  ICMP MYSQL DATACOM(TV)",
+  "uid": "f9a36f18-bf64-4df1-89c2-1f3a3ef52a1f",
+  "version": 8,
+  "weekStart": ""
+}
