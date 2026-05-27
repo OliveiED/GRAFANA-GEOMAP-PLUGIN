@@ -1,0 +1,961 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Temos como análise em real time as métricas de latência, packet loss e status do serviços. Essas análises são coletadas via ansible e enviada para o zabbix via trapper",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 213,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "a5f846b6-c07f-4ca5-a9ad-b4e86ddc34df"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "activeTheme": "Tema Evandro",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Evandro",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": "https://i.ibb.co/qKdxWYk/Technology-Background-DASH.jpg"
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": ""
+                },
+                "type": "style"
+              },
+              {
+                "props": {
+                  "color": ""
+                },
+                "type": "panel-container-bg-color"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "a5f846b6-c07f-4ca5-a9ad-b4e86ddc34df"
+          },
+          "editorMode": "builder",
+          "format": "table",
+          "rawSql": "",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 6,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a0a1a, #1a1a2e, #0a0a1a),\n    radial-gradient(circle at center, rgba(0, 209, 242, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.6),\n    inset 0 0 12px rgba(0, 209, 242, 0.4),\n    0 0 30px rgba(0, 209, 242, 0.3);\n  border: 1px solid rgba(0, 209, 242, 0.4);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon azuis -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(0, 180, 255, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon azul -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(0, 209, 242, 0.5), \n      transparent, \n      rgba(0, 150, 255, 0.5), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal com gradiente azul -->\n  <span style=\"\n    background: linear-gradient(135deg, #00d1f2, #00a2ff, #0066ff);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">LINK BRASIL</span>\n  \n  <span style=\"\n    color: #a0e0ff;\n    text-shadow: 0 0 8px rgba(160, 224, 255, 0.5);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(0, 180, 255, 0.4));\n  \"> >> PING SERVIÇOS</span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(0, 150, 255, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(0, 180, 255, 0.7), 0 0 25px rgba(0, 120, 255, 0.4); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 7,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n  font-size: 34px;\n  text-align: center;\n  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;\n  background: \n    linear-gradient(145deg, #0a1a16, #252e2b, #0a1a16),\n    radial-gradient(circle at center, rgba(131, 248, 189, 0.15) 0%, transparent 70%);\n  border-radius: 35px 250px 35px;\n  font-weight: 800;\n  padding: 12px 28px;\n  margin: 0 auto;\n  width: fit-content;\n  box-shadow: \n    0 5px 15px rgba(0, 0, 0, 0.4),\n    inset 0 0 12px rgba(131, 248, 189, 0.3),\n    0 0 20px rgba(131, 248, 189, 0.2);\n  border: 1px solid rgba(131, 248, 189, 0.3);\n  position: relative;\n  overflow: hidden;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.2;\n  transition: all 0.3s ease;\n\">\n  <!-- Efeito de partículas neon verde-água -->\n  <div style=\"\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: \n      radial-gradient(circle at 20% 30%, rgba(131, 248, 189, 0.2) 0%, transparent 30%),\n      radial-gradient(circle at 80% 70%, rgba(131, 248, 189, 0.2) 0%, transparent 30%);\n    z-index: 1;\n  \"></div>\n  \n  <!-- Efeito de borda neon verde-água -->\n  <div style=\"\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    right: -2px;\n    bottom: -2px;\n    border-radius: inherit;\n    background: linear-gradient(45deg, \n      transparent, \n      rgba(131, 248, 189, 0.3), \n      transparent, \n      rgba(131, 248, 189, 0.3), \n      transparent);\n    background-size: 400% 400%;\n    animation: borderGlow 6s linear infinite;\n    z-index: 0;\n    pointer-events: none;\n  \"></div>\n\n  <!-- Texto principal em verde-água neon -->\n  <span style=\"\n    background: linear-gradient(135deg, #83f8bd, #c1ffe0, #83f8bd);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    text-shadow: 0 0 10px rgba(131, 248, 189, 0.4);\n    position: relative;\n    z-index: 2;\n    padding-right: 5px;\n    animation: textGlow 2s ease-in-out infinite alternate;\n  \">FIBRA PLUS</span>\n  \n  <span style=\"\n    color: #e0fff1;\n    text-shadow: 0 0 8px rgba(224, 255, 241, 0.3);\n    position: relative;\n    z-index: 2;\n    margin-left: 8px;\n    filter: drop-shadow(0 0 5px rgba(131, 248, 189, 0.3));\n  \">>> PING SERVIÇOS</span>\n</div>\n\n<style>\n  @keyframes borderGlow {\n    0% { background-position: 0% 50%; }\n    50% { background-position: 100% 50%; }\n    100% { background-position: 0% 50%; }\n  }\n  \n  @keyframes textGlow {\n    0% { text-shadow: 0 0 8px rgba(131, 248, 189, 0.4); }\n    100% { text-shadow: 0 0 15px rgba(131, 248, 189, 0.7), 0 0 25px rgba(131, 248, 189, 0.3); }\n  }\n</style>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f7ff7bbe-acc3-4114-a4af-be8a21131ad4"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 80,
+                "result": {
+                  "index": 0
+                },
+                "to": 1000
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#173c48",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ULT.VALOR"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "Down"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "Up"
+                      }
+                    },
+                    "type": "value"
+                  },
+                  {
+                    "options": {
+                      "from": 0,
+                      "result": {
+                        "color": "light-green",
+                        "index": 2
+                      },
+                      "to": 30
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 30,
+                      "result": {
+                        "color": "semi-dark-green",
+                        "index": 3
+                      },
+                      "to": 40
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 40,
+                      "result": {
+                        "color": "yellow",
+                        "index": 4
+                      },
+                      "to": 50
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 50,
+                      "result": {
+                        "color": "orange",
+                        "index": 5
+                      },
+                      "to": 80
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 80,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 6
+                      },
+                      "to": 150
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 150,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 7
+                      },
+                      "to": 1000
+                    },
+                    "type": "range"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "HOSTID"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": []
+              },
+              {
+                "id": "custom.width",
+                "value": 73
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "KEY"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 379
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 29,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 9,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "HOST"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "f7ff7bbe-acc3-4114-a4af-be8a21131ad4"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT DISTINCT \r\n    ht.hostid AS HOSTID,\r\n    ht.name AS HOST,\r\n    it.key_ AS `KEY`,\r\n    CASE \r\n        WHEN i.ip <> '' THEN i.ip \r\n        ELSE i.dns \r\n    END AS `IP/DNS`,\r\n    CONCAT(ROUND(hu.value, 2), ' ms') AS `ULT.VALOR`,\r\n    CONVERT_TZ(FROM_UNIXTIME(hu.clock), '+00:00', '+03:00') AS `ULT.VERIFICACAO`\r\nFROM items it\r\nINNER JOIN hosts ht ON it.hostid = ht.hostid\r\nINNER JOIN hosts_groups hg ON hg.hostid = ht.hostid\r\nINNER JOIN hstgrp g ON g.groupid = hg.groupid\r\nINNER JOIN interface i ON i.hostid = it.hostid\r\nLEFT JOIN (\r\n    SELECT h1.itemid, h1.value, h1.clock\r\n    FROM history h1\r\n    JOIN (\r\n        SELECT itemid, MAX(clock) AS max_clock\r\n        FROM history\r\n        WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n        GROUP BY itemid\r\n    ) h2 ON h1.itemid = h2.itemid AND h1.clock = h2.max_clock\r\n) hu ON hu.itemid = it.itemid\r\nWHERE \r\n    ht.status = 0\r\n    AND it.key_ LIKE 'dst_ping_latencia_%'\r\n    AND it.key_ LIKE '%linkbrasil%'\r\n    AND g.name = 'MONITORAMENTO_LINKS_ANSIBLE'\r\n    AND hu.value IS NOT NULL\r\nORDER BY hu.value DESC;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f7ff7bbe-acc3-4114-a4af-be8a21131ad4"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 80,
+                "result": {
+                  "index": 0
+                },
+                "to": 1000
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#173c48",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ULT.VALOR"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "Down"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "Up"
+                      }
+                    },
+                    "type": "value"
+                  },
+                  {
+                    "options": {
+                      "from": 0,
+                      "result": {
+                        "color": "light-green",
+                        "index": 2
+                      },
+                      "to": 30
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 30,
+                      "result": {
+                        "color": "semi-dark-green",
+                        "index": 3
+                      },
+                      "to": 40
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 40,
+                      "result": {
+                        "color": "yellow",
+                        "index": 4
+                      },
+                      "to": 50
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 50,
+                      "result": {
+                        "color": "orange",
+                        "index": 5
+                      },
+                      "to": 80
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 80,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 6
+                      },
+                      "to": 150
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 150,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 7
+                      },
+                      "to": 1000
+                    },
+                    "type": "range"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "HOSTID"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": []
+              },
+              {
+                "id": "custom.width",
+                "value": 73
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "KEY"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 276
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 29,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "id": 8,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "HOST"
+          }
+        ]
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "f7ff7bbe-acc3-4114-a4af-be8a21131ad4"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT DISTINCT \r\n    ht.hostid AS HOSTID,\r\n    ht.name AS HOST,\r\n    it.key_ AS `KEY`,\r\n    CASE \r\n        WHEN i.ip <> '' THEN i.ip \r\n        ELSE i.dns \r\n    END AS `IP/DNS`,\r\n    CONCAT(ROUND(hu.value, 2), ' ms') AS `ULT.VALOR`,\r\n    CONVERT_TZ(FROM_UNIXTIME(hu.clock), '+00:00', '+03:00') AS `ULT.VERIFICACAO`\r\nFROM items it\r\nINNER JOIN hosts ht ON it.hostid = ht.hostid\r\nINNER JOIN hosts_groups hg ON hg.hostid = ht.hostid\r\nINNER JOIN hstgrp g ON g.groupid = hg.groupid\r\nINNER JOIN interface i ON i.hostid = it.hostid\r\nLEFT JOIN (\r\n    SELECT h1.itemid, h1.value, h1.clock\r\n    FROM history h1\r\n    JOIN (\r\n        SELECT itemid, MAX(clock) AS max_clock\r\n        FROM history\r\n        WHERE clock BETWEEN ${__from:date:seconds} AND ${__to:date:seconds}\r\n        GROUP BY itemid\r\n    ) h2 ON h1.itemid = h2.itemid AND h1.clock = h2.max_clock\r\n) hu ON hu.itemid = it.itemid\r\nWHERE \r\n    ht.status = 0\r\n    AND it.key_ LIKE 'dst_ping_latencia_%'\r\n    AND it.key_ LIKE '%fibraplus%'\r\n    AND g.name = 'MONITORAMENTO_LINKS_ANSIBLE'\r\n    AND hu.value IS NOT NULL\r\nORDER BY hu.value DESC;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 30
+              },
+              {
+                "color": "red",
+                "value": 50
+              },
+              {
+                "color": "dark-red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 12,
+        "x": 0,
+        "y": 33
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "MONITORAMENTO_LINKS_ANSIBLE"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "/(.*loss.*)(linkbrasil).*/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "PACKET_LOSS_VIA_LINKBRASIL",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 30
+              },
+              {
+                "color": "red",
+                "value": 50
+              },
+              {
+                "color": "dark-red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 12,
+        "x": 12,
+        "y": 33
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "b1a49c9f-8877-4b2d-aba7-7862d61ec5f5"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "MONITORAMENTO_LINKS_ANSIBLE"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "/(.*loss.*)(fibraplus).*/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "PACKET_LOSS_VIA_FIBRAPLUS",
+      "transparent": true,
+      "type": "stat"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DASHBOARD-SERVICOS-OPERADORAS",
+  "uid": "f501072a-1682-4faa-b879-e2198815ab9a",
+  "version": 28,
+  "weekStart": ""
+}
