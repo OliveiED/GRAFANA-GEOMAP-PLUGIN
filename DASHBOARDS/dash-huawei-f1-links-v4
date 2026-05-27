@@ -1,0 +1,2239 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 7,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "a5f846b6-c07f-4ca5-a9ad-b4e86ddc34df"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 76,
+      "options": {
+        "activeTheme": "Tema Evandro",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Evandro",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": "https://i.ibb.co/qKdxWYk/Technology-Background-DASH.jpg"
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": ""
+                },
+                "type": "style"
+              },
+              {
+                "props": {
+                  "color": ""
+                },
+                "type": "panel-container-bg-color"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "a5f846b6-c07f-4ca5-a9ad-b4e86ddc34df"
+          },
+          "editorMode": "builder",
+          "format": "table",
+          "rawSql": "",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 55,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:30px;text-align:center;font-family:Roboto;background-image: linear-gradient(to RIGHT,#111116,#1e1e2d,#111116);border-radius: 60px 605px 60px;font-weight:bold\">  \n\n <span style=\"color: #6eee23\"> F1 FREEWAY </span> <span style=\"color: white\"> BGP \n </span>\n\n</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e1e4d2e3-fd1f-4959-89b9-8fa1f92a8e44"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 3
+      },
+      "id": 4,
+      "options": {
+        "inlineEditing": true,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "transparent"
+            },
+            "image": {
+              "fixed": "https://static.wixstatic.com/media/b5c52f_db4678c3391b46dfaa9f351b82e4a3e4~mv2.png/v1/fill/w_560,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b5c52f_db4678c3391b46dfaa9f351b82e4a3e4~mv2.png"
+            },
+            "size": "fill"
+          },
+          "border": {
+            "color": {
+              "fixed": "dark-green"
+            }
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [],
+          "name": "Element 1701975095244",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "a58e9cf9-f019-4753-ae00-d7a78d53840a"
+          },
+          "editorMode": "builder",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawSql": "",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "canvas"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 3,
+        "y": 3
+      },
+      "id": 59,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:33px;\n            text-align:center;\n            font-family:Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #499f46 0%,   #499f46 74%);\n            color:white;\n            font-weight: bold;\"> FIB </div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 6,
+        "y": 3
+      },
+      "id": 58,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:33px;\n            text-align:center;\n            font-family:Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #499f46 0%,   #499f46 74%);\n            color:white;\n            font-weight: bold;\">Direct</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 9,
+        "y": 3
+      },
+      "id": 56,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:33px;\n            text-align:center;\n            font-family:Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #499f46 0%,   #499f46 74%);\n            color:white;\n            font-weight: bold;\">Rota Static</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 72,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size: 33px;\n            text-align: center;\n            font-family: Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #6eee23 0%,   #6eee23 74%);\n            color: white;\n            font-weight: bold;\">CDN FLEXTEL</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 3,
+        "y": 5
+      },
+      "id": 60,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  // Encontrando os campos numéricos e de tempo de cada série\n  const numberField = s.fields.find((f) => f.type === 'number');\n\n  // Acessando os valores numéricos da série\n  const sData = numberField ? (numberField.values.buffer || numberField.values) : [];\n\n  // Garantindo que existem dados para mostrar\n  if (sData.length === 0) {\n    return {}; // Retorna vazio se não houver dados\n  }\n\n  // Pegando o último valor para exibir no gráfico\n  const lastValue = sData[sData.length - 1];\n\n  return {\n    name: s.refId,\n    type: 'bar', // Usando bar para a visualização\n    data: [lastValue], // Passando o valor para o gráfico de barras\n    label: {\n      show: true, // Mostrar o valor no topo da barra\n      position: 'top', // Colocar o valor no topo da barra\n      fontSize: 20, // Tamanho da fonte\n      fontWeight: 'bold', // Peso da fonte\n      color: '#00e600', // Cor do valor\n    },\n    itemStyle: {\n      color: '#00e600', // Cor da barra\n    },\n    emphasis: {\n      label: {\n        color: '#ff9800', // Cor quando em foco\n        fontSize: 24,\n      },\n    },\n  };\n});\n\nreturn {\n  backgroundColor: 'transparent', // Fundo transparente\n  tooltip: {\n    trigger: 'item',\n    formatter: '{FIB} <br/>{b} : {c}', // Tooltip mostrando o valor\n  },\n  series: series, // Passando as séries configuradas\n  xAxis: {\n    type: 'category', // Tipo de eixo X (categorias)\n    data: context.panel.data.series.map((s) => s.refId), // Definindo o nome das categorias como os IDs das séries\n  },\n  yAxis: {\n    type: 'value', // Eixo Y (valores numéricos)\n    axisLabel: {\n      formatter: '{value}', // Formatando os valores do eixo Y\n    },\n  },\n  grid: {\n    left: '5%', // Espaçamento esquerdo\n    right: '5%', // Espaçamento direito\n    bottom: '10%', // Espaçamento inferior\n    top: '20%', // Espaçamento superior\n  },\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Quantidade de Rotas FIB"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 6,
+        "y": 5
+      },
+      "id": 61,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  // Encontrando os campos numéricos e de tempo de cada série\n  const numberField = s.fields.find((f) => f.type === 'number');\n\n  // Acessando os valores numéricos da série\n  const sData = numberField ? (numberField.values.buffer || numberField.values) : [];\n\n  // Garantindo que existem dados para mostrar\n  if (sData.length === 0) {\n    return {}; // Retorna vazio se não houver dados\n  }\n\n  // Pegando o último valor para exibir no gráfico\n  const lastValue = sData[sData.length - 1];\n\n  return {\n    name: s.refId,\n    type: 'bar', // Usando bar para a visualização\n    data: [lastValue], // Passando o valor para o gráfico de barras\n    label: {\n      show: true, // Mostrar o valor no topo da barra\n      position: 'top', // Colocar o valor no topo da barra\n      fontSize: 20, // Tamanho da fonte\n      fontWeight: 'bold', // Peso da fonte\n      color: '#00e600', // Cor do valor\n    },\n    itemStyle: {\n      color: '#00e600', // Cor da barra\n    },\n    emphasis: {\n      label: {\n        color: '#ff9800', // Cor quando em foco\n        fontSize: 24,\n      },\n    },\n  };\n});\n\nreturn {\n  backgroundColor: 'transparent', // Fundo transparente\n  tooltip: {\n    trigger: 'item',\n    formatter: '{DIRECT} <br/>{b} : {c}', // Tooltip mostrando o valor\n  },\n  series: series, // Passando as séries configuradas\n  xAxis: {\n    type: 'category', // Tipo de eixo X (categorias)\n    data: context.panel.data.series.map((s) => s.refId), // Definindo o nome das categorias como os IDs das séries\n  },\n  yAxis: {\n    type: 'value', // Eixo Y (valores numéricos)\n    axisLabel: {\n      formatter: '{value}', // Formatando os valores do eixo Y\n    },\n  },\n  grid: {\n    left: '5%', // Espaçamento esquerdo\n    right: '5%', // Espaçamento direito\n    bottom: '10%', // Espaçamento inferior\n    top: '20%', // Espaçamento superior\n  },\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Quantidade de Rotas Direct"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 9,
+        "y": 5
+      },
+      "id": 62,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  // Encontrando os campos numéricos e de tempo de cada série\n  const numberField = s.fields.find((f) => f.type === 'number');\n\n  // Acessando os valores numéricos da série\n  const sData = numberField ? (numberField.values.buffer || numberField.values) : [];\n\n  // Garantindo que existem dados para mostrar\n  if (sData.length === 0) {\n    return {}; // Retorna vazio se não houver dados\n  }\n\n  // Pegando o último valor para exibir no gráfico\n  const lastValue = sData[sData.length - 1];\n\n  return {\n    name: s.refId,\n    type: 'bar', // Usando bar para a visualização\n    data: [lastValue], // Passando o valor para o gráfico de barras\n    label: {\n      show: true, // Mostrar o valor no topo da barra\n      position: 'top', // Colocar o valor no topo da barra\n      fontSize: 20, // Tamanho da fonte\n      fontWeight: 'bold', // Peso da fonte\n      color: '#00e600', // Cor do valor\n    },\n    itemStyle: {\n      color: '#00e600', // Cor da barra\n    },\n    emphasis: {\n      label: {\n        color: '#ff9800', // Cor quando em foco\n        fontSize: 24,\n      },\n    },\n  };\n});\n\nreturn {\n  backgroundColor: 'transparent', // Fundo transparente\n  tooltip: {\n    trigger: 'item',\n    formatter: '{STATIC} <br/>{b} : {c}', // Tooltip mostrando o valor\n  },\n  series: series, // Passando as séries configuradas\n  xAxis: {\n    type: 'category', // Tipo de eixo X (categorias)\n    data: context.panel.data.series.map((s) => s.refId), // Definindo o nome das categorias como os IDs das séries\n  },\n  yAxis: {\n    type: 'value', // Eixo Y (valores numéricos)\n    axisLabel: {\n      formatter: '{value}', // Formatando os valores do eixo Y\n    },\n  },\n  grid: {\n    left: '5%', // Espaçamento esquerdo\n    right: '5%', // Espaçamento direito\n    bottom: '10%', // Espaçamento inferior\n    top: '20%', // Espaçamento superior\n  },\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Quantidade de Rotas Static"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
+      "id": 71,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.3011(\"eBGP-FLEXTEL_CDNxFREEWAY\"): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.3011(\"eBGP-FLEXTEL_CDNxFREEWAY\"): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 7
+      },
+      "id": 69,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const lastValue = sData[sData.length - 1]; // Pega o último valor (1 para UP, 0 para DOWN)\n\n  const isUp = lastValue === 1;\n\n  return {\n    type: 'stat',\n    radius: '85%',\n    center: ['50%', '55%'], // Centraliza o medidor\n    axisLine: {\n      lineStyle: {\n        width: 10,\n        color: [\n          [1, isUp ? '#00FFAA' : '#FF3E3E'], // Verde se UP, Vermelho se DOWN\n        ],\n      },\n    },\n    pointer: {\n      show: false, // Esconde o ponteiro\n    },\n    progress: {\n      show: true,\n      width: 10,\n      itemStyle: {\n        color: isUp ? '#00FFAA' : '#FF3E3E', // Progresso na mesma cor\n      },\n    },\n    detail: {\n      show: true,\n      formatter: isUp ? 'UP' : 'DOWN',\n      fontSize: 30,\n      color: isUp ? '#00FFAA' : '#FF3E3E',\n      fontWeight: 'bold',\n      offsetCenter: [0, '20%'],\n    },\n    title: {\n      show: false, // Remove o título interno\n    },\n    data: [\n      {\n        value: lastValue,\n        name: 'Status',\n      },\n    ],\n  };\n});\n\n// Define qual seta exibir com base no valor\nconst lastValue = series.length > 0 && series[0].data.length > 0 ? series[0].data[0].value : 0; // Garante um valor válido\nconst isUp = lastValue === 1;\n\nreturn {\n  backgroundColor: 'transparent', // Fundo escuro tecnológico\n  tooltip: {\n    show: true,\n    formatter: (params) =>\n      params.value === 1 ? 'Status: UP' : 'Status: DOWN',\n    backgroundColor: '#333',\n    borderColor: '#00FFAA',\n    textStyle: {\n      color: '#FFF',\n    },\n  },\n  series,\n  graphic: [\n    {\n      type: 'image',\n      left: 'center',\n      top: '15%',\n      style: {\n        image: isUp\n          ? 'https://cdn-icons-png.flaticon.com/128/5610/5610930.png' // URL para imagem de seta para cima\n          : 'https://cdn-icons-png.flaticon.com/128/14025/14025545.png', // URL para imagem de seta para baixo\n        width: 50,\n        height: 50,\n        opacity: 0.9,\n      },\n      animation: {\n        duration: 1500,\n        easing: 'elasticOut',\n        loop: true,\n      },\n    },\n    {\n      type: 'text',\n      left: 'center',\n      top: '65%',\n      style: {\n        text: isUp ? 'ONLINE' : 'OFFLINE',\n        fontSize: 20,\n        fontWeight: 'bold',\n        fill: isUp ? '#00FFAA' : '#FF3E3E',\n      },\n    },\n  ],\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 3,
+        "y": 8
+      },
+      "id": 73,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "right",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "ICMP response time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 0,
+        "y": 11
+      },
+      "id": 50,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:33px;\n            text-align:center;\n            font-family:Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #dcc53e 0%,   #dcc53e 74%);\n            color:white;\n            font-weight: bold;\"> TRÁFEGO PTT </div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 11
+      },
+      "id": 42,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size: 33px;\n            text-align: center;\n            font-family: Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #4e7395 5%,   #4e7395 74%);\n            color: white;\n            font-weight: bold;\">LINK VIA MS </div>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 13
+      },
+      "id": 32,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.835(IX_PTT_MS): Bits received"
+          },
+          "itemTag": {
+            "filter": "/filesystem:/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.835(IX_PTT_MS): Bits sent"
+          },
+          "itemTag": {
+            "filter": "/filesystem:/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 13
+      },
+      "id": 75,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.3004(\"eBGP_FREEWAYxFIBRAPLUS_VLAN3004\"): Bits received"
+          },
+          "itemTag": {
+            "filter": "/filesystem:/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.3004(\"eBGP_FREEWAYxFIBRAPLUS_VLAN3004\"): Bits sent"
+          },
+          "itemTag": {
+            "filter": "/filesystem:/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 36,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size: 33px;\n            text-align: center;\n            font-family: Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #0000FF 0%,   #0000FF 74%);\n            color: white;\n            font-weight: bold;\">LINK BRASIL </div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 19
+      },
+      "id": 40,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size: 33px;\n            text-align: center;\n            font-family: Serif;\n            border-radius: 10px;\n            background-image: linear-gradient(315deg,   #d4b689 5%,   #d4b689 74%);\n            color: white;\n            font-weight: bold;\">LINK BR DIGITAL </div>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "e632954c-c6d7-442a-a5d0-d4074e743921"
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 21
+      },
+      "id": 29,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.803(\"LINK BRASIL\"): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "FREEWAY-F1-ZEUS"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.803(\"LINK BRASIL\"): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 21
+      },
+      "id": 12,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "visual",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "const series = context.panel.data.series.map((s) => {\n  const sData = s.fields.find((f) => f.type === 'number').values.buffer || s.fields.find((f) => f.type === 'number').values;\n  const sTime = s.fields.find((f) => f.type === 'time').values.buffer || s.fields.find((f) => f.type === 'time').values;\n  \n  return {\n    name: s.refId,\n    type: 'line',\n    showSymbol: false,\n    areaStyle: {\n      opacity: 0.1,\n    },\n    lineStyle: {\n      width: 1,\n    },\n    data: sData.map((d, i) => [sTime[i], d.toFixed(2)]),\n  };\n});\n\n/**\n * Enable Data Zoom by default\n */\nsetTimeout(() => context.panel.chart.dispatchAction({\n  type: 'takeGlobalCursor',\n  key: 'dataZoomSelect',\n  dataZoomSelectActive: true,\n}), 500);\n\n/**\n * Update Time Range on Zoom\n */\ncontext.panel.chart.on('datazoom', function (params) {\n  const startValue = params.batch[0]?.startValue;\n  const endValue = params.batch[0]?.endValue;\n  locationService.partial({ from: startValue, to: endValue });\n});\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'axis',\n  },\n  legend: {\n    left: '0',\n    bottom: '0',\n    data: context.panel.data.series.map((s) => s.refId),\n    textStyle: {\n      color: 'rgba(128, 128, 128, .9)',\n    },\n  },\n  toolbox: {\n    feature: {\n      dataZoom: {\n        yAxisIndex: 'none',\n        icon: {\n          zoom: 'path://',\n          back: 'path://',\n        },\n      },\n      saveAsImage: {},\n    }\n  },\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n  grid: {\n    left: '2%',\n    right: '2%',\n    top: '2%',\n    bottom: 24,\n    containLabel: true,\n  },\n  series,\n};",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "context.panel.data.series.map((s) => {\n  teste = s.fields;\n});\n\n// Converter os timestamps em datas legíveis\nconst formattedDates = teste[0].values.map(timestamp => {\n  const date = new Date(timestamp);\n  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;\n});\n\nconst formatBps = (bps) => {\n  const kbps = 1000;\n  const mbps = 1000 * kbps;\n  const gbps = 1000 * mbps;\n\n  if (bps >= gbps) {\n    return (bps / gbps).toFixed(2) + ' Gbp/s';\n  } else if (bps >= mbps) {\n    return (bps / mbps).toFixed(2) + ' Mbp/s';\n  } else if (bps >= kbps) {\n    return (bps / kbps).toFixed(2) + ' kbp/s';\n  } else {\n    return bps + ' b/s';\n  }\n};\n\n// Gera cores harmonizadas\nfunction getRandomColor() {\n  const hue = Math.floor(Math.random() * 360);\n  const saturation = 70 + Math.floor(Math.random() * 30);\n  const lightness = 40 + Math.floor(Math.random() * 30);\n  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;\n}\n\nconst numericalValues1 = teste[1].values;\nconst numericalValues2 = teste[2].values;\n\nconst color1 = getRandomColor();\nconst color2 = getRandomColor();\n\nreturn {\n  backgroundColor: 'transparent',\n  grid: {\n    bottom: \"3%\",\n    containLabel: true,\n    left: \"3%\",\n    right: \"4%\",\n  },\n  legend: {\n    left: 'left',\n    textStyle: {\n      color: '#FFFFFF'\n    }\n  },\n  series: [\n    {\n      name: teste[1].name,\n      data: numericalValues1,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color1,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color1\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    },\n    {\n      name: teste[2].name,\n      data: numericalValues2,\n      type: \"line\",\n      smooth: true,\n      showSymbol: formattedDates.length < 15,\n      symbolSize: 6,\n      lineStyle: {\n        width: 3,\n        color: color2,\n        shadowColor: 'rgba(0, 0, 0, 0.5)',\n        shadowBlur: 10,\n        shadowOffsetY: 5\n      },\n      areaStyle: {\n        opacity: 0.2,\n        color: color2\n      },\n      emphasis: {\n        focus: 'series',\n        itemStyle: {\n          borderWidth: 2,\n          borderColor: '#fff'\n        }\n      }\n    }\n  ],\n  toolbox: {\n    feature: {\n      dataView: {\n        readOnly: false\n      },\n      dataZoom: {\n        yAxisIndex: \"none\"\n      },\n      magicType: {\n        type: [\"line\", \"bar\"]\n      },\n      restore: {},\n      saveAsImage: {}\n    },\n    show: true\n  },\n  tooltip: {\n    trigger: 'axis',\n    backgroundColor: 'rgba(0, 0, 0, 0.8)',\n    borderColor: '#00d1ff',\n    borderWidth: 1,\n    textStyle: {\n      color: '#fff',\n      fontSize: 12\n    },\n    extraCssText: 'box-shadow: 0 0 15px rgba(0, 209, 255, 0.3); border-radius: 4px;',\n    formatter: (params) => {\n      let result = params[0].name + '<br/>';\n      params.forEach(item => {\n        result += item.marker + item.seriesName + ': ' + formatBps(item.value) + '<br/>';\n      });\n      return result;\n    }\n  },\n  xAxis: {\n    type: 'category',\n    boundaryGap: false,\n    data: formattedDates,\n    axisLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.3)',\n        width: 1\n      }\n    },\n    axisLabel: {\n      color: '#fff',\n      fontSize: 11\n    },\n    axisTick: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)'\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\",\n    axisLabel: {\n      formatter: (value) => formatBps(value),\n      color: '#fff',\n      fontSize: 12\n    },\n    axisLine: {\n      show: false\n    },\n    axisTick: {\n      show: false\n    },\n    splitLine: {\n      lineStyle: {\n        color: 'rgba(255, 255, 255, 0.1)',\n        type: 'dashed'\n      }\n    },\n    splitArea: {\n      show: true,\n      areaStyle: {\n        color: ['rgba(0,0,0,0.01)', 'rgba(255,255,255,0.02)']\n      }\n    }\n  }\n};\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "host": {
+            "filter": "EASYNET-F1"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.1113(eBGP_IPV4_BRDIGITALxF1_EASYNET): Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "c1154fb1-338b-4fc0-abd8-d19bcff47048"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FREEWAY"
+          },
+          "hide": false,
+          "host": {
+            "filter": "EASYNET-F1"
+          },
+          "item": {
+            "filter": "Interface 100GE0/1/49.1113(eBGP_IPV4_BRDIGITALxF1_EASYNET): Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-echarts-panel"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DASH >> HUAWEI F1 - LINK's v4",
+  "uid": "a8762fc8-e5b6-4573-b22c-345570a280df",
+  "version": 175,
+  "weekStart": ""
+}
