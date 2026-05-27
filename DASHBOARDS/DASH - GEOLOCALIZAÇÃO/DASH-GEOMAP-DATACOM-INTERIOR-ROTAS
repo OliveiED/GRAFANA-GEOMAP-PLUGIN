@@ -1,0 +1,444 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 65,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "semi-dark-orange",
+                  "index": 1,
+                  "text": "Down"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 4,
+                  "text": "UP"
+                },
+                "0.00 ms": {
+                  "color": "dark-red",
+                  "index": 2,
+                  "text": "Down"
+                },
+                "100,000.00": {
+                  "color": "dark-red",
+                  "index": 0,
+                  "text": "Down"
+                },
+                "Down": {
+                  "color": "dark-red",
+                  "index": 3,
+                  "text": "Down"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 35,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "opacity": 1,
+          "tooltip": true,
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "field": "ULT.VALOR",
+                  "fixed": "dark-green"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "field": "ITEMID",
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "field": "SITE_COUNTRY",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 13,
+                  "offsetX": 22,
+                  "offsetY": 2,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "A"
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 2",
+            "tooltip": true,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "field": "ITEMID",
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.9,
+                "rotation": {
+                  "field": "ITEMID",
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "ULT.VALOR",
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "field": "ULT.VALOR",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 14,
+                  "offsetX": 20,
+                  "offsetY": 7,
+                  "textAlign": "center",
+                  "textBaseline": "top"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "B"
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 3",
+            "tooltip": true,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "rules": [],
+              "src": "public/maps/MS-CONTORNO.geojson",
+              "style": {
+                "color": {
+                  "fixed": "#ccccdc"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "name": "Layer 4",
+            "opacity": 1,
+            "tooltip": true,
+            "type": "geojson"
+          },
+          {
+            "config": {
+              "rules": [],
+              "src": "public/maps/FREEWAY-ROTA.geojson",
+              "style": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.4,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 5",
+            "opacity": 1,
+            "tooltip": true,
+            "type": "geojson"
+          },
+          {
+            "config": {
+              "rules": [],
+              "src": "public/maps/mato-grosso-cidades.geojson",
+              "style": {
+                "color": {
+                  "fixed": "#ccccdc"
+                },
+                "opacity": 0,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "name": "Layer 6",
+            "opacity": 1,
+            "tooltip": true,
+            "type": "geojson"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "coords",
+          "lat": -20.659368,
+          "lon": -54.278887,
+          "shared": false,
+          "zoom": 7.31
+        }
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "WITH LatestValues AS (\r\n    SELECT \r\n        hu.itemid, \r\n        hu.value, \r\n        hu.clock\r\n    FROM zabbix.history_uint hu\r\n    JOIN (\r\n        SELECT itemid, MAX(clock) AS max_clock\r\n        FROM zabbix.history_uint\r\n        GROUP BY itemid\r\n    ) max_hu ON hu.itemid = max_hu.itemid AND hu.clock = max_hu.max_clock\r\n    JOIN zabbix.items it ON hu.itemid = it.itemid\r\n    WHERE it.key_ = 'icmpping'\r\n)\r\nSELECT \r\n    ht.name AS HOST,\r\n    hi.location_lat AS LATITUDE,\r\n    hi.location_lon AS LONGITUDE,\r\n    hi.site_country AS SITE_COUNTRY,\r\n    it.itemid AS ITEMID,\r\n    it.name AS ITEM, \r\n    lv.value AS \"ULT.VALOR\",\r\n    CONVERT_TZ(from_unixtime(lv.clock), '+00:00', '+04:00') AS \"ULT.VERIFICACAO\"\r\nFROM zabbix.items it\r\nJOIN zabbix.hosts ht ON it.hostid = ht.hostid\r\nJOIN LatestValues lv ON it.itemid = lv.itemid\r\nJOIN hosts_groups hg ON ht.hostid = hg.hostid\r\nJOIN hstgrp g ON hg.groupid = g.groupid\r\nLEFT JOIN host_inventory hi ON ht.hostid = hi.hostid\r\nWHERE g.name = 'INTERIOR' -- Filtrar por nome do grupo\r\nLIMIT 85;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "b400229d-41c4-4077-ae51-8f2ed76737fb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "WITH LatestValues AS (\r\n    SELECT hu.itemid, ROUND(hu.value * 1000, 2) AS value, hu.clock,\r\n           ROW_NUMBER() OVER (PARTITION BY hu.itemid ORDER BY hu.clock DESC) AS rn\r\n    FROM zabbix.history hu\r\n    JOIN zabbix.items it ON hu.itemid = it.itemid\r\n    WHERE it.key_ = 'icmppingsec'\r\n)\r\nSELECT DISTINCT \r\n    ht.name AS HOST,\r\n    hi.location_lat AS latitude,\r\n    hi.location_lon AS longitude,\r\n    it.itemid AS ITEMID,\r\n    it.name AS ITEM, \r\n    CONCAT(ROUND(lv.value, 2), ' ms') AS \"ULT.VALOR\",\r\n    CONVERT_TZ(from_unixtime(lv.clock), '+00:00', '+04:00') AS \"ULT.VERIFICACAO\"\r\nFROM zabbix.items it\r\nJOIN zabbix.hosts ht ON it.hostid = ht.hostid\r\nJOIN LatestValues lv ON it.itemid = lv.itemid AND lv.rn = 1\r\nJOIN hosts_groups hg ON ht.hostid = hg.hostid\r\nJOIN hstgrp g ON hg.groupid = g.groupid\r\nLEFT JOIN host_inventory hi ON ht.hostid = hi.hostid\r\nWHERE g.name = 'INTERIOR' -- Filtrar por nome do grupo\r\nLIMIT 85;\r\n",
+          "refId": "B",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "geomap"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "tags": [
+    "PROJ-MPLS"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "GEOMAP-DASH-ROTAS",
+  "uid": "f72c2b54-a9c2-4828-8703-125d70425da3",
+  "version": 55,
+  "weekStart": ""
+}
